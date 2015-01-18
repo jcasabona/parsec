@@ -29,7 +29,7 @@ html {
 	box-sizing: inherit;
 }
 body {
-	background: $color__background-body; /* Fallback for when there is no custom background color defined. */
+	background: $color-background-body; /* Fallback for when there is no custom background color defined. */
 }
 article,
 aside,
