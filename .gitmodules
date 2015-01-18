@@ -1,0 +1,3 @@
+[submodule "wp-content/plugins/disable-google-fonts"]
+	path = wp-content/plugins/disable-google-fonts
+	url = git@github.com:dimadin/disable-google-fonts.git
