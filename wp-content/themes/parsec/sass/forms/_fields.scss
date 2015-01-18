@@ -24,8 +24,8 @@ input[type="url"],
 input[type="password"],
 input[type="search"],
 textarea {
-	color: $color__text-input;
-	border: 1px solid $color__border-input;
+	color: $color-text-input;
+	border: 1px solid $color-border-input;
 	border-radius: 3px;
 }
 
@@ -35,7 +35,7 @@ input[type="url"]:focus,
 input[type="password"]:focus,
 input[type="search"]:focus,
 textarea:focus {
-	color: $color__text-input-focus;
+	color: $color-text-input-focus;
 }
 
 input[type="text"],

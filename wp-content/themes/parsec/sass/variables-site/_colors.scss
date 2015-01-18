@@ -1,20 +1,29 @@
-$color__background-body: #fff;
-$color__background-screen: #f1f1f1;
-$color__background-hr: #ccc;
-$color__background-button: #e6e6e6;
-$color__background-pre: #eee;
-$color__background-ins: #fff9c0;
+$color-primary: #444c49; //dark greyish
+$color-secondary: #6d7063; //brownish
+$color-accent: #b7d8d7; //light blue
+$color-accent-two: #c3e5d1; //light green
+$color-accent-three: #d0c79c; //tan
+$color-white: #FFFFFF;
+$color-black: #000000;
+$color-gray-base: #999999;
 
-$color__text-screen: #21759b;
-$color__text-input: #666;
-$color__text-input-focus: #111;
-$color__link: royalblue;
-$color__link-visited: purple;
-$color__link-hover: midnightblue;
-$color__text-main: #404040;
+$color-background-body: $color-primary;
+$color-background-screen: $color-white;
+$color-background-hr: $color-accent-three;
+$color-background-button: $color-accent;
+$color-background-pre: $color-primary;
+$color-background-ins: $color-accent-two;
 
-$color__border-button: #ccc #ccc #bbb;
-$color__border-button-hover: #ccc #bbb #aaa;
-$color__border-button-focus: #aaa #bbb #bbb;
-$color__border-input: #ccc;
-$color__border-abbr: #666;
+$color-text-screen: $color-primary;
+$color-text-input: $color-gray-base;
+$color-text-input-focus: darken($color-gray-base, 10%);
+$color-link: $color-accent;
+$color-link-visited: $color-accent-three;
+$color-link-hover: darken($color-accent, 15%);
+$color-text-main: $color-primary;
+
+$color-border-button: $color-secondary;
+$color-border-button-hover: lighten($color-secondary, 10%);
+$color-border-button-focus: lighten($color-secondary, 10%);
+$color-border-input: $color-gray-base;
+$color-border-abbr: $color-gray-base;
