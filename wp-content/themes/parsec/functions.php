@@ -100,6 +100,10 @@ add_action( 'widgets_init', 'parsec_widgets_init' );
  * Enqueue scripts and styles.
  */
 function parsec_scripts() {
+	if( ! is_admin() ) {  
+		wp_deregister_style( 'open-sans-css' ); //Remove Default inclusion of open sans
+	}
+	
 	wp_enqueue_style( 'google-web-fonts', '//fonts.googleapis.com/css?family=Marmelad|Roboto+Condensed:400italic,700,400|Ruda' );
 	wp_enqueue_style( 'parsec-style', get_stylesheet_uri(), array( 'google-web-fonts' ) );
 
