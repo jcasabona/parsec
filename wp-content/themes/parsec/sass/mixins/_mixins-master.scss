@@ -20,3 +20,10 @@
 @mixin clearfix-after() {
 	clear: both;
 }
+
+// Media Query Helpers
+@mixin breakpoint($breakpoint, $direction: min) {
+	@media (#{$direction}-width: $breakpoint)  {
+		@content;
+	}
+}
