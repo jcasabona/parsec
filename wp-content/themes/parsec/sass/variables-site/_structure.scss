@@ -1,2 +1,11 @@
-$size__site-main: 100%;
-$size__site-sidebar: 25%;
+/*** Breakpoints ***/
+
+$breakpoint-1: 20em; 
+$breakpoint-2: 40em;
+$breakpoint-3: 50em;
+$breakpoint-4: 60em;
+
+$max-width: 1300px;
+
+$size-site-main: 100%;
+$size-site-sidebar: 25%;
