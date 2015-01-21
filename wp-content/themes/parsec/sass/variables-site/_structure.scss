@@ -5,7 +5,14 @@ $breakpoint-2: 40em;
 $breakpoint-3: 50em;
 $breakpoint-4: 60em;
 
-$max-width: 1300px;
+$max-width-px: 1300px;
+$max-width-percent: 95%;
 
 $size-site-main: 100%;
 $size-site-sidebar: 25%;
+
+$base-margin: 10px;
+$margin-center: 0 auto;
+$base-padding: 15px;
+$padding-more: $base-padding * 2;
+$padding-less: $base-padding / 2;
