@@ -2,7 +2,7 @@
 
 *.log
 .htaccess
-index.php
+/index.php
 license.txt
 readme.html
 sitemap.xml
