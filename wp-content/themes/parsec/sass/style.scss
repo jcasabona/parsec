@@ -28,6 +28,7 @@ and Blueprint http://www.blueprintcss.org/
 2.0 Typography
 3.0 Elements
 4.0 Forms
+4.5 Base Layout
 5.0 Navigation
 	5.1 Links
 	5.2 Menus
@@ -66,6 +67,11 @@ and Blueprint http://www.blueprintcss.org/
 4.0 Forms
 --------------------------------------------------------------*/
 @import "forms/forms";
+
+/*--------------------------------------------------------------
+4.5 Base Layout
+--------------------------------------------------------------*/
+@import "layout/base-layout";
 
 /*--------------------------------------------------------------
 5.0 Navigation
