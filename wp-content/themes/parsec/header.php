@@ -33,4 +33,4 @@
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
 
-	<div id="content" class="site-content">
+	<div id="content" class="site-content"> <?php //here is where I will put a class for choosing the layout ?>

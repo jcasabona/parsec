@@ -358,15 +358,49 @@ textarea {
 /*--------------------------------------------------------------
 4.5 Base Layout
 --------------------------------------------------------------*/
+.site-content {
+  max-width: 1300px;
+  margin: 0 auto; }
+
+.site-header, .site-footer {
+  margin: 0 auto;
+  max-width: 95%;
+  padding: 30px 0; }
+
 .content-area {
   background: #FFFFFF;
   margin: 0 auto;
   max-width: 95%;
   padding: 30px; }
+  @media (min-width: 40em) {
+    .content-area {
+      display: inline-block;
+      width: 60%;
+      vertical-align: top; } }
+  @media (min-width: 50em) {
+    .content-area {
+      display: inline-block;
+      margin-right: 10%;
+      vertical-align: top;
+      width: 65%; } }
 
 .contain, .main-navigation {
   margin: 0 auto;
+  max-width: 1300px; }
+
+aside {
+  margin: 0 auto;
   max-width: 95%; }
+  @media (min-width: 40em) {
+    aside {
+      display: inline-block;
+      width: 36%;
+      vertical-align: top; } }
+  @media (min-width: 50em) {
+    aside {
+      display: inline-block;
+      vertical-align: top;
+      width: 24%; } }
 
 /*--------------------------------------------------------------
 5.0 Navigation
@@ -391,34 +425,22 @@ a {
     list-style: none;
     margin: 0;
     padding-left: 0; }
-    .main-navigation ul ul {
-      box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-      float: left;
-      position: absolute;
-      top: 1.5em;
-      left: -999em;
-      z-index: 99999; }
-      .main-navigation ul ul ul {
-        left: -999em;
-        top: 0; }
-      .main-navigation ul ul li:hover > ul {
-        left: 100%; }
-      .main-navigation ul ul a {
-        width: 200px; }
-    .main-navigation ul li:hover > ul {
-      left: auto; }
   .main-navigation li {
-    float: left;
-    position: relative; }
-  .main-navigation a {
-    display: block;
-    text-decoration: none; }
+    display: inline;
+    text-align: justify; }
+    .main-navigation li a {
+      background: #d0c79c;
+      color: #444c49;
+      display: inline-block;
+      margin: 10px;
+      padding: 7.5px;
+      text-decoration: none; }
 
 /* Small menu */
 .menu-toggle {
   display: none; }
 
-@media screen and (max-width: 600px) {
+@media (max-width: 20em) {
   .menu-toggle,
   .main-navigation.toggled .nav-menu {
     display: block; }
@@ -521,8 +543,13 @@ a {
 9.0 Widgets
 --------------------------------------------------------------*/
 .widget {
-  margin: 0 0 1.5em;
+  background: #FFFFFF;
+  margin: 10px 0;
+  padding: 30px;
   /* Make sure select elements fit in widgets */ }
+  @media (min-width: 40em) {
+    .widget:first-child {
+      margin-top: 0; } }
   .widget select {
     max-width: 100%; }
 
