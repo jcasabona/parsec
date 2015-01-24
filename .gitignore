@@ -27,6 +27,8 @@ wp-content/backup-db/
 wp-content/backups/
 wp-content/blogs.dir/
 wp-content/cache/
+wp-content/plugins/akistmet/
+wp-content/plugins/hello.php
 wp-content/themes/parsec/style.css.map
 wp-content/upgrade/
 wp-content/uploads/
