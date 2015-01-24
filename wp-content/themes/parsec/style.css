@@ -440,7 +440,7 @@ a {
 .menu-toggle {
   display: none; }
 
-@media (max-width: 20em) {
+@media (max-width: 30em) {
   .menu-toggle,
   .main-navigation.toggled .nav-menu {
     display: block; }
