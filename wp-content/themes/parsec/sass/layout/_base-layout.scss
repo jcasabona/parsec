@@ -1,11 +1,53 @@
+.site-content {
+	max-width: $max-width-px;
+	margin: $margin-center;
+}
+
+
+.site-header, .site-footer {
+	margin: $margin-center;
+	max-width: $max-width-percent;
+	padding: $padding-more 0;
+}
+
 .content-area {
 	background: $color-white;
 	margin: $margin-center;
 	max-width: $max-width-percent;
 	padding: $padding-more;
+
+	@include breakpoint( $breakpoint-2 ) {
+		display: inline-block;
+		width: 60%;
+		vertical-align: top;
+	}
+
+	@include breakpoint( $breakpoint-3 ) {
+		display: inline-block;
+		margin-right: 10%;
+		vertical-align: top;
+		width: 65%;
+	}
 }
 
 .contain {
 	margin: $margin-center;
+	max-width: $max-width-px;
+}
+
+aside {
+	margin: $margin-center;
 	max-width: $max-width-percent;
+
+	@include breakpoint( $breakpoint-2 ) {
+		display: inline-block;
+		width: 36%;
+		vertical-align: top;
+	}
+
+	@include breakpoint( $breakpoint-3 ) {
+		display: inline-block;
+		vertical-align: top;
+		width: 24%;
+	}
 }
