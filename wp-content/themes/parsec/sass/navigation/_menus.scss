@@ -7,11 +7,17 @@
 		list-style: none;
 		margin: 0;
 		padding-left: 0;
+		text-align: justify;
+
+		&::after {
+			display: inline-block;
+			height: 0%;
+			width: 100%;
+		}
 	}
 
 	li {
-		display: inline;
-		text-align: justify;
+		display: inline-block;
 
 		&:hover > a {
 		}
