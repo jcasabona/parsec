@@ -1,3 +1,11 @@
+body {
+	background: $color-primary;
+}
+
+.site {
+		background: $color-white;
+	}
+
 .site-content {
 	max-width: $max-width-px;
 	margin: $margin-center;
@@ -5,13 +13,12 @@
 
 
 .site-header, .site-footer {
+	background: $color-primary;
+	color: $color-white;
 	margin: $margin-center;
-	max-width: $max-width-percent;
-	padding: $padding-more 0;
 }
 
 .content-area {
-	background: $color-white;
 	margin: $margin-center;
 	max-width: $max-width-percent;
 	padding: $padding-more;
