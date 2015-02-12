@@ -1,11 +1,14 @@
-$font-serif: 'Marmelad', sans-serif;
-$font-sans: 'Roboto Condensed', sans-serif;
-$font-sans-alt: 'Ruda', sans-serif;
+$font-sans: 'Source Sans Pro', sans-serif;
+$font-sans-alt: 'Pathway Gothic One', sans-serif;
 $font-mono: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
 
-$font-main: $font-serif;
-$font-headings: $font-serif;
+$font-main: $font-sans;
+$font-headings: $font-sans-alt;
 $font-code: $font-mono;
 $font-pre: $font-mono;
 $font-line-height-body: 1.5;
 $font-line-height-pre: 1.6;
+$font-weight: 200;
+
+$font-size-base: 10px;
+$font-size-heading-base: 3em;

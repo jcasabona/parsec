@@ -100,7 +100,7 @@ add_action( 'widgets_init', 'parsec_widgets_init' );
  * Enqueue scripts and styles.
  */
 function parsec_scripts() {	
-	wp_enqueue_style( 'google-web-fonts', '//fonts.googleapis.com/css?family=Marmelad|Roboto+Condensed:400italic,700,400|Ruda' );
+	wp_enqueue_style( 'google-web-fonts', '//fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,700|Pathway+Gothic+One' );
 	wp_enqueue_style( 'parsec-style', get_stylesheet_uri(), array( 'google-web-fonts' ) );
 
 	wp_enqueue_script( 'parsec-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
