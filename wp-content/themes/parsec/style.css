@@ -85,7 +85,7 @@ html {
   box-sizing: inherit; }
 
 body {
-  background: #444c49;
+  background: #FFFFFF;
   /* Fallback for when there is no custom background color defined. */ }
 
 article,
@@ -138,13 +138,16 @@ input,
 select,
 textarea {
   color: #444c49;
-  font-family: "Marmelad", sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 200;
   font-size: 16px;
   font-size: 1.6rem;
   line-height: 1.5; }
 
 h1, h2, h3, h4, h5, h6 {
-  clear: both; }
+  clear: both;
+  font-family: "Pathway Gothic One", sans-serif;
+  font-weight: normal; }
 
 p {
   margin-bottom: 1.5em; }
