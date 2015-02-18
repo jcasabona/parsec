@@ -773,6 +773,23 @@ a {
 .archive .format-aside .entry-title {
   display: none; }
 
+aside.footer-widgets {
+  display: block;
+  padding-top: 25px;
+  width: 100%; }
+  aside.footer-widgets .widget {
+    background: none;
+    vertical-align: top; }
+    @media (min-width: 40em) {
+      aside.footer-widgets .widget {
+        display: inline-block;
+        width: 49%; } }
+    @media (min-width: 60em) {
+      aside.footer-widgets .widget {
+        display: inline-block;
+        margin-right: 1.5em;
+        width: 24%; } }
+
 /*--------------------------------------------------------------
 10.3 Comments
 --------------------------------------------------------------*/

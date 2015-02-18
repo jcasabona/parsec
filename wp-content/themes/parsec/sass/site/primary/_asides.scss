@@ -2,3 +2,25 @@
 .archive .format-aside .entry-title {
 	display: none;
 }
+
+aside.footer-widgets {
+	display: block;
+	padding-top: 25px;
+	width: 100%;
+
+	.widget {
+		background: none;
+		vertical-align: top;
+
+		@include breakpoint( $breakpoint-2 ) {
+			display: inline-block;
+			width: 49%;
+		}
+
+		@include breakpoint( $breakpoint-4 ) {
+			display: inline-block;
+			margin-right: 1.5em;
+			width: 24%;
+		}
+	}
+}
