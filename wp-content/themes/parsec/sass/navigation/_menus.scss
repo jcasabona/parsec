@@ -1,6 +1,5 @@
 .main-navigation {
 	@extend .contain;
-	clear: both;
 	display: block;
 
 	ul {
@@ -51,6 +50,7 @@
 	.menu-toggle,
 	.main-navigation.toggled .nav-menu {
 		display: block;
+		float: right;
 	}
 
 	.main-navigation ul {

@@ -11,7 +11,9 @@
 		return;
 	}
 
-	button = container.getElementsByTagName( 'button' )[0];
+	buttonContainer = document.getElementById( 'masthead' );
+
+	button = container.getElementsByTagName( 'svg' )[0];
 	if ( 'undefined' === typeof button ) {
 		return;
 	}

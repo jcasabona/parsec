@@ -146,7 +146,6 @@ textarea {
   line-height: 1.5; }
 
 h1, h2, h3, h4, h5, h6 {
-  clear: both;
   font-family: "Pathway Gothic One", sans-serif;
   font-weight: normal; }
 
@@ -233,6 +232,12 @@ big {
   src: url("/wp-content/themes/parsec/assets/fonts/icon-font.eot?#iefix") format("embedded-opentype"), url("/wp-content/themes/parsec/assets/fonts/icon-font.woff") format("woff"), url("/wp-content/themes/parsec/assets/fonts/icon-font.ttf") format("truetype"), url("/wp-content/themes/parsec/assets/fonts/icon-font.svg#icon-font") format("svg");
   font-weight: normal;
   font-style: normal; }
+[class^="icon-"], [class*=" icon-"] {
+  height: 32px;
+  width: 32px;
+  display: inline-block;
+  fill: currentColor; }
+
 [data-icon]:before {
   font-family: "icon-font" !important;
   content: attr(data-icon);
@@ -537,7 +542,14 @@ body {
   background: #444c49; }
 
 .site {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
   background: #FFFFFF; }
+  .site:after {
+    content: " ";
+    display: block;
+    clear: both; }
 
 .site-content {
   max-width: 1300px;
@@ -547,6 +559,21 @@ body {
   background: #444c49;
   color: #FFFFFF;
   margin: 0 auto; }
+
+.site-header {
+  padding: 15px; }
+  .site-header .site-branding {
+    float: left; }
+    .site-header .site-branding h1 {
+      line-height: 1em;
+      margin: 0;
+      padding: 0; }
+      .site-header .site-branding h1 a {
+        font-weight: normal;
+        text-decoration: none; }
+  .site-header svg {
+    height: 3em;
+    vertical-align: middle; }
 
 .content-area {
   margin: 0 auto;
@@ -599,7 +626,6 @@ a {
 5.2 Menus
 --------------------------------------------------------------*/
 .main-navigation {
-  clear: both;
   display: block; }
   .main-navigation ul {
     list-style: none;
@@ -627,7 +653,8 @@ a {
 @media (max-width: 30em) {
   .menu-toggle,
   .main-navigation.toggled .nav-menu {
-    display: block; }
+    display: block;
+    float: right; }
 
   .main-navigation ul {
     display: none; } }

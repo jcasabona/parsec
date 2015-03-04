@@ -5,6 +5,7 @@
  * @package Parsec
  */
 
+
 /**
  * Set the content width based on the theme's design and stylesheet.
  */
@@ -74,6 +75,13 @@ function parsec_setup() {
 		'default-color' => 'ffffff',
 		'default-image' => '',
 	) ) );
+
+	/**
+	* Global Variables
+	*/
+
+	global $p_svg_path;
+	$p_svg_path = esc_url( get_stylesheet_directory_uri() .'/assets/icons.svg' );
 }
 endif; // parsec_setup
 add_action( 'after_setup_theme', 'parsec_setup' );
@@ -109,7 +117,7 @@ add_action( 'widgets_init', 'parsec_widgets_init' );
 /**
  * Enqueue scripts and styles.
  */
-function parsec_scripts() {	
+function parsec_scripts() {
 	wp_enqueue_style( 'google-web-fonts', '//fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,700|Pathway+Gothic+One' );
 	wp_enqueue_style( 'parsec-style', get_stylesheet_uri(), array( 'google-web-fonts' ) );
 

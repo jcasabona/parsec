@@ -6,6 +6,9 @@
  *
  * @package Parsec
  */
+
+global $p_svg_path;
+
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
@@ -18,16 +21,17 @@
 </head>
 
 <body <?php body_class(); ?>>
+
 <div id="page" class="hfeed site">
 	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'parsec' ); ?></a>
 
 	<header id="masthead" class="site-header clearfix" role="banner">
-		<div class="site-branding contain">
+		<div class="site-branding">
 			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 		</div><!-- .site-branding -->
 
 		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<button class="menu-toggle" aria-controls="menu" aria-expanded="false"><?php _e( 'Primary Menu', 'parsec' ); ?></button>
+			<svg class="icon-align-justify menu-toggle" aria-controls="menu" aria-expanded="false"><use xlink:href="<?php echo $p_svg_path; ?>#icon-align-justify"></use></svg>
 			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->

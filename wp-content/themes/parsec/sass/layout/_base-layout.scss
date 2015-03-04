@@ -3,6 +3,7 @@ body {
 }
 
 .site {
+		@include container();
 		background: $color-white;
 	}
 
@@ -16,6 +17,30 @@ body {
 	background: $color-primary;
 	color: $color-white;
 	margin: $margin-center;
+}
+
+.site-header {
+	padding: $base-padding;
+
+	.site-branding {
+		float: left;
+
+		h1{
+				line-height: 1em;
+				margin: 0;
+				padding: 0;
+
+				a{
+					font-weight: normal;
+					text-decoration: none;
+				}
+		}
+	}
+
+	svg {
+		height: 3em;
+		vertical-align: middle;
+	}
 }
 
 .content-area {
