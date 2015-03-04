@@ -12,6 +12,13 @@
 
 }
 
+[class^="icon-"], [class*=" icon-"] {
+    height: 32px;
+    width: 32px;
+    display: inline-block;
+    fill: currentColor;
+}
+
 [data-icon]:before {
   font-family: "icon-font" !important;
   content: attr(data-icon);
