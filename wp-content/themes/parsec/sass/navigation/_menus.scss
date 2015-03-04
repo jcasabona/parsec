@@ -7,29 +7,35 @@
 		list-style: none;
 		margin: 0;
 		padding-left: 0;
+		text-align: justify;
+
+		&::after {
+			display: inline-block;
+			height: 0%;
+			width: 100%;
+		}
 	}
 
 	li {
-		display: inline;
-		text-align: justify;
+		display: inline-block;
 
 		&:hover > a {
 		}
-	
+
 		a {
-			background: $color-accent-three;
-			color: $color-primary;
+			color: $color-white;
 			display: inline-block;
+			font-weight: bold;
 			margin: $base-margin;
 			padding: $padding-less;
 			text-decoration: none;
-			
+
 		}
 
 	.current_page_item > a,
 	.current-menu-item > a,
 	.current_page_ancestor > a {
-	
+
 	}
 
 	}
