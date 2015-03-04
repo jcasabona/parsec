@@ -21,21 +21,21 @@
 
 		&:hover > a {
 		}
-	
+
 		a {
-			background: $color-accent-three;
-			color: $color-primary;
+			color: $color-white;
 			display: inline-block;
+			font-weight: bold;
 			margin: $base-margin;
 			padding: $padding-less;
 			text-decoration: none;
-			
+
 		}
 
 	.current_page_item > a,
 	.current-menu-item > a,
 	.current_page_ancestor > a {
-	
+
 	}
 
 	}
