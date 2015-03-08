@@ -2,6 +2,10 @@
 	@extend .contain;
 	display: block;
 
+	@include breakpoint( $breakpoint-2 ) {
+		float: right;
+	}
+
 	ul {
 		list-style: none;
 		margin: 0;

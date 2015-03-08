@@ -564,6 +564,9 @@ body {
   padding: 15px; }
   .site-header .site-branding {
     float: left; }
+    @media (min-width: 30em) and (max-width: 49em) {
+      .site-header .site-branding {
+        float: none; } }
     .site-header .site-branding h1 {
       line-height: 1em;
       margin: 0;
@@ -574,6 +577,8 @@ body {
   .site-header svg {
     height: 3em;
     vertical-align: middle; }
+    .site-header svg:hover, .site-header svg:focus {
+      cursor: pointer; }
 
 .content-area {
   margin: 0 auto;
@@ -627,6 +632,9 @@ a {
 --------------------------------------------------------------*/
 .main-navigation {
   display: block; }
+  @media (min-width: 40em) {
+    .main-navigation {
+      float: right; } }
   .main-navigation ul {
     list-style: none;
     margin: 0;
