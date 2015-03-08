@@ -4,10 +4,11 @@ body {
 
 .site {
 		@include container();
-		background: $color-white;
+		background: $color-background-screen;
 	}
 
 .site-content {
+	background: $color-background-screen;
 	max-width: $max-width-px;
 	margin: $margin-center;
 }
@@ -58,15 +59,11 @@ body {
 	padding: $padding-more;
 
 	@include breakpoint( $breakpoint-2 ) {
-		display: inline-block;
 		width: 60%;
 		vertical-align: top;
 	}
 
 	@include breakpoint( $breakpoint-3 ) {
-		display: inline-block;
-		margin-right: 10%;
-		vertical-align: top;
 		width: 65%;
 	}
 }
