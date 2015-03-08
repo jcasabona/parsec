@@ -3,7 +3,25 @@
 }
 
 .hentry {
+	background: $color-white;
 	margin: 0 0 1.5em;
+
+	.entry-header {
+		padding: 0 $base-padding;
+
+		a {
+				text-decoration: none;
+		}
+	}
+
+	.entry-content {
+		padding: 0 $base-padding;
+	}
+
+	.entry-footer {
+		background: lighten($color-gray-base, 25%);
+		padding: $base-padding;
+	}
 }
 
 .byline,

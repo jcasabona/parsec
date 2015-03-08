@@ -451,7 +451,7 @@ input[type="submit"] {
   border: 1px solid;
   border-color: #6d7063;
   border-radius: 3px;
-  background: #b7d8d7;
+  background: #85bdbb;
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);
   color: rgba(0, 0, 0, 0.8);
   cursor: pointer;
@@ -545,13 +545,14 @@ body {
   max-width: 100%;
   margin-left: auto;
   margin-right: auto;
-  background: #FFFFFF; }
+  background: whitesmoke; }
   .site:after {
     content: " ";
     display: block;
     clear: both; }
 
 .site-content {
+  background: whitesmoke;
   max-width: 1300px;
   margin: 0 auto; }
 
@@ -586,14 +587,10 @@ body {
   padding: 30px; }
   @media (min-width: 40em) {
     .content-area {
-      display: inline-block;
       width: 60%;
       vertical-align: top; } }
   @media (min-width: 50em) {
     .content-area {
-      display: inline-block;
-      margin-right: 10%;
-      vertical-align: top;
       width: 65%; } }
 
 .contain, .main-navigation {
@@ -621,11 +618,11 @@ aside {
 5.1 Links
 --------------------------------------------------------------*/
 a {
-  color: #b7d8d7; }
+  color: #85bdbb; }
   a:visited {
     color: #d0c79c; }
   a:hover, a:focus, a:active {
-    color: #85bdbb; }
+    color: #56a09d; }
 
 /*--------------------------------------------------------------
 5.2 Menus
@@ -696,7 +693,7 @@ a {
   width: 1px;
   overflow: hidden; }
   .screen-reader-text:hover, .screen-reader-text:active, .screen-reader-text:focus {
-    background-color: #FFFFFF;
+    background-color: whitesmoke;
     border-radius: 3px;
     box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
     clip: auto !important;
@@ -786,7 +783,17 @@ a {
   display: block; }
 
 .hentry {
+  background: #FFFFFF;
   margin: 0 0 1.5em; }
+  .hentry .entry-header {
+    padding: 0 15px; }
+    .hentry .entry-header a {
+      text-decoration: none; }
+  .hentry .entry-content {
+    padding: 0 15px; }
+  .hentry .entry-footer {
+    background: #d9d9d9;
+    padding: 15px; }
 
 .byline,
 .updated:not(.published) {

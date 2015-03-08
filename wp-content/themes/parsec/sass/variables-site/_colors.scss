@@ -1,6 +1,6 @@
 $color-primary: #444c49; //dark greyish
 $color-secondary: #6d7063; //brownish
-$color-accent: #b7d8d7; //light blue
+$color-accent: darken(#b7d8d7, 15%); //light blue
 $color-accent-two: #c3e5d1; //light green
 $color-accent-three: #d0c79c; //tan
 $color-white: #FFFFFF;
@@ -8,7 +8,7 @@ $color-black: #000000;
 $color-gray-base: #999999;
 
 $color-background-body: $color-white;
-$color-background-screen: $color-white;
+$color-background-screen: lighten($color-gray-base, 36%);
 $color-background-hr: $color-accent-three;
 $color-background-button: $color-accent;
 $color-background-pre: $color-primary;
