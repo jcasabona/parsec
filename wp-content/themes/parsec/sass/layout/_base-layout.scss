@@ -25,6 +25,10 @@ body {
 	.site-branding {
 		float: left;
 
+		@media (min-width: $breakpoint-1) and ( max-width: $breakpoint-3 - 1) {
+			float: none;
+		}
+
 		h1{
 				line-height: 1em;
 				margin: 0;
@@ -40,6 +44,11 @@ body {
 	svg {
 		height: 3em;
 		vertical-align: middle;
+
+		&:hover,
+		&:focus {
+			cursor: pointer;
+		}
 	}
 }
 
