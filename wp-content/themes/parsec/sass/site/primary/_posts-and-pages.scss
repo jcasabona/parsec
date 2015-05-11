@@ -19,8 +19,14 @@
 	}
 
 	.entry-footer {
-		background: lighten($color-gray-base, 25%);
+		background: $color-accent-three;
+		color: $color-white;
 		padding: $base-padding;
+
+		a{
+			@include link-colors($color-white, lighten($color-gray-base, 20%));
+		}
+
 	}
 }
 

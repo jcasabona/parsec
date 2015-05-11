@@ -1,12 +1,3 @@
 a {
-	color: $color-link;
-
-	&:visited {
-		color: $color-link-visited;
-	}
-	&:hover,
-	&:focus,
-	&:active {
-		color: $color-link-hover;
-	}
+	@include link-colors($color-link-visited, $color-link-hover);
 }

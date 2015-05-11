@@ -1,3 +1,34 @@
+.comment-list {
+	list-style-type: none;
+	margin: 0;
+
+	li {
+		background: $color-white;
+		padding: $base-padding;
+		border-bottom: 3px solid $color-secondary;
+		margin-bottom: $base-margin;
+
+		&:nth-child(even) {
+			border-bottom: 3px solid $color-accent-two;
+		}
+
+		.comment-meta {
+			margin-bottom: $padding-less;
+			padding: $padding-less;
+
+			img {
+				float: left;
+				margin: 6px $base-margin 0 0;
+			}
+		}
+
+		.comment-awaiting-moderation {
+			@extend .alert;
+		}
+	}
+}
+
+
 .comment-content a {
 	word-wrap: break-word;
 }

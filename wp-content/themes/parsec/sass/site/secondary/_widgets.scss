@@ -1,7 +1,13 @@
 .widget {
 	background: $color-white;
 	margin: $base-margin 0;
-	padding: $padding-more;
+
+	.widget-title {
+		background: $color-accent-two;
+		color: $color-white;
+		padding: $base-padding;
+		margin-bottom: $base-margin;
+	}
 
 
 	@include breakpoint( $breakpoint-2 ) {

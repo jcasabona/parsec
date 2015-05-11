@@ -21,14 +21,21 @@ body {
 }
 
 .site-header {
-	padding: $base-padding;
+	background: url( $asset-path + 'img/city.jpg' );
+	background-attachment: fixed;
+	background-position: 50% 0%;
+	-webkit-background-size: cover;
+	background-size: cover;
+	min-height: 200px;
+
+	@include breakpoint( $breakpoint-1 ) {
+		min-height: auto;
+		height: 400px;
+	}
 
 	.site-branding {
-		float: left;
 
-		@media (min-width: $breakpoint-1) and ( max-width: $breakpoint-3 - 1) {
-			float: none;
-		}
+		padding: $padding-more;
 
 		h1{
 				line-height: 1em;
@@ -56,15 +63,26 @@ body {
 .content-area {
 	margin: $margin-center;
 	max-width: $max-width-percent;
-	padding: $padding-more;
+	padding: $padding-more 0 $padding-less;
 
 	@include breakpoint( $breakpoint-2 ) {
+		display: inline-block;
+		padding: $padding-more;
 		width: 60%;
 		vertical-align: top;
 	}
 
 	@include breakpoint( $breakpoint-3 ) {
-		width: 65%;
+		width: 69%;
+	}
+
+	&.one-col {
+		display: block;
+		width: $max-width-percent;
+
+		@include breakpoint( $breakpoint-3 ) {
+			width: $max-width-percent - 10;
+		}
 	}
 }
 
@@ -79,6 +97,7 @@ aside {
 
 	@include breakpoint( $breakpoint-2 ) {
 		display: inline-block;
+		padding-top: $padding-more;
 		width: 36%;
 		vertical-align: top;
 	}
@@ -86,6 +105,6 @@ aside {
 	@include breakpoint( $breakpoint-3 ) {
 		display: inline-block;
 		vertical-align: top;
-		width: 24%;
+		width: 30%;
 	}
 }
