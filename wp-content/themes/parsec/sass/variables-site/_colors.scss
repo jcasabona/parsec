@@ -1,8 +1,8 @@
 $color-primary: #333333; //dark blue
-$color-secondary: #D98A49; //burnt orange
+$color-secondary: #9E4E0C; //burnt orange
 $color-accent: #004949; //light blue
 $color-accent-two: #226e6c; //logo teal
-$color-accent-three: lighten($color-secondary, 10%); //light orange
+$color-accent-three: lighten($color-secondary, 18%); //light orange
 $color-white: #FFFFFF;
 $color-black: #000000;
 $color-gray-base: #999999;
@@ -17,9 +17,9 @@ $color-background-ins: $color-accent-two;
 $color-text-screen: $color-primary;
 $color-text-input: $color-gray-base;
 $color-text-input-focus: darken($color-gray-base, 10%);
-$color-link: $color-accent-three;
-$color-link-visited: $color-accent-three;
-$color-link-hover: darken($color-accent-three, 15%);
+$color-link: $color-secondary;
+$color-link-visited: $color-secondary;
+$color-link-hover: $color-accent-three;
 $color-text-main: $color-primary;
 
 $color-border-button: $color-secondary;

@@ -395,7 +395,7 @@ big {
 3.0 Elements
 --------------------------------------------------------------*/
 hr {
-  background-color: #e2a573;
+  background-color: #ed7918;
   border: 0;
   height: 1px;
   margin-bottom: 1.5em; }
@@ -455,7 +455,7 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"] {
   border: 1px solid;
-  border-color: #D98A49;
+  border-color: #9E4E0C;
   border-radius: 3px;
   background: #004949;
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);
@@ -474,7 +474,7 @@ button:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
-  border-color: #e2a573;
+  border-color: #cd6510;
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 15px 17px rgba(255, 255, 255, 0.8), inset 0 -5px 12px rgba(0, 0, 0, 0.02); }
 
 button:focus,
@@ -485,7 +485,7 @@ button:active,
 input[type="button"]:active,
 input[type="reset"]:active,
 input[type="submit"]:active {
-  border-color: #e2a573;
+  border-color: #cd6510;
   box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15); }
 
 input[type="checkbox"],
@@ -597,9 +597,9 @@ body {
       cursor: pointer; }
 
 .site-footer a:link, .site-footer a:visited {
-  color: #e2a573; }
+  color: #ed7918; }
 .site-footer a:hover, .site-footer a:focus, .site-footer a:active {
-  color: #D98A49; }
+  color: #9E4E0C; }
 
 .content-area {
   margin: 0 auto;
@@ -647,9 +647,9 @@ aside {
 5.1 Links
 --------------------------------------------------------------*/
 a:link, a:visited {
-  color: #e2a573; }
+  color: #9E4E0C; }
 a:hover, a:focus, a:active {
-  color: #d57c34; }
+  color: #ed7918; }
 
 /*--------------------------------------------------------------
 5.2 Menus
@@ -821,7 +821,7 @@ a:hover, a:focus, a:active {
   .hentry .entry-content {
     padding: 0 15px; }
   .hentry .entry-footer {
-    background: #e2a573;
+    background: #9E4E0C;
     color: #FFFFFF;
     padding: 15px; }
     .hentry .entry-footer a:link, .hentry .entry-footer a:visited {
@@ -879,7 +879,7 @@ aside.footer-widgets {
   .comment-list li {
     background: #FFFFFF;
     padding: 15px;
-    border-bottom: 3px solid #D98A49;
+    border-bottom: 3px solid #9E4E0C;
     margin-bottom: 10px; }
     .comment-list li:nth-child(even) {
       border-bottom: 3px solid #226e6c; }
