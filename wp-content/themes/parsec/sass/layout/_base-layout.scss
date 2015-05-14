@@ -21,22 +21,20 @@ body {
 }
 
 .site-header {
-	background: url( $asset-path + 'img/city.jpg' );
+	background: url( $asset-path + 'img/city-sign.jpg' );
 	background-attachment: fixed;
-	background-position: 50% 0%;
+	background-position: 50%;
 	-webkit-background-size: cover;
 	background-size: cover;
 	min-height: 200px;
 
 	@include breakpoint( $breakpoint-1 ) {
 		min-height: auto;
-		height: 400px;
+		height: 570px;
 	}
 
 	.site-branding {
-
 		padding: $padding-more;
-
 		h1{
 				line-height: 1em;
 				margin: 0;
@@ -45,6 +43,12 @@ body {
 				a{
 					font-weight: normal;
 					text-decoration: none;
+				}
+
+				img {
+					@include breakpoint( $breakpoint-1 ) {
+						max-height: 300px;
+					}
 				}
 		}
 	}
@@ -57,6 +61,13 @@ body {
 		&:focus {
 			cursor: pointer;
 		}
+	}
+}
+
+
+.site-footer {
+	a {
+		@include link-colors( $color-accent-three, $color-secondary );
 	}
 }
 

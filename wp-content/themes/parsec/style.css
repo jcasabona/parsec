@@ -144,7 +144,7 @@ button,
 input,
 select,
 textarea {
-  color: #003030;
+  color: #333333;
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 200;
   font-size: 16px;
@@ -189,7 +189,7 @@ address {
   margin: 0 0 1.5em; }
 
 pre {
-  background: #003030;
+  background: #333333;
   font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
   font-size: 15px;
   font-size: 1.5rem;
@@ -209,7 +209,7 @@ abbr, acronym {
   cursor: help; }
 
 mark, ins {
-  background: #2d882d;
+  background: #226e6c;
   text-decoration: none; }
 
 sup,
@@ -395,7 +395,7 @@ big {
 3.0 Elements
 --------------------------------------------------------------*/
 hr {
-  background-color: #c67029;
+  background-color: #e2a573;
   border: 0;
   height: 1px;
   margin-bottom: 1.5em; }
@@ -545,7 +545,7 @@ textarea {
 4.5 Base Layout
 --------------------------------------------------------------*/
 body {
-  background: #003030; }
+  background: #333333; }
 
 .site {
   max-width: 100%;
@@ -563,21 +563,21 @@ body {
   margin: 0 auto; }
 
 .site-header, .site-footer {
-  background: #003030;
+  background: #333333;
   color: #FFFFFF;
   margin: 0 auto; }
 
 .site-header {
-  background: url("/wp-content/themes/parsec/assets/img/city.jpg");
+  background: url("/wp-content/themes/parsec/assets/img/city-sign.jpg");
   background-attachment: fixed;
-  background-position: 50% 0%;
+  background-position: 50%;
   -webkit-background-size: cover;
   background-size: cover;
   min-height: 200px; }
   @media (min-width: 30em) {
     .site-header {
       min-height: auto;
-      height: 400px; } }
+      height: 570px; } }
   .site-header .site-branding {
     padding: 30px; }
     .site-header .site-branding h1 {
@@ -587,11 +587,19 @@ body {
       .site-header .site-branding h1 a {
         font-weight: normal;
         text-decoration: none; }
+      @media (min-width: 30em) {
+        .site-header .site-branding h1 img {
+          max-height: 300px; } }
   .site-header svg {
     height: 3em;
     vertical-align: middle; }
     .site-header svg:hover, .site-header svg:focus {
       cursor: pointer; }
+
+.site-footer a:link, .site-footer a:visited {
+  color: #e2a573; }
+.site-footer a:hover, .site-footer a:focus, .site-footer a:active {
+  color: #D98A49; }
 
 .content-area {
   margin: 0 auto;
@@ -639,15 +647,15 @@ aside {
 5.1 Links
 --------------------------------------------------------------*/
 a:link, a:visited {
-  color: #c67029; }
+  color: #e2a573; }
 a:hover, a:focus, a:active {
-  color: #864c1c; }
+  color: #d57c34; }
 
 /*--------------------------------------------------------------
 5.2 Menus
 --------------------------------------------------------------*/
 .main-navigation {
-  background: #2d882d;
+  background: #226e6c;
   text-align: right; }
   .main-navigation ul {
     display: block;
@@ -714,7 +722,7 @@ a:hover, a:focus, a:active {
     border-radius: 3px;
     box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
     clip: auto !important;
-    color: #003030;
+    color: #333333;
     display: block;
     font-size: 14px;
     font-size: 1.4rem;
@@ -780,7 +788,7 @@ a:hover, a:focus, a:active {
   margin: 10px 0;
   /* Make sure select elements fit in widgets */ }
   .widget .widget-title {
-    background: #2d882d;
+    background: #226e6c;
     color: #FFFFFF;
     padding: 15px;
     margin-bottom: 10px; }
@@ -813,7 +821,7 @@ a:hover, a:focus, a:active {
   .hentry .entry-content {
     padding: 0 15px; }
   .hentry .entry-footer {
-    background: #c67029;
+    background: #e2a573;
     color: #FFFFFF;
     padding: 15px; }
     .hentry .entry-footer a:link, .hentry .entry-footer a:visited {
@@ -874,7 +882,7 @@ aside.footer-widgets {
     border-bottom: 3px solid #D98A49;
     margin-bottom: 10px; }
     .comment-list li:nth-child(even) {
-      border-bottom: 3px solid #2d882d; }
+      border-bottom: 3px solid #226e6c; }
     .comment-list li .comment-meta {
       margin-bottom: 7.5px;
       padding: 7.5px; }

@@ -1,8 +1,8 @@
-$color-primary: #003030; //dark blue
+$color-primary: #333333; //dark blue
 $color-secondary: #D98A49; //burnt orange
 $color-accent: #004949; //light blue
-$color-accent-two: darken(#3AAE3A, 10%); //light green
-$color-accent-three: darken($color-secondary, 10%); //light orange
+$color-accent-two: #226e6c; //logo teal
+$color-accent-three: lighten($color-secondary, 10%); //light orange
 $color-white: #FFFFFF;
 $color-black: #000000;
 $color-gray-base: #999999;

@@ -32,7 +32,7 @@ global $p_svg_path;
 		</nav><!-- #site-navigation -->
 
 		<div class="site-branding">
-			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img class="logo" src="<?php echo trailingslashit( get_stylesheet_directory_uri() ); ?>assets/img/logo-wordmark.png"alt="<?php bloginfo( 'name' ); ?>" /></a></h1>
 		</div><!-- .site-branding -->
 
 	</header><!-- #masthead -->
