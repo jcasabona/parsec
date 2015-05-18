@@ -13,7 +13,7 @@
 
 	buttonContainer = document.getElementById( 'masthead' );
 
-	button = container.getElementsByTagName( 'svg' )[0];
+	button = container.getElementsByTagName( 'i' )[0];
 	if ( 'undefined' === typeof button ) {
 		return;
 	}
@@ -44,3 +44,28 @@
 		}
 	};
 } )();
+
+(function( $ ) {
+
+	$(document).ready( reHeight );
+	$(window).resize( reHeight );
+
+	function reHeight() {
+		$('.event-info').each(function(){
+
+				var highestBox = 0;
+				$('.widget', this).each(function(){
+
+						if($(this).height() > highestBox) {
+							highestBox = $(this).height();
+						} else if( $(this).text.height > highestBox ) {
+							highestBox = $(this).text.height();
+						}
+				});
+
+				$('.widget',this).height(highestBox);
+
+		});
+	}
+
+})(jQuery);

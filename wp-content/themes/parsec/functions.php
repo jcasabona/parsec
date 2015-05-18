@@ -102,6 +102,17 @@ function parsec_widgets_init() {
 		'after_title'   => '</h3>',
 	) );
 
+	//quick and dirty thing to make the title a hyperlink.
+	register_sidebar( array(
+		'name'          => __( 'Event Info Widgets', 'parsec' ),
+		'id'            => 'event-info',
+		'description'   => '',
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
+	) );
+
 	register_sidebar( array(
 		'name'          => __( 'Footer Widgets', 'parsec' ),
 		'id'            => 'footer-widgets',
@@ -121,7 +132,7 @@ function parsec_scripts() {
 	wp_enqueue_style( 'google-web-fonts', '//fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,700|Pathway+Gothic+One' );
 	wp_enqueue_style( 'parsec-style', get_stylesheet_uri(), array( 'google-web-fonts' ) );
 
-	wp_enqueue_script( 'parsec-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
+	wp_enqueue_script( 'parsec-navigation', get_template_directory_uri() . '/js/navigation.js', array( 'jquery' ), '20120206', true );
 
 	wp_enqueue_script( 'parsec-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
 

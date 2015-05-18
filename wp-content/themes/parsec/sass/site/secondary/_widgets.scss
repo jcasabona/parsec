@@ -1,14 +1,23 @@
 .widget {
-	background: $color-white;
+	background: rgba($color-accent-two, 0.4);
+	color: $color-white;
 	margin: $base-margin 0;
+	padding: $base-padding;
 
-	.widget-title {
-		background: $color-accent-two;
-		color: $color-white;
-		padding: $base-padding;
-		margin-bottom: $base-margin;
+	a {
+		@include link-colors( darken($color-accent, 10%) , $color-accent-three );
 	}
 
+	ul {
+		margin: 0;
+		padding: 0;
+
+		li {
+			margin: 0;
+			padding: $padding-less;
+			list-style-type: none;
+		}
+	}
 
 	@include breakpoint( $breakpoint-2 ) {
 
@@ -21,6 +30,51 @@
 	select {
 		max-width: 100%;
 	}
+
+	section.event-info & {
+		background: $color-secondary;
+		border-bottom: 1px solid $color-white;
+		color: $color-white;
+		font-size: 2rem;
+		font-size: 20px;
+		font-weight: bold;
+		margin: 0;
+		padding: $base-padding;
+		text-align: center;
+
+		&:last-child {
+			border: 0;
+		}
+
+		a{
+			@include link-colors( $color-white, $color-accent-three );
+		}
+
+		i {
+			font-size: 6rem;
+			font-size: 60px;
+			font-weight: normal;
+		}
+
+		.widget-title {
+			background: $color-secondary;
+			padding: 0;
+			margin: 0;
+		}
+
+		@include breakpoint( $breakpoint-2 ) {
+			border-bottom: 0;
+			border-right: 1px solid $color-white;
+			display: inline-block;
+			padding: $base-padding;
+			margin: 0;
+			vertical-align: top;
+			width: 33%;
+		}
+
+	}
+
+
 }
 
 /* Search widget */

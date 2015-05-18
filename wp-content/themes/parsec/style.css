@@ -238,12 +238,6 @@ big {
   src: url("/wp-content/themes/parsec/assets/fonts/icon-font.eot?#iefix") format("embedded-opentype"), url("/wp-content/themes/parsec/assets/fonts/icon-font.woff") format("woff"), url("/wp-content/themes/parsec/assets/fonts/icon-font.ttf") format("truetype"), url("/wp-content/themes/parsec/assets/fonts/icon-font.svg#icon-font") format("svg");
   font-weight: normal;
   font-style: normal; }
-[class^="icon-"], [class*=" icon-"] {
-  height: 32px;
-  width: 32px;
-  display: inline-block;
-  fill: currentColor; }
-
 [data-icon]:before {
   font-family: "icon-font" !important;
   content: attr(data-icon);
@@ -390,6 +384,60 @@ big {
 
 .icon-sharethis:before {
   content: "O"; }
+
+.icon-heart:before {
+  content: "Q"; }
+
+.icon-flame:before {
+  content: "R"; }
+
+.icon-plug:before {
+  content: "S"; }
+
+.icon-briefcase:before {
+  content: "T"; }
+
+.icon-broadcast:before {
+  content: "U"; }
+
+.icon-bug:before {
+  content: "V"; }
+
+.icon-beer:before {
+  content: "W"; }
+
+.icon-location:before {
+  content: "X"; }
+
+.icon-microscope:before {
+  content: "Y"; }
+
+.icon-triangle-down:before {
+  content: "Z"; }
+
+.icon-megaphone:before {
+  content: "0"; }
+
+.icon-fontawesome-webfont:before {
+  content: "P"; }
+
+.icon-linkedin-square:before {
+  content: "1"; }
+
+.icon-facebook-square:before {
+  content: "2"; }
+
+.icon-twitter:before {
+  content: "3"; }
+
+.icon-caret-square-right:before {
+  content: "4"; }
+
+.icon-dribble:before {
+  content: "5"; }
+
+.icon-bell-two:before {
+  content: "6"; }
 
 /*--------------------------------------------------------------
 3.0 Elements
@@ -568,7 +616,7 @@ body {
   margin: 0 auto; }
 
 .site-header {
-  background: url("/wp-content/themes/parsec/assets/img/city-sign.jpg");
+  background: url("/wp-content/themes/parsec/assets/img/city-sign.jpg") no-repeat;
   background-attachment: fixed;
   background-position: 50%;
   -webkit-background-size: cover;
@@ -578,6 +626,11 @@ body {
     .site-header {
       min-height: auto;
       height: 570px; } }
+  @media (min-width: 77.5625em) {
+    .site-header {
+      background-position: top center;
+      -webkit-background-size: contain;
+      background-size: contain; } }
   .site-header .site-branding {
     padding: 30px; }
     .site-header .site-branding h1 {
@@ -590,10 +643,13 @@ body {
       @media (min-width: 30em) {
         .site-header .site-branding h1 img {
           max-height: 300px; } }
-  .site-header svg {
-    height: 3em;
+  .site-header i {
+    font-size: 3em;
+    color: #FFFFFF;
+    padding: 0 7.5px;
+    text-align: right;
     vertical-align: middle; }
-    .site-header svg:hover, .site-header svg:focus {
+    .site-header i:hover, .site-header i:focus {
       cursor: pointer; }
 
 .site-footer a:link, .site-footer a:visited {
@@ -784,19 +840,60 @@ a:hover, a:focus, a:active {
 9.0 Widgets
 --------------------------------------------------------------*/
 .widget {
-  background: #FFFFFF;
+  background: rgba(34, 110, 108, 0.4);
+  color: #FFFFFF;
   margin: 10px 0;
+  padding: 15px;
   /* Make sure select elements fit in widgets */ }
-  .widget .widget-title {
-    background: #226e6c;
-    color: #FFFFFF;
-    padding: 15px;
-    margin-bottom: 10px; }
+  .widget a:link, .widget a:visited {
+    color: #001616; }
+  .widget a:hover, .widget a:focus, .widget a:active {
+    color: #ed7918; }
+  .widget ul {
+    margin: 0;
+    padding: 0; }
+    .widget ul li {
+      margin: 0;
+      padding: 7.5px;
+      list-style-type: none; }
   @media (min-width: 40em) {
     .widget:first-child {
       margin-top: 0; } }
   .widget select {
     max-width: 100%; }
+  section.event-info .widget {
+    background: #9E4E0C;
+    border-bottom: 1px solid #FFFFFF;
+    color: #FFFFFF;
+    font-size: 2rem;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0;
+    padding: 15px;
+    text-align: center; }
+    section.event-info .widget:last-child {
+      border: 0; }
+    section.event-info .widget a:link, section.event-info .widget a:visited {
+      color: #FFFFFF; }
+    section.event-info .widget a:hover, section.event-info .widget a:focus, section.event-info .widget a:active {
+      color: #ed7918; }
+    section.event-info .widget i {
+      font-size: 6rem;
+      font-size: 60px;
+      font-weight: normal; }
+    section.event-info .widget .widget-title {
+      background: #9E4E0C;
+      padding: 0;
+      margin: 0; }
+    @media (min-width: 40em) {
+      section.event-info .widget {
+        border-bottom: 0;
+        border-right: 1px solid #FFFFFF;
+        display: inline-block;
+        padding: 15px;
+        margin: 0;
+        vertical-align: top;
+        width: 33%; } }
 
 /* Search widget */
 .widget_search .search-submit {
@@ -869,6 +966,9 @@ aside.footer-widgets {
         display: inline-block;
         margin-right: 1.5em;
         width: 24%; } }
+
+section.event-info {
+  background: #9E4E0C; }
 
 /*--------------------------------------------------------------
 10.3 Comments

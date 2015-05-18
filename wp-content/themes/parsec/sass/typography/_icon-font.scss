@@ -12,13 +12,6 @@
 
 }
 
-[class^="icon-"], [class*=" icon-"] {
-    height: 32px;
-    width: 32px;
-    display: inline-block;
-    fill: currentColor;
-}
-
 [data-icon]:before {
   font-family: "icon-font" !important;
   content: attr(data-icon);
@@ -167,4 +160,58 @@
 }
 .icon-sharethis:before {
   content: "O";
+}
+.icon-heart:before {
+  content: "Q";
+}
+.icon-flame:before {
+  content: "R";
+}
+.icon-plug:before {
+  content: "S";
+}
+.icon-briefcase:before {
+  content: "T";
+}
+.icon-broadcast:before {
+  content: "U";
+}
+.icon-bug:before {
+  content: "V";
+}
+.icon-beer:before {
+  content: "W";
+}
+.icon-location:before {
+  content: "X";
+}
+.icon-microscope:before {
+  content: "Y";
+}
+.icon-triangle-down:before {
+  content: "Z";
+}
+.icon-megaphone:before {
+  content: "0";
+}
+.icon-fontawesome-webfont:before {
+  content: "P";
+}
+.icon-linkedin-square:before {
+  content: "1";
+}
+.icon-facebook-square:before {
+  content: "2";
+}
+.icon-twitter:before {
+  content: "3";
+}
+.icon-caret-square-right:before {
+  content: "4";
+}
+.icon-dribble:before {
+  content: "5";
+}
+.icon-bell-two:before {
+  content: "6";
 }

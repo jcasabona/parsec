@@ -27,7 +27,7 @@ global $p_svg_path;
 
 	<header id="masthead" class="site-header clearfix" role="banner">
 		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<svg class="icon-align-justify menu-toggle" aria-controls="menu" aria-expanded="false"><use xlink:href="<?php echo $p_svg_path; ?>#icon-align-justify"></use></svg>
+			<i class="icon-align-justify menu-toggle" aria-controls="menu" aria-expanded="false"></i>
 			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 		</nav><!-- #site-navigation -->
 
@@ -36,5 +36,7 @@ global $p_svg_path;
 		</div><!-- .site-branding -->
 
 	</header><!-- #masthead -->
+
+	<?php get_sidebar( 'event-info' ); ?>
 
 	<div id="content" class="site-content"> <?php //here is where I will put a class for choosing the layout ?>

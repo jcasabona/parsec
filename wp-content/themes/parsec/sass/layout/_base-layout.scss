@@ -21,7 +21,7 @@ body {
 }
 
 .site-header {
-	background: url( $asset-path + 'img/city-sign.jpg' );
+	background: url( $asset-path + 'img/city-sign.jpg' ) no-repeat;
 	background-attachment: fixed;
 	background-position: 50%;
 	-webkit-background-size: cover;
@@ -31,6 +31,12 @@ body {
 	@include breakpoint( $breakpoint-1 ) {
 		min-height: auto;
 		height: 570px;
+	}
+
+	@include breakpoint( $breakpoint-5 ) {
+		background-position: top center;
+		-webkit-background-size: contain;
+		background-size: contain;
 	}
 
 	.site-branding {
@@ -53,8 +59,11 @@ body {
 		}
 	}
 
-	svg {
-		height: 3em;
+	i {
+		font-size: 3em;
+		color: $color-white;
+		padding: 0 $padding-less;
+		text-align: right;
 		vertical-align: middle;
 
 		&:hover,
