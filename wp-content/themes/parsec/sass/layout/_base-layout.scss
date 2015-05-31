@@ -21,22 +21,30 @@ body {
 }
 
 .site-header {
-	background: url( $asset-path + 'img/city-sign.jpg' ) no-repeat;
-	background-attachment: fixed;
-	background-position: 50%;
-	-webkit-background-size: cover;
-	background-size: cover;
-	min-height: 200px;
 
-	@include breakpoint( $breakpoint-1 ) {
-		min-height: auto;
-		height: 570px;
-	}
+	.impact-img {
+		background: url( $asset-path + 'img/erinandjoe-sm.jpg' ) center no-repeat;
+		-webkit-background-size: cover;
+		background-size: cover;
+		margin: 0 auto;
+		min-height: 300px;
+		text-align: center;
 
-	@include breakpoint( $breakpoint-5 ) {
-		background-position: top center;
-		-webkit-background-size: contain;
-		background-size: contain;
+		@include breakpoint( $breakpoint-1 ) {
+			background-image: url( $asset-path + 'img/erinandjoe.jpg' );
+			background-position: center;
+			min-height: auto;
+			height: 470px;
+			max-width: 2000px;
+		}
+
+		@include breakpoint( $breakpoint-2 ) {
+			height: 570px;
+		}
+
+		@include breakpoint( $breakpoint-4 ) {
+			height: 770px;
+		}
 	}
 
 	.site-branding {

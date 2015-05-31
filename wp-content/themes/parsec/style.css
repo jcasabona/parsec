@@ -209,7 +209,7 @@ abbr, acronym {
   cursor: help; }
 
 mark, ins {
-  background: #226e6c;
+  background: #006776;
   text-decoration: none; }
 
 sup,
@@ -443,7 +443,7 @@ big {
 3.0 Elements
 --------------------------------------------------------------*/
 hr {
-  background-color: #ed7918;
+  background-color: #F16900;
   border: 0;
   height: 1px;
   margin-bottom: 1.5em; }
@@ -503,9 +503,9 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"] {
   border: 1px solid;
-  border-color: #9E4E0C;
+  border-color: #C05300;
   border-radius: 3px;
-  background: #004949;
+  background: #FD429E;
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);
   color: rgba(0, 0, 0, 0.8);
   cursor: pointer;
@@ -522,7 +522,7 @@ button:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
-  border-color: #cd6510;
+  border-color: #f36900;
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 15px 17px rgba(255, 255, 255, 0.8), inset 0 -5px 12px rgba(0, 0, 0, 0.02); }
 
 button:focus,
@@ -533,7 +533,7 @@ button:active,
 input[type="button"]:active,
 input[type="reset"]:active,
 input[type="submit"]:active {
-  border-color: #cd6510;
+  border-color: #f36900;
   box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15); }
 
 input[type="checkbox"],
@@ -615,47 +615,51 @@ body {
   color: #FFFFFF;
   margin: 0 auto; }
 
-.site-header {
-  background: url("/wp-content/themes/parsec/assets/img/city-sign.jpg") no-repeat;
-  background-attachment: fixed;
-  background-position: 50%;
+.site-header .impact-img {
+  background: url("/wp-content/themes/parsec/assets/img/erinandjoe-sm.jpg") center no-repeat;
   -webkit-background-size: cover;
   background-size: cover;
-  min-height: 200px; }
+  margin: 0 auto;
+  min-height: 300px;
+  text-align: center; }
   @media (min-width: 30em) {
-    .site-header {
+    .site-header .impact-img {
+      background-image: url("/wp-content/themes/parsec/assets/img/erinandjoe.jpg");
+      background-position: center;
       min-height: auto;
+      height: 470px;
+      max-width: 2000px; } }
+  @media (min-width: 40em) {
+    .site-header .impact-img {
       height: 570px; } }
-  @media (min-width: 77.5625em) {
-    .site-header {
-      background-position: top center;
-      -webkit-background-size: contain;
-      background-size: contain; } }
-  .site-header .site-branding {
-    padding: 30px; }
-    .site-header .site-branding h1 {
-      line-height: 1em;
-      margin: 0;
-      padding: 0; }
-      .site-header .site-branding h1 a {
-        font-weight: normal;
-        text-decoration: none; }
-      @media (min-width: 30em) {
-        .site-header .site-branding h1 img {
-          max-height: 300px; } }
-  .site-header i {
-    font-size: 3em;
-    color: #FFFFFF;
-    padding: 0 7.5px;
-    text-align: right;
-    vertical-align: middle; }
-    .site-header i:hover, .site-header i:focus {
-      cursor: pointer; }
+  @media (min-width: 60em) {
+    .site-header .impact-img {
+      height: 770px; } }
+.site-header .site-branding {
+  padding: 30px; }
+  .site-header .site-branding h1 {
+    line-height: 1em;
+    margin: 0;
+    padding: 0; }
+    .site-header .site-branding h1 a {
+      font-weight: normal;
+      text-decoration: none; }
+    @media (min-width: 30em) {
+      .site-header .site-branding h1 img {
+        max-height: 300px; } }
+.site-header i {
+  font-size: 3em;
+  color: #FFFFFF;
+  padding: 0 7.5px;
+  text-align: right;
+  vertical-align: middle; }
+  .site-header i:hover, .site-header i:focus {
+    cursor: pointer; }
 
 .site-footer a:link, .site-footer a:visited {
-  color: #ed7918; }
+  color: #F16900; }
 .site-footer a:hover, .site-footer a:focus, .site-footer a:active {
-  color: #9E4E0C; }
+  color: #C05300; }
 
 .content-area {
   margin: 0 auto;
@@ -703,15 +707,15 @@ aside {
 5.1 Links
 --------------------------------------------------------------*/
 a:link, a:visited {
-  color: #9E4E0C; }
+  color: #C05300; }
 a:hover, a:focus, a:active {
-  color: #ed7918; }
+  color: #F16900; }
 
 /*--------------------------------------------------------------
 5.2 Menus
 --------------------------------------------------------------*/
 .main-navigation {
-  background: #226e6c;
+  background: #006776;
   text-align: right; }
   .main-navigation ul {
     display: block;
@@ -723,6 +727,9 @@ a:hover, a:focus, a:active {
       display: inline-block;
       height: 0%;
       width: 100%; }
+    @media (min-width: 30em) {
+      .main-navigation ul {
+        text-align: right; } }
   .main-navigation li {
     display: inline-block; }
     .main-navigation li a {
@@ -732,6 +739,16 @@ a:hover, a:focus, a:active {
       margin: 10px;
       padding: 7.5px;
       text-decoration: none; }
+  .main-navigation .site-title {
+    float: left;
+    line-height: 1em;
+    padding: 0 0 0 7.5px; }
+    .main-navigation .site-title a {
+      text-decoration: none; }
+      .main-navigation .site-title a:link, .main-navigation .site-title a:visited {
+        color: #FFFFFF; }
+      .main-navigation .site-title a:hover, .main-navigation .site-title a:focus, .main-navigation .site-title a:active {
+        color: #FD429E; }
 
 /* Small menu */
 .menu-toggle {
@@ -840,15 +857,15 @@ a:hover, a:focus, a:active {
 9.0 Widgets
 --------------------------------------------------------------*/
 .widget {
-  background: rgba(34, 110, 108, 0.4);
+  background: rgba(0, 103, 118, 0.4);
   color: #FFFFFF;
   margin: 10px 0;
   padding: 15px;
   /* Make sure select elements fit in widgets */ }
   .widget a:link, .widget a:visited {
-    color: #001616; }
+    color: #fc1084; }
   .widget a:hover, .widget a:focus, .widget a:active {
-    color: #ed7918; }
+    color: #F16900; }
   .widget ul {
     margin: 0;
     padding: 0; }
@@ -862,7 +879,7 @@ a:hover, a:focus, a:active {
   .widget select {
     max-width: 100%; }
   section.event-info .widget {
-    background: #9E4E0C;
+    background: #C05300;
     border-bottom: 1px solid #FFFFFF;
     color: #FFFFFF;
     font-size: 2rem;
@@ -876,13 +893,13 @@ a:hover, a:focus, a:active {
     section.event-info .widget a:link, section.event-info .widget a:visited {
       color: #FFFFFF; }
     section.event-info .widget a:hover, section.event-info .widget a:focus, section.event-info .widget a:active {
-      color: #ed7918; }
+      color: #F16900; }
     section.event-info .widget i {
       font-size: 6rem;
       font-size: 60px;
       font-weight: normal; }
     section.event-info .widget .widget-title {
-      background: #9E4E0C;
+      background: #C05300;
       padding: 0;
       margin: 0; }
     @media (min-width: 40em) {
@@ -918,7 +935,7 @@ a:hover, a:focus, a:active {
   .hentry .entry-content {
     padding: 0 15px; }
   .hentry .entry-footer {
-    background: #9E4E0C;
+    background: #C05300;
     color: #FFFFFF;
     padding: 15px; }
     .hentry .entry-footer a:link, .hentry .entry-footer a:visited {
@@ -968,7 +985,7 @@ aside.footer-widgets {
         width: 24%; } }
 
 section.event-info {
-  background: #9E4E0C; }
+  background: #C05300; }
 
 /*--------------------------------------------------------------
 10.3 Comments
@@ -979,10 +996,10 @@ section.event-info {
   .comment-list li {
     background: #FFFFFF;
     padding: 15px;
-    border-bottom: 3px solid #9E4E0C;
+    border-bottom: 3px solid #C05300;
     margin-bottom: 10px; }
     .comment-list li:nth-child(even) {
-      border-bottom: 3px solid #226e6c; }
+      border-bottom: 3px solid #006776; }
     .comment-list li .comment-meta {
       margin-bottom: 7.5px;
       padding: 7.5px; }

@@ -14,6 +14,10 @@
 			height: 0%;
 			width: 100%;
 		}
+
+		@include breakpoint( $breakpoint-1 ) {
+			text-align: right;
+		}
 	}
 
 	li {
@@ -38,6 +42,17 @@
 
 	}
 
+	}
+
+	.site-title {
+		float: left;
+		line-height: 1em;
+		padding: 0 0 0 $padding-less;
+
+		 a {
+			@include link-colors( $color-white, $color-accent );
+			text-decoration: none;
+		}
 	}
 
 }

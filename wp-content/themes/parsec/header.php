@@ -27,16 +27,11 @@ global $p_svg_path;
 
 	<header id="masthead" class="site-header clearfix" role="banner">
 		<nav id="site-navigation" class="main-navigation" role="navigation">
+			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img class="logo" src="<?php echo trailingslashit( get_stylesheet_directory_uri() ); ?>assets/img/logo-wordmark.png"alt="<?php bloginfo( 'name' ); ?>" /></a></h1>
 			<i class="icon-align-justify menu-toggle" aria-controls="menu" aria-expanded="false"></i>
 			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 		</nav><!-- #site-navigation -->
 
-		<div class="site-branding">
-			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img class="logo" src="<?php echo trailingslashit( get_stylesheet_directory_uri() ); ?>assets/img/logo-wordmark.png"alt="<?php bloginfo( 'name' ); ?>" /></a></h1>
-		</div><!-- .site-branding -->
-
+		<div class="impact-img"></div>
 	</header><!-- #masthead -->
-
-	<?php get_sidebar( 'event-info' ); ?>
-
 	<div id="content" class="site-content"> <?php //here is where I will put a class for choosing the layout ?>
