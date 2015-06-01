@@ -173,6 +173,22 @@ h5 {
 h6 {
   font-size: 0.5em; }
 
+h2.countdown {
+  background: #C05300;
+  color: #FFFFFF;
+  font-weight: bold;
+  padding: 0;
+  text-align: center;
+  text-transform: uppercase; }
+  @media (min-width: 40em) {
+    h2.countdown {
+      color: #000000;
+      font-size: 4em; }
+      h2.countdown span {
+        background: #FFFFFF;
+        border: 3px solid #C05300;
+        padding: 30px; } }
+
 p {
   margin-bottom: 1.5em; }
 
@@ -477,6 +493,18 @@ img {
 figure {
   margin: 0; }
 
+.google-map {
+  position: relative;
+  padding-bottom: 50%;
+  height: 0;
+  overflow: hidden; }
+  .google-map iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important; }
+
 table {
   margin: 0 0 1.5em;
   width: 100%; }
@@ -611,7 +639,7 @@ body {
   margin: 0 auto; }
 
 .site-header, .site-footer {
-  background: #333333;
+  background: #006776;
   color: #FFFFFF;
   margin: 0 auto; }
 
@@ -656,10 +684,12 @@ body {
   .site-header i:hover, .site-header i:focus {
     cursor: pointer; }
 
-.site-footer a:link, .site-footer a:visited {
-  color: #F16900; }
-.site-footer a:hover, .site-footer a:focus, .site-footer a:active {
-  color: #C05300; }
+.site-footer {
+  background: #333333; }
+  .site-footer a:link, .site-footer a:visited {
+    color: #F16900; }
+  .site-footer a:hover, .site-footer a:focus, .site-footer a:active {
+    color: #C05300; }
 
 .content-area {
   margin: 0 auto;
@@ -960,6 +990,66 @@ a:hover, a:focus, a:active {
   clear: both;
   margin: 0 0 1.5em; }
 
+.date-time,
+.share {
+  text-align: center;
+  text-transform: small-caps; }
+  .date-time h3,
+  .share h3 {
+    font-size: 3em;
+    font-weight: bold; }
+  .date-time h4.time,
+  .share h4.time {
+    font-size: 2em;
+    font-weight: bold; }
+  .date-time h5,
+  .share h5 {
+    font-size: 1.7em; }
+  @media (min-width: 60em) {
+    .date-time h3,
+    .share h3 {
+      font-size: 5em; }
+    .date-time h4.time,
+    .share h4.time {
+      font-size: 4.5em; }
+    .date-time h5,
+    .share h5 {
+      font-size: 3em; } }
+
+.location p {
+  padding: 15px;
+  text-align: center; }
+.location iframe {
+  padding: 15px 15px 0; }
+
+.panels div {
+  background-position: 50%;
+  background-repeat: no-repeat;
+  display: inline-block;
+  margin: 15px 0;
+  width: 33%; }
+  .panels div.our-story {
+    background-image: url("/wp-content/themes/parsec/assets/img/our-story.jpg"); }
+  .panels div.rsvp {
+    background-image: url("/wp-content/themes/parsec/assets/img/rsvp.jpg"); }
+  .panels div.registry {
+    background-image: url("/wp-content/themes/parsec/assets/img/registry.jpg"); }
+.panels a.panel {
+  background: rgba(255, 255, 255, 0.6);
+  display: flex;
+  font-size: 2.5em;
+  font-weight: bold;
+  flex-direction: column;
+  height: 550px;
+  justify-content: center;
+  padding: 30px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: background 0.5s ease; }
+  .panels a.panel:hover {
+    background: rgba(255, 255, 255, 0); }
+
 /*--------------------------------------------------------------
 10.2 Asides
 --------------------------------------------------------------*/
@@ -986,6 +1076,34 @@ aside.footer-widgets {
 
 section.event-info {
   background: #C05300; }
+
+aside.box-half {
+  margin: 10px 0; }
+  aside.box-half h2 {
+    background: #006776;
+    color: #FFFFFF;
+    margin: 0;
+    padding: 15px;
+    text-align: left;
+    text-transform: uppercase; }
+  @media (min-width: 40em) {
+    aside.box-half {
+      display: inline-block;
+      vertical-align: top;
+      width: 47%; }
+      aside.box-half:first-child {
+        margin-right: 10px; }
+      aside.box-half:last-child {
+        margin-left: 10px; } }
+  @media (min-width: 50em) {
+    aside.box-half {
+      width: 48%; } }
+  aside.box-half .widget {
+    background: #FFFFFF;
+    border: 1px solid #999999;
+    color: #000000;
+    padding: 0;
+    margin: 0 0 20px; }
 
 /*--------------------------------------------------------------
 10.3 Comments

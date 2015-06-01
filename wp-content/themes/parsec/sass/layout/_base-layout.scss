@@ -15,7 +15,7 @@ body {
 
 
 .site-header, .site-footer {
-	background: $color-primary;
+	background: $color-accent-two;
 	color: $color-white;
 	margin: $margin-center;
 }
@@ -83,6 +83,7 @@ body {
 
 
 .site-footer {
+	background: $color-primary;
 	a {
 		@include link-colors( $color-accent-three, $color-secondary );
 	}

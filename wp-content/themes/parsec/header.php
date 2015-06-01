@@ -32,6 +32,8 @@ global $p_svg_path;
 			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 		</nav><!-- #site-navigation -->
 
-		<div class="impact-img"></div>
+		<div class="impact-img">
+		</div>
 	</header><!-- #masthead -->
+	<h2 class="countdown"><span>365 Days until the big day!</span></h2>
 	<div id="content" class="site-content"> <?php //here is where I will put a class for choosing the layout ?>

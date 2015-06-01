@@ -50,3 +50,93 @@
 	clear: both;
 	margin: 0 0 1.5em;
 }
+
+//Home Page
+.date-time,
+.share {
+	text-align: center;
+	text-transform: small-caps;
+
+	h3 {
+		font-size: $font-size-heading-base;
+		font-weight: bold;
+	}
+
+	h4.time {
+		font-size: 2em;
+		font-weight: bold;
+	}
+
+	h5 {
+		font-size: 1.7em;
+	}
+
+	@include breakpoint( $breakpoint-4 ) {
+		h3 {
+			font-size: $font-size-huge + 0.5;
+		}
+
+		h4.time {
+			font-size: $font-size-huge;
+		}
+
+		h5 {
+			font-size: $font-size-heading-base;
+		}
+	}
+}
+
+.location {
+	p {
+		padding: $base-padding;
+		text-align: center;
+	}
+
+	iframe {
+		padding: $base-padding $base-padding 0;
+	}
+
+}
+
+.panels {
+
+	div {
+		background-position: 50%;
+		background-repeat: no-repeat;
+		display: inline-block;
+		margin: $base-padding 0;
+		width: 33%;
+
+		&.our-story {
+			background-image: url( $asset-path + 'img/our-story.jpg' );
+		}
+
+		&.rsvp {
+			background-image: url( $asset-path + 'img/rsvp.jpg' );
+		}
+
+		&.registry {
+			background-image: url( $asset-path + 'img/registry.jpg' );
+		}
+	}
+
+	a.panel {
+		background: rgba( $color-white, 0.6 );
+		display: flex;
+		font-size: $font-size-heading-base - 0.5;
+		font-weight: bold;
+		flex-direction: column;
+		height: 550px;
+		justify-content: center;
+		padding: $padding-more;
+		text-align: center;
+		text-decoration: none;
+		text-transform: uppercase;
+		transition: background 0.5s ease;
+
+		&:hover {
+			background: rgba( $color-white, 0 );
+		}
+
+	}
+}
