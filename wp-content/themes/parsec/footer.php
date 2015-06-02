@@ -10,6 +10,20 @@
 
 	</div><!-- #content -->
 
+	<section class="panels">
+			<div class="our-story">
+					<a class="panel" href="<?php echo parsec_panel_link( 'wedding_story_page' ); ?>">Our Story</a>
+			</div>
+
+			<div class="rsvp">
+				<a class="panel" href="<?php echo parsec_panel_link( 'wedding_rsvp_page' ); ?>">RSVP</a>
+			</div>
+
+			<div class="registry">
+				<a class="panel" href="<?php echo parsec_panel_link( 'wedding_gifts_page' ); ?>">Gifts</a>
+			</div>
+	</section>
+
 	<footer id="colophon" class="site-footer" role="contentinfo">
 
 		<aside class="footer-widgets site-info contain">

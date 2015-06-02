@@ -260,3 +260,38 @@ function parsec_category_transient_flusher() {
 }
 add_action( 'edit_category', 'parsec_category_transient_flusher' );
 add_action( 'save_post',     'parsec_category_transient_flusher' );
+
+
+
+function parsec_panel_link( $option ) {
+	return ( get_option( $option ) ) ? esc_attr( get_option( $option ) ) : "#";
+}
+
+function parsec_final_countdown() {
+	$today = new DateTime( 'now', new DateTimeZone('America/New_York') );
+	$wedding = new DateTime( esc_attr( get_option( 'wedding_date' ) ) );
+
+	$date_diff= $today->diff( $wedding );
+
+	$its_today = ( $date_diff->invert && $date_diff->days == 0 );
+	$its_tomorrow = ( ! $date_diff->invert && $date_diff->days == 0 );
+	$it_happened = $date_diff->invert && $date_diff->days > 0;
+
+	if ( $its_today ) {
+		return "It's Today!";
+	} else if ( $its_tomorrow ) {
+		return "It's Tomorrow!";
+	} else if ( $it_happened ) {
+		return "We are Married!!";
+	}
+
+	//$time_left = $date_diff->h + $date_diff->i + $date_diff->s;
+	//$days_left = ( $time_left > 1 ) ? $date_diff->days + 1 : $date_diff->days;
+
+	return $date_diff->days . " Days Away";
+}
+
+function parsec_google_map( $address ){
+		$format = '<div class="google-map"><iframe src="https://www.google.com/maps?q=%s&output=embed" frameborder="0" style="border:0"></iframe></div>';
+		return sprintf( $format, esc_attr( $address ) );
+}

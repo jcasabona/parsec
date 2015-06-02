@@ -27,7 +27,7 @@ global $p_svg_path;
 
 	<header id="masthead" class="site-header clearfix" role="banner">
 		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img class="logo" src="<?php echo trailingslashit( get_stylesheet_directory_uri() ); ?>assets/img/logo-wordmark.png"alt="<?php bloginfo( 'name' ); ?>" /></a></h1>
+			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 			<i class="icon-align-justify menu-toggle" aria-controls="menu" aria-expanded="false"></i>
 			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 		</nav><!-- #site-navigation -->
@@ -35,5 +35,5 @@ global $p_svg_path;
 		<div class="impact-img">
 		</div>
 	</header><!-- #masthead -->
-	<h2 class="countdown"><span>365 Days until the big day!</span></h2>
+	<h2 class="countdown"><span><?php echo parsec_final_countdown(); ?></span></h2>
 	<div id="content" class="site-content"> <?php //here is where I will put a class for choosing the layout ?>

@@ -2,6 +2,10 @@
 	background: $color-accent-two;
 	text-align: right;
 
+	@include breakpoint( $breakpoint-srsly ) {
+		background: $color-secondary;
+	}
+
 	ul {
 		display: block;
 		list-style: none;

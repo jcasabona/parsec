@@ -99,13 +99,24 @@
 }
 
 .panels {
+	margin: 0 auto -6px;
+	text-align: center;
 
 	div {
 		background-position: 50%;
 		background-repeat: no-repeat;
-		display: inline-block;
-		margin: $base-padding 0;
-		width: 33%;
+		margin: 2px 0 0;
+
+
+		@include breakpoint($breakpoint-1) {
+			display: inline-block;
+			margin: $base-margin 0 0;
+			width: 32.5%;
+		}
+
+		@include breakpoint($breakpoint-2) {
+			width: 33%;
+		}
 
 		&.our-story {
 			background-image: url( $asset-path + 'img/our-story.jpg' );
@@ -126,13 +137,17 @@
 		font-size: $font-size-heading-base - 0.5;
 		font-weight: bold;
 		flex-direction: column;
-		height: 550px;
+		height: 250px;
 		justify-content: center;
-		padding: $padding-more;
+		padding: $padding-more 0;
 		text-align: center;
 		text-decoration: none;
 		text-transform: uppercase;
 		transition: background 0.5s ease;
+
+		@include breakpoint( $breakpoint-1 ) {
+			height: 550px;
+		}
 
 		&:hover {
 			background: rgba( $color-white, 0 );
