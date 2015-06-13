@@ -1036,6 +1036,7 @@ a:hover, a:focus, a:active {
       .panels div {
         display: inline-block;
         margin: 10px 0 0;
+        vertical-align: top;
         width: 32.5%; } }
     @media (min-width: 40em) {
       .panels div {
