@@ -3,6 +3,7 @@
 *.log
 .htaccess
 /index.php
+local-config.php
 license.txt
 readme.html
 sitemap.xml

@@ -99,7 +99,7 @@
 }
 
 .panels {
-	margin: 0 auto -6px;
+	margin: 0 auto;
 	text-align: center;
 
 	div {
@@ -133,11 +133,17 @@
 
 	a.panel {
 		background: rgba( $color-white, 0.6 );
+		display: -ms-flexbox;      /* TWEENER - IE 10 */
+		display: -webkit-flex;
 		display: flex;
 		font-size: $font-size-heading-base - 0.5;
 		font-weight: bold;
+		-webkit-flex-direction: column;
 		flex-direction: column;
 		height: 250px;
+		-ms-flex-pack: center;
+		-ms-justify-content: center;
+		-webkit-justify-content: center;
 		justify-content: center;
 		padding: $padding-more 0;
 		text-align: center;
