@@ -533,7 +533,7 @@ input[type="submit"] {
   border: 1px solid;
   border-color: #C05300;
   border-radius: 3px;
-  background: #FD429E;
+  background: #FF6946;
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);
   color: rgba(0, 0, 0, 0.8);
   cursor: pointer;
@@ -737,7 +737,7 @@ aside {
 5.1 Links
 --------------------------------------------------------------*/
 a:link, a:visited {
-  color: #C05300; }
+  color: #FF6946; }
 a:hover, a:focus, a:active {
   color: #F16900; }
 
@@ -781,7 +781,7 @@ a:hover, a:focus, a:active {
       .main-navigation .site-title a:link, .main-navigation .site-title a:visited {
         color: #FFFFFF; }
       .main-navigation .site-title a:hover, .main-navigation .site-title a:focus, .main-navigation .site-title a:active {
-        color: #FD429E; }
+        color: #FF6946; }
 
 /* Small menu */
 .menu-toggle {
@@ -896,7 +896,7 @@ a:hover, a:focus, a:active {
   padding: 15px;
   /* Make sure select elements fit in widgets */ }
   .widget a:link, .widget a:visited {
-    color: #fc1084; }
+    color: #ff4013; }
   .widget a:hover, .widget a:focus, .widget a:active {
     color: #F16900; }
   .widget ul {
@@ -1072,6 +1072,15 @@ a:hover, a:focus, a:active {
         height: 550px; } }
     .panels a.panel:hover {
       background: rgba(255, 255, 255, 0); }
+
+.wedding-party .bio-photo img {
+  border: 2px #FF6946 solid;
+  border-radius: 50%;
+  max-width: 200px; }
+.wedding-party .bio-info {
+  padding-top: 15px; }
+  .wedding-party .bio-info.elevate {
+    background: rgba(0, 103, 118, 0.4); }
 
 /*--------------------------------------------------------------
 10.2 Asides

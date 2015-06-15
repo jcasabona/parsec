@@ -1,6 +1,6 @@
 $color-primary: #333333; //dark grey
 $color-secondary: #C05300; //burnt orange
-$color-accent: #FD429E; //pink
+$color-accent: #FF6946; //pink
 $color-accent-dark: #540029; //dark pink
 $color-accent-two: #006776; //teal
 $color-accent-three: #F16900; //light orange
@@ -18,8 +18,8 @@ $color-background-ins: $color-accent-two;
 $color-text-screen: $color-primary;
 $color-text-input: $color-gray-base;
 $color-text-input-focus: darken($color-gray-base, 10%);
-$color-link: $color-secondary;
-$color-link-visited: $color-secondary;
+$color-link: $color-accent;
+$color-link-visited: $color-accent;
 $color-link-hover: $color-accent-three;
 $color-text-main: $color-primary;
 

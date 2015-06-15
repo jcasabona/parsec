@@ -162,3 +162,19 @@
 
 	}
 }
+
+.wedding-party {
+	.bio-photo img{
+		border: 2px $color-accent solid;
+		border-radius: 50%;
+		max-width: 200px;
+	}
+
+	.bio-info {
+		padding-top: 15px;
+
+		&.elevate {
+			background: rgba( $color-accent-two, 0.4 );
+		}
+	}
+}
