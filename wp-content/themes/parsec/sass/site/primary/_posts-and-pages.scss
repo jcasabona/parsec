@@ -164,17 +164,91 @@
 }
 
 .wedding-party {
-	.bio-photo img{
-		border: 2px $color-accent solid;
-		border-radius: 50%;
-		max-width: 200px;
+
+	.single-wedding-party & {
+		margin: $padding-more auto;
+
+
+	}
+
+	.bio {
+		@include clearfix();
+		padding: $base-padding;
+		width: 100%;
+
+		@include breakpoint( $breakpoint-2 + 4.875 ) {
+			display: inline-block;
+			vertical-align: top;
+			width: 49%;
+		}
+
+		@include breakpoint( $breakpoint-3 ) {
+			width: 32%;
+		}
+	}
+
+	.bio-photo {
+		float: left;
+		width: 35%;
+
+		img{
+			border: 2px $color-accent solid;
+			border-radius: 50%;
+		}
+
+		@include breakpoint-tweener( $breakpoint-3, $breakpoint-5 - 1 ) {
+			float: none;
+			margin: 0 auto;
+			width: 60%;
+		}
+
+		.single-wedding-party & {
+			width: 40%;
+
+			img {
+				border: 0;
+				border-radius: 0;
+				max-width: 100%;
+			}
+
+		}
 	}
 
 	.bio-info {
-		padding-top: 15px;
+		margin-left: 40%;
 
-		&.elevate {
-			background: rgba( $color-accent-two, 0.4 );
+		@include breakpoint-tweener( $breakpoint-3, $breakpoint-5 - 1 ) {
+			margin-left: 0;
+			text-align: center;
+		}
+	}
+
+	.elevate {
+		&.maid-of-honor {
+			background: rgba( $color-accent-three, 0.1 );
+		}
+
+		&.best-man {
+			background: rgba( $color-accent-two, 0.1 );
+		}
+
+		@include breakpoint( $breakpoint-3 ) {
+			width: 49%;
+		}
+
+		//undo some stuff.
+		.bio-info {
+			@include breakpoint( $breakpoint-4 ) {
+				margin-left: 43%;
+				text-align: left;
+			}
+		}
+
+		.bio-photo {
+			@include breakpoint( $breakpoint-4 ) {
+				float: left;
+				width: 38%;
+			}
 		}
 	}
 }

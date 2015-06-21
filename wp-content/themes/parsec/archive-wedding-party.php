@@ -15,19 +15,19 @@ get_header();
 			if ( class_exists( 'Wedding_Party' ) ) :
 			while ( have_posts() ) : the_post();
 				$party_member = new Wedding_Party( $post );
-				$classes = 'bio wedding-party clear';
-				$classes .= ( $party_member->is_important_role() ) ? ' elevate' : '';
+				$classes = ( $party_member->is_important_role() ) ? $party_member->get_classes( 'bio group elevate' ) : $party_member->get_classes( 'bio group' );
 			?>
 
 				<div class="<?php echo $classes; ?>">
-					<div class="bio-photo alignleft">
-							<?php echo $party_member->get_head_shot(); ?>
+					<div class="bio-photo">
+							<?php echo $party_member->get_head_shot( 'wedding-party-photo' ); ?>
 				</div>
 				<div class="bio-info">
-						<h3><?php the_title(); ?></h3>
+						<h3><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h3>
 						<h4><?php echo $party_member->get_role(); ?></h4>
 						<h5><?php echo $party_member->get_relationship(); ?></h5>
 				</div>
+			</div>
 			<?php
 				endwhile;
 			endif;

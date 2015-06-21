@@ -14,6 +14,11 @@ Class Wedding_Party {
     return get_post_meta( $this->post_id, $field, true);
   }
 
+  private function get_sanitized_role() {
+    $role = $this->get_role();
+    return sanitize_title_with_dashes( $role );
+  }
+
   public function get_role() {
     return $this->get_field( 'role' );
   }
@@ -22,15 +27,32 @@ Class Wedding_Party {
     return $this->get_field( 'relationship' );
   }
 
-  public function get_head_shot() {
-    return get_the_post_thumbnail( $this->post_id, 'thumbnail' );
+  public function get_party( $uc = true ) {
+    if ( $uc ) {
+      return ucfirst( $this->get_field( 'party_side' ) );
+    }
+
+    return $this->get_field( 'party_side' );
+  }
+
+  public function get_head_shot( $size = 'thumbnail' ) {
+    return get_the_post_thumbnail( $this->post_id, $size );
   }
 
   public function is_important_role() {
-    $role = $this->get_role();
-    //standardize format
-    $role = strtolower( trim( str_replace( ' ', '-', $role ) ) );
-    return in_array( $role, $this->impt_roles );
+    return in_array( $this->get_sanitized_role(), $this->impt_roles );
   }
 
+  public function get_classes( $classes = '' ) {
+    $classes .= ( $this->is_important_role() ) ? ' important-role ' : '';
+    $classes .= $this->get_party( false ) . '-party ';
+    $classes .= $this->get_sanitized_role();
+
+    return trim( $classes );
+  }
+
+/* @TODO: Get Wedding Party Members: general private function
+ * get_party_members( $side = 'bride' ) then
+ * get_bridesmaids() & get_groomsmen()
+*/
 }

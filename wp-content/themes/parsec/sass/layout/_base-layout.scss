@@ -31,19 +31,30 @@ body {
 		text-align: center;
 
 		@include breakpoint( $breakpoint-1 ) {
-			background-image: url( $asset-path + 'img/erinandjoe.jpg' );
+			background-image: url( $asset-path + 'img/erinandjoe-med.jpg' );
 			background-position: center;
 			min-height: auto;
-			height: 470px;
-			max-width: 2000px;
+			height: 250px;
 		}
 
 		@include breakpoint( $breakpoint-2 ) {
-			height: 570px;
+			height: 350px;
+		}
+
+		@include breakpoint( $breakpoint-3 ) {
+			background-image: url( $asset-path + 'img/erinandjoe.jpg' );
 		}
 
 		@include breakpoint( $breakpoint-4 ) {
-			height: 770px;
+			height: 600px;
+		}
+
+		@include breakpoint( $breakpoint-5 ) {
+			height: 700px;
+		}
+
+		@include breakpoint( $breakpoint-srsly ) {
+			height: 800px;
 		}
 	}
 

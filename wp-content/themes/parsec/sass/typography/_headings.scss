@@ -13,23 +13,35 @@ $start: $font-size-heading-base;
   }
 
 
-	h2.countdown {
-		background: $color-secondary;
-		color: $color-white;
-		font-weight: bold;
-		padding: 0;
-		text-align: center;
-		text-transform: uppercase;
+	h2 {
 
+		&.big-header {
+			color: $color-accent-two;
+			font-size: $font-size-huge * 1.5;
+			font-variant: small-caps;
+			font-weight: bold;
+			margin: 0;
+			text-align: center;
+		}
 
-		@include breakpoint( $breakpoint-2 ) {
-			color: $color-black;
-			font-size: $font-size-heading-base + 1;
+		&.countdown {
+			background: $color-secondary;
+			color: $color-white;
+			font-weight: bold;
+			padding: 0;
+			text-align: center;
+			text-transform: uppercase;
 
-			span {
-				background: #FFFFFF;
-				border: 3px solid $color-secondary;
-				padding: $padding-more;
+			@include breakpoint( $breakpoint-2 ) {
+				color: $color-black;
+				font-size: $font-size-heading-base + 1;
+
+				span {
+					background: #FFFFFF;
+					border: 3px solid $color-secondary;
+					padding: $padding-more;
+				}
 			}
 		}
+
 	}

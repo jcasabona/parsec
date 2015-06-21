@@ -11,22 +11,15 @@ global $post;
 
 ?>
 
-	<div id="primary" class="content-area one-col">
-		<main id="main" class="site-main" role="main">
+	<div id="primary" class="content-area one-col wedding-party">
+		<main id="main" class="site-main clear" role="main">
 
 			<?php while ( have_posts() ) : the_post();
 
-				if ( class_exists( 'Wedding_Party' ) ) {
-					$party_member = new Wedding_Party( $post );
+			get_template_part( 'content', 'single-wedding-party' );
 
-
-				}
-
-			?>
-
-
-
-			<?php endwhile; // end of the loop. ?>
+			endwhile; // end of the loop.
+		?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

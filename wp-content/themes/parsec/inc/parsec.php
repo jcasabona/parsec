@@ -43,7 +43,7 @@ function parsec_get_featured_image( $html, $aid = null ){
 	return $img;
 }
 
-add_filter( 'post_thumbnail_html', 'parsec_get_featured_image' );
+//add_filter( 'post_thumbnail_html', 'parsec_get_featured_image' );
 
 //@TODO: Revisit this function
 function parsec_responsive_image(  $atts, $content=null ){
