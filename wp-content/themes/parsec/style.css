@@ -46,6 +46,12 @@ and Blueprint http://www.blueprintcss.org/
 --------------------------------------------------------------*/
 /*** Breakpoints ***/
 /** General Variables **/
+/* Extensible Classes */
+.alert, .comment-list li .comment-awaiting-moderation {
+  color: #880000;
+  font-weight: bold;
+  font-style: italic; }
+
 /*--------------------------------------------------------------
 1.0 Reset
 --------------------------------------------------------------*/
@@ -138,7 +144,7 @@ button,
 input,
 select,
 textarea {
-  color: #444c49;
+  color: #333333;
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 200;
   font-size: 16px;
@@ -183,7 +189,7 @@ address {
   margin: 0 0 1.5em; }
 
 pre {
-  background: #444c49;
+  background: #333333;
   font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
   font-size: 15px;
   font-size: 1.5rem;
@@ -203,7 +209,7 @@ abbr, acronym {
   cursor: help; }
 
 mark, ins {
-  background: #c3e5d1;
+  background: #226e6c;
   text-decoration: none; }
 
 sup,
@@ -389,7 +395,7 @@ big {
 3.0 Elements
 --------------------------------------------------------------*/
 hr {
-  background-color: #d0c79c;
+  background-color: #ed7918;
   border: 0;
   height: 1px;
   margin-bottom: 1.5em; }
@@ -449,9 +455,9 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"] {
   border: 1px solid;
-  border-color: #6d7063;
+  border-color: #9E4E0C;
   border-radius: 3px;
-  background: #85bdbb;
+  background: #004949;
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);
   color: rgba(0, 0, 0, 0.8);
   cursor: pointer;
@@ -468,7 +474,7 @@ button:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
-  border-color: #878b7b;
+  border-color: #cd6510;
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 15px 17px rgba(255, 255, 255, 0.8), inset 0 -5px 12px rgba(0, 0, 0, 0.02); }
 
 button:focus,
@@ -479,7 +485,7 @@ button:active,
 input[type="button"]:active,
 input[type="reset"]:active,
 input[type="submit"]:active {
-  border-color: #878b7b;
+  border-color: #cd6510;
   box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15); }
 
 input[type="checkbox"],
@@ -539,7 +545,7 @@ textarea {
 4.5 Base Layout
 --------------------------------------------------------------*/
 body {
-  background: #444c49; }
+  background: #333333; }
 
 .site {
   max-width: 100%;
@@ -557,17 +563,23 @@ body {
   margin: 0 auto; }
 
 .site-header, .site-footer {
-  background: #444c49;
+  background: #333333;
   color: #FFFFFF;
   margin: 0 auto; }
 
 .site-header {
-  padding: 15px; }
+  background: url("/wp-content/themes/parsec/assets/img/city-sign.jpg");
+  background-attachment: fixed;
+  background-position: 50%;
+  -webkit-background-size: cover;
+  background-size: cover;
+  min-height: 200px; }
+  @media (min-width: 30em) {
+    .site-header {
+      min-height: auto;
+      height: 570px; } }
   .site-header .site-branding {
-    float: left; }
-    @media (min-width: 30em) and (max-width: 49em) {
-      .site-header .site-branding {
-        float: none; } }
+    padding: 30px; }
     .site-header .site-branding h1 {
       line-height: 1em;
       margin: 0;
@@ -575,25 +587,41 @@ body {
       .site-header .site-branding h1 a {
         font-weight: normal;
         text-decoration: none; }
+      @media (min-width: 30em) {
+        .site-header .site-branding h1 img {
+          max-height: 300px; } }
   .site-header svg {
     height: 3em;
     vertical-align: middle; }
     .site-header svg:hover, .site-header svg:focus {
       cursor: pointer; }
 
+.site-footer a:link, .site-footer a:visited {
+  color: #ed7918; }
+.site-footer a:hover, .site-footer a:focus, .site-footer a:active {
+  color: #9E4E0C; }
+
 .content-area {
   margin: 0 auto;
   max-width: 95%;
-  padding: 30px; }
+  padding: 30px 0 7.5px; }
   @media (min-width: 40em) {
     .content-area {
+      display: inline-block;
+      padding: 30px;
       width: 60%;
       vertical-align: top; } }
   @media (min-width: 50em) {
     .content-area {
-      width: 65%; } }
+      width: 69%; } }
+  .content-area.one-col {
+    display: block;
+    width: 95%; }
+    @media (min-width: 50em) {
+      .content-area.one-col {
+        width: 85%; } }
 
-.contain, .main-navigation {
+.contain {
   margin: 0 auto;
   max-width: 1300px; }
 
@@ -603,13 +631,14 @@ aside {
   @media (min-width: 40em) {
     aside {
       display: inline-block;
+      padding-top: 30px;
       width: 36%;
       vertical-align: top; } }
   @media (min-width: 50em) {
     aside {
       display: inline-block;
       vertical-align: top;
-      width: 24%; } }
+      width: 30%; } }
 
 /*--------------------------------------------------------------
 5.0 Navigation
@@ -617,22 +646,19 @@ aside {
 /*--------------------------------------------------------------
 5.1 Links
 --------------------------------------------------------------*/
-a {
-  color: #85bdbb; }
-  a:visited {
-    color: #d0c79c; }
-  a:hover, a:focus, a:active {
-    color: #56a09d; }
+a:link, a:visited {
+  color: #9E4E0C; }
+a:hover, a:focus, a:active {
+  color: #ed7918; }
 
 /*--------------------------------------------------------------
 5.2 Menus
 --------------------------------------------------------------*/
 .main-navigation {
-  display: block; }
-  @media (min-width: 40em) {
-    .main-navigation {
-      float: right; } }
+  background: #226e6c;
+  text-align: right; }
   .main-navigation ul {
+    display: block;
     list-style: none;
     margin: 0;
     padding-left: 0;
@@ -658,8 +684,7 @@ a {
 @media (max-width: 30em) {
   .menu-toggle,
   .main-navigation.toggled .nav-menu {
-    display: block;
-    float: right; }
+    display: inline-block; }
 
   .main-navigation ul {
     display: none; } }
@@ -697,7 +722,7 @@ a {
     border-radius: 3px;
     box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
     clip: auto !important;
-    color: #444c49;
+    color: #333333;
     display: block;
     font-size: 14px;
     font-size: 1.4rem;
@@ -761,8 +786,12 @@ a {
 .widget {
   background: #FFFFFF;
   margin: 10px 0;
-  padding: 30px;
   /* Make sure select elements fit in widgets */ }
+  .widget .widget-title {
+    background: #226e6c;
+    color: #FFFFFF;
+    padding: 15px;
+    margin-bottom: 10px; }
   @media (min-width: 40em) {
     .widget:first-child {
       margin-top: 0; } }
@@ -792,8 +821,13 @@ a {
   .hentry .entry-content {
     padding: 0 15px; }
   .hentry .entry-footer {
-    background: #d9d9d9;
+    background: #9E4E0C;
+    color: #FFFFFF;
     padding: 15px; }
+    .hentry .entry-footer a:link, .hentry .entry-footer a:visited {
+      color: #FFFFFF; }
+    .hentry .entry-footer a:hover, .hentry .entry-footer a:focus, .hentry .entry-footer a:active {
+      color: #cccccc; }
 
 .byline,
 .updated:not(.published) {
@@ -839,6 +873,23 @@ aside.footer-widgets {
 /*--------------------------------------------------------------
 10.3 Comments
 --------------------------------------------------------------*/
+.comment-list {
+  list-style-type: none;
+  margin: 0; }
+  .comment-list li {
+    background: #FFFFFF;
+    padding: 15px;
+    border-bottom: 3px solid #9E4E0C;
+    margin-bottom: 10px; }
+    .comment-list li:nth-child(even) {
+      border-bottom: 3px solid #226e6c; }
+    .comment-list li .comment-meta {
+      margin-bottom: 7.5px;
+      padding: 7.5px; }
+      .comment-list li .comment-meta img {
+        float: left;
+        margin: 6px 10px 0 0; }
+
 .comment-content a {
   word-wrap: break-word; }
 

@@ -1,12 +1,9 @@
 .main-navigation {
-	@extend .contain;
-	display: block;
-
-	@include breakpoint( $breakpoint-2 ) {
-		float: right;
-	}
+	background: $color-accent-two;
+	text-align: right;
 
 	ul {
+		display: block;
 		list-style: none;
 		margin: 0;
 		padding-left: 0;
@@ -53,8 +50,7 @@
 @include breakpoint( $breakpoint-1, 'max' ) {
 	.menu-toggle,
 	.main-navigation.toggled .nav-menu {
-		display: block;
-		float: right;
+		display: inline-block;
 	}
 
 	.main-navigation ul {

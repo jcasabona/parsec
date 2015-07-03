@@ -4,6 +4,18 @@
 	font-size: $sizeValue + rem;
 }
 
+@mixin link-colors($link, $hover) {
+	&:link,
+	&:visited {
+		color: $link;
+	}
+	&:hover,
+	&:focus,
+	&:active {
+		color: $hover;
+	}
+}
+
 // Center block
 @mixin center-block {
 	display: block;
@@ -26,4 +38,11 @@
 	@media (#{$direction}-width: $breakpoint)  {
 		@content;
 	}
+}
+
+/* Extensible Classes */
+.alert {
+	color: #880000;
+	font-weight: bold;
+	font-style: italic;
 }

@@ -26,14 +26,15 @@ global $p_svg_path;
 	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'parsec' ); ?></a>
 
 	<header id="masthead" class="site-header clearfix" role="banner">
-		<div class="site-branding">
-			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-		</div><!-- .site-branding -->
-
 		<nav id="site-navigation" class="main-navigation" role="navigation">
 			<svg class="icon-align-justify menu-toggle" aria-controls="menu" aria-expanded="false"><use xlink:href="<?php echo $p_svg_path; ?>#icon-align-justify"></use></svg>
 			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 		</nav><!-- #site-navigation -->
+
+		<div class="site-branding">
+			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img class="logo" src="<?php echo trailingslashit( get_stylesheet_directory_uri() ); ?>assets/img/logo-wordmark.png"alt="<?php bloginfo( 'name' ); ?>" /></a></h1>
+		</div><!-- .site-branding -->
+
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content"> <?php //here is where I will put a class for choosing the layout ?>
