@@ -144,7 +144,7 @@ button,
 input,
 select,
 textarea {
-  color: #333333;
+  color: #444c49;
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 200;
   font-size: 16px;
@@ -189,7 +189,7 @@ address {
   margin: 0 0 1.5em; }
 
 pre {
-  background: #333333;
+  background: #444c49;
   font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
   font-size: 15px;
   font-size: 1.5rem;
@@ -209,7 +209,7 @@ abbr, acronym {
   cursor: help; }
 
 mark, ins {
-  background: #226e6c;
+  background: #c3e5d1;
   text-decoration: none; }
 
 sup,
@@ -395,7 +395,7 @@ big {
 3.0 Elements
 --------------------------------------------------------------*/
 hr {
-  background-color: #ed7918;
+  background-color: #d0c79c;
   border: 0;
   height: 1px;
   margin-bottom: 1.5em; }
@@ -455,9 +455,9 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"] {
   border: 1px solid;
-  border-color: #9E4E0C;
+  border-color: #6d7063;
   border-radius: 3px;
-  background: #004949;
+  background: #96c6c5;
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);
   color: rgba(0, 0, 0, 0.8);
   cursor: pointer;
@@ -474,7 +474,7 @@ button:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
-  border-color: #cd6510;
+  border-color: #878b7b;
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 15px 17px rgba(255, 255, 255, 0.8), inset 0 -5px 12px rgba(0, 0, 0, 0.02); }
 
 button:focus,
@@ -485,7 +485,7 @@ button:active,
 input[type="button"]:active,
 input[type="reset"]:active,
 input[type="submit"]:active {
-  border-color: #cd6510;
+  border-color: #878b7b;
   box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15); }
 
 input[type="checkbox"],
@@ -545,7 +545,7 @@ textarea {
 4.5 Base Layout
 --------------------------------------------------------------*/
 body {
-  background: #333333; }
+  background: #444c49; }
 
 .site {
   max-width: 100%;
@@ -563,21 +563,33 @@ body {
   margin: 0 auto; }
 
 .site-header, .site-footer {
-  background: #333333;
+  background: #444c49;
   color: #FFFFFF;
   margin: 0 auto; }
 
 .site-header {
-  background: url("/wp-content/themes/parsec/assets/img/city-sign.jpg");
-  background-attachment: fixed;
-  background-position: 50%;
+  background: url("/wp-content/themes/parsec/assets/img/banner-sm.jpg") center no-repeat;
   -webkit-background-size: cover;
   background-size: cover;
-  min-height: 200px; }
+  margin: 0 auto;
+  min-height: 60px;
+  text-align: center; }
   @media (min-width: 30em) {
     .site-header {
+      background-image: url("/wp-content/themes/parsec/assets/img/banner-med.jpg");
+      background-position: center;
       min-height: auto;
-      height: 570px; } }
+      height: 200px; } }
+  @media (min-width: 40em) {
+    .site-header {
+      height: 300px;
+      text-align: left; } }
+  @media (min-width: 50em) {
+    .site-header {
+      background-image: url("/wp-content/themes/parsec/assets/img/banner.jpg"); } }
+  @media (min-width: 60em) {
+    .site-header {
+      height: 450px; } }
   .site-header .site-branding {
     padding: 30px; }
     .site-header .site-branding h1 {
@@ -585,6 +597,7 @@ body {
       margin: 0;
       padding: 0; }
       .site-header .site-branding h1 a {
+        color: #FFFFFF;
         font-weight: normal;
         text-decoration: none; }
       @media (min-width: 30em) {
@@ -597,9 +610,9 @@ body {
       cursor: pointer; }
 
 .site-footer a:link, .site-footer a:visited {
-  color: #ed7918; }
+  color: #d0c79c; }
 .site-footer a:hover, .site-footer a:focus, .site-footer a:active {
-  color: #9E4E0C; }
+  color: #6d7063; }
 
 .content-area {
   margin: 0 auto;
@@ -647,15 +660,15 @@ aside {
 5.1 Links
 --------------------------------------------------------------*/
 a:link, a:visited {
-  color: #9E4E0C; }
+  color: #6d7063; }
 a:hover, a:focus, a:active {
-  color: #ed7918; }
+  color: #d0c79c; }
 
 /*--------------------------------------------------------------
 5.2 Menus
 --------------------------------------------------------------*/
 .main-navigation {
-  background: #226e6c;
+  background: #444c49;
   text-align: right; }
   .main-navigation ul {
     display: block;
@@ -722,7 +735,7 @@ a:hover, a:focus, a:active {
     border-radius: 3px;
     box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
     clip: auto !important;
-    color: #333333;
+    color: #444c49;
     display: block;
     font-size: 14px;
     font-size: 1.4rem;
@@ -786,10 +799,11 @@ a:hover, a:focus, a:active {
 .widget {
   background: #FFFFFF;
   margin: 10px 0;
+  padding: 0 0 15px 0;
   /* Make sure select elements fit in widgets */ }
   .widget .widget-title {
-    background: #226e6c;
-    color: #FFFFFF;
+    background: #c3e5d1;
+    color: #444c49;
     padding: 15px;
     margin-bottom: 10px; }
   @media (min-width: 40em) {
@@ -821,7 +835,7 @@ a:hover, a:focus, a:active {
   .hentry .entry-content {
     padding: 0 15px; }
   .hentry .entry-footer {
-    background: #9E4E0C;
+    background: #6d7063;
     color: #FFFFFF;
     padding: 15px; }
     .hentry .entry-footer a:link, .hentry .entry-footer a:visited {
@@ -879,10 +893,10 @@ aside.footer-widgets {
   .comment-list li {
     background: #FFFFFF;
     padding: 15px;
-    border-bottom: 3px solid #9E4E0C;
+    border-bottom: 3px solid #6d7063;
     margin-bottom: 10px; }
     .comment-list li:nth-child(even) {
-      border-bottom: 3px solid #226e6c; }
+      border-bottom: 3px solid #c3e5d1; }
     .comment-list li .comment-meta {
       margin-bottom: 7.5px;
       padding: 7.5px; }

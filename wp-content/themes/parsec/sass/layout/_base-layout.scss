@@ -21,17 +21,32 @@ body {
 }
 
 .site-header {
-	background: url( $asset-path + 'img/city-sign.jpg' );
-	background-attachment: fixed;
-	background-position: 50%;
-	-webkit-background-size: cover;
-	background-size: cover;
-	min-height: 200px;
+	background: url( $asset-path + 'img/banner-sm.jpg' ) center no-repeat;
+		-webkit-background-size: cover;
+		background-size: cover;
+		margin: 0 auto;
+		min-height: 60px;
+		text-align: center;
 
-	@include breakpoint( $breakpoint-1 ) {
-		min-height: auto;
-		height: 570px;
-	}
+		@include breakpoint( $breakpoint-1 ) {
+			background-image: url( $asset-path + 'img/banner-med.jpg' );
+			background-position: center;
+			min-height: auto;
+			height: 200px;
+		}
+
+		@include breakpoint( $breakpoint-2 ) {
+			height: 300px;
+			text-align: left;
+		}
+
+		@include breakpoint( $breakpoint-3 ) {
+			background-image: url( $asset-path + 'img/banner.jpg' );
+		}
+
+		@include breakpoint( $breakpoint-4 ) {
+			height: 450px;
+		}
 
 	.site-branding {
 		padding: $padding-more;
@@ -41,6 +56,7 @@ body {
 				padding: 0;
 
 				a{
+					color: $color-white;
 					font-weight: normal;
 					text-decoration: none;
 				}
