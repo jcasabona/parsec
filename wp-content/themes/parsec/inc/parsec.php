@@ -85,3 +85,49 @@ function parsec_replace_post_images($content){
 	 return $content;
 }
 //add_filter('the_content', 'parsec_replace_post_images');
+
+
+/** Custom Editor Styles **/
+add_filter( 'mce_buttons_2', 'parsec_mce_editor_buttons' );
+function parsec_mce_editor_buttons( $buttons ) {
+
+    array_unshift( $buttons, 'styleselect' );
+    return $buttons;
+}
+
+add_filter( 'tiny_mce_before_init', 'parsec_mce_before_init' );
+
+function parsec_mce_before_init( $settings ) {
+
+    $style_formats = array(
+        array(
+            'title' => 'Erin Text',
+            'block' => 'p',
+            'classes' => 'erin bride',
+        ),
+        array(
+            'title' => 'Joe Text',
+            'block' => 'p',
+            'classes' => 'joe groom',
+        ),
+    );
+
+    $settings['style_formats'] = json_encode( $style_formats );
+
+    return $settings;
+}
+
+/**
+ * Apply styles to the visual editor
+ */
+add_filter( 'mce_css', 'parsec_mcekit_editor_style');
+function parsec_mcekit_editor_style( $url ) {
+
+    if ( ! empty( $url ) ) {
+        $url .= ',';
+    }
+
+    $url .= trailingslashit( get_stylesheet_directory_uri() ) . 'assets/css/editor-styles.css';
+
+    return $url;
+}

@@ -256,6 +256,16 @@ small {
 big {
   font-size: 125%; }
 
+.erin,
+.bride {
+  color: #C05300;
+  font-weight: bold; }
+
+.joe,
+.groom {
+  color: #006776;
+  font-weight: bold; }
+
 @font-face {
   font-family: "icon-font";
   src: url("/wp-content/themes/parsec/assets/fonts/icon-font.eot");

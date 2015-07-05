@@ -1,6 +1,5 @@
 <?php
 /**
- * Template Name: One Column
  *
  * @package Parsec
  */

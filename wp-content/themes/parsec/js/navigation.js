@@ -69,3 +69,7 @@
 	}
 
 })(jQuery);
+
+jQuery('html, body').animate({
+		scrollTop: jQuery("body:not(.home) #js-countdown").offset().top
+}, 600);

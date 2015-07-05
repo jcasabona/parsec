@@ -35,5 +35,5 @@ global $p_svg_path;
 		<div class="impact-img">
 		</div>
 	</header><!-- #masthead -->
-	<h2 class="countdown"><span><?php echo parsec_final_countdown(); ?></span></h2>
+	<h2 id="js-countdown" class="countdown"><span><?php echo parsec_final_countdown(); ?></span></h2>
 	<div id="content" class="site-content"> <?php //here is where I will put a class for choosing the layout ?>
