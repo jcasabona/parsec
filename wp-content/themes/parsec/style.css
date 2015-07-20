@@ -682,13 +682,19 @@ body {
       background-image: url("/wp-content/themes/parsec/assets/img/erinandjoe.jpg"); } }
   @media (min-width: 60em) {
     .site-header .impact-img {
-      height: 600px; } }
+      height: 400px; } }
   @media (min-width: 77.5625em) {
     .site-header .impact-img {
-      height: 700px; } }
+      height: 500px; } }
   @media (min-width: 125em) {
     .site-header .impact-img {
-      height: 800px; } }
+      height: 700px; } }
+  .site-header .impact-img #more-stuff {
+    margin: 30px;
+    padding: 30px;
+    text-align: left;
+    display: none;
+    transition: display 0.5s linear; }
 .site-header .site-branding {
   padding: 30px; }
   .site-header .site-branding h1 {
@@ -736,6 +742,10 @@ body {
     @media (min-width: 50em) {
       .content-area.one-col {
         width: 85%; } }
+  .content-area .featured-image {
+    display: block;
+    margin: 0 auto;
+    text-align: center; }
 
 .contain {
   margin: 0 auto;

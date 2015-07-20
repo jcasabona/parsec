@@ -8,6 +8,9 @@
 get_header(); ?>
 
 	<div id="primary" class="content-area one-col">
+		<div class="featured-image alignceter">
+			<?php the_post_thumbnail(); ?>
+		</div>
 		<main id="main" class="site-main" role="main">
 
 			<?php while ( have_posts() ) : the_post(); ?>

@@ -33,6 +33,9 @@ global $p_svg_path;
 		</nav><!-- #site-navigation -->
 
 		<div class="impact-img">
+			<div id="more-stuff" class="more">
+					<h2>Hey! There's more stuff. Just scroll</h2>
+			</div>
 		</div>
 	</header><!-- #masthead -->
 	<h2 id="js-countdown" class="countdown"><span><?php echo parsec_final_countdown(); ?></span></h2>

@@ -31,9 +31,7 @@
 		</aside>
 
 		<div class="site-info contain">
-			<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'parsec' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'parsec' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( __( 'Theme: %1$s by %2$s.', 'parsec' ), 'Parsec', '<a href="http://casabona.org" rel="designer">Joe Casabona</a>' ); ?>
+			<?php echo '<a href="http://casabona.org" title="by Joe Casabona" rel="designer">Scranton Made</a>'; ?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->

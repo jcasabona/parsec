@@ -46,15 +46,23 @@ body {
 		}
 
 		@include breakpoint( $breakpoint-4 ) {
-			height: 600px;
+			height: 400px;
 		}
 
 		@include breakpoint( $breakpoint-5 ) {
-			height: 700px;
+			height: 500px;
 		}
 
 		@include breakpoint( $breakpoint-srsly ) {
-			height: 800px;
+			height: 700px;
+		}
+
+		#more-stuff {
+			margin: $padding-more;
+			padding: $padding-more;
+			text-align: left;
+			display: none;
+			transition: display 0.5s linear;
 		}
 	}
 
@@ -123,6 +131,11 @@ body {
 		@include breakpoint( $breakpoint-3 ) {
 			width: $max-width-percent - 10;
 		}
+	}
+
+	.featured-image {
+		@include center-block;
+		text-align: center;
 	}
 }
 
