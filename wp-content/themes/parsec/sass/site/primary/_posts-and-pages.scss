@@ -28,6 +28,10 @@
 		}
 
 	}
+
+	.impact-area {
+		@include font-size(2.4);
+	}
 }
 
 .byline,

@@ -31,12 +31,5 @@ global $p_svg_path;
 			<i class="icon-align-justify menu-toggle" aria-controls="menu" aria-expanded="false"></i>
 			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 		</nav><!-- #site-navigation -->
-
-		<div class="impact-img">
-			<div id="more-stuff" class="more">
-					<h2>Hey! There's more stuff. Just scroll</h2>
-			</div>
-		</div>
 	</header><!-- #masthead -->
-	<h2 id="js-countdown" class="countdown"><span><?php echo parsec_final_countdown(); ?></span></h2>
 	<div id="content" class="site-content"> <?php //here is where I will put a class for choosing the layout ?>

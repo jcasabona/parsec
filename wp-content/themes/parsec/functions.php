@@ -83,13 +83,23 @@ function parsec_widgets_init() {
 
 	//quick and dirty thing to make the title a hyperlink.
 	register_sidebar( array(
-		'name'          => __( 'Event Info Widgets', 'parsec' ),
-		'id'            => 'event-info',
+		'name'          => __( 'Home Right Column', 'parsec' ),
+		'id'            => 'home-right',
 		'description'   => '',
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</div>',
-		'before_title'  => '<h3 class="widget-title">',
-		'after_title'   => '</h3>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+
+	register_sidebar( array(
+		'name'          => __( 'Home Left Column', 'parsec' ),
+		'id'            => 'home-left',
+		'description'   => '',
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
 	) );
 
 	register_sidebar( array(
@@ -114,8 +124,8 @@ function parsec_scripts() {
       wp_enqueue_script( 'jquery' );
 	}
 
-	wp_enqueue_style( 'google-web-fonts', '//fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,700|Pathway+Gothic+One' );
-	wp_enqueue_style( 'parsec-style', get_stylesheet_uri(), array( 'google-web-fonts' ) );
+	wp_enqueue_script( 'typekit', '//use.typekit.net/bev5ovw.js' );
+	wp_enqueue_style( 'parsec-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'parsec-navigation', get_template_directory_uri() . '/js/navigation.js', array( 'jquery' ), '20120206', true );
 
@@ -134,6 +144,13 @@ function parsec_scripts() {
 add_action( 'wp_enqueue_scripts', 'parsec_scripts' );
 
 
+function parsec_footer_scripts() {
+	?>
+		<script>try{Typekit.load({ async: true });}catch(e){}</script>
+	<?php
+}
+
+add_action( 'wp_footer', 'parsec_footer_scripts' );
 /**
  * Custom template tags for this theme.
  */

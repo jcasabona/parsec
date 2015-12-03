@@ -24,24 +24,4 @@ $start: $font-size-heading-base;
 			text-align: center;
 		}
 
-		&.countdown {
-			background: $color-secondary;
-			color: $color-white;
-			font-weight: bold;
-			padding: 0;
-			text-align: center;
-			text-transform: uppercase;
-
-			@include breakpoint( $breakpoint-2 ) {
-				color: $color-black;
-				font-size: $font-size-heading-base + 1;
-
-				span {
-					background: #FFFFFF;
-					border: 3px solid $color-secondary;
-					padding: $padding-more;
-				}
-			}
-		}
-
 	}

@@ -33,8 +33,8 @@ aside.box-half {
 	margin: $base-margin 0;
 
 	h2 {
-		background: $color-accent-two;
-		color: $color-white;
+		border-bottom: 1px solid $color-accent-two;
+		color: $color-accent-two;
 		margin: 0;
 		padding: $base-padding;
 		text-align: left;
@@ -61,7 +61,6 @@ aside.box-half {
 
 	.widget {
 		background: $color-white;
-		border: 1px solid $color-gray-base;
 		color: $color-black;
 		padding: 0;
 		margin: 0 0 $base-margin * 2;
