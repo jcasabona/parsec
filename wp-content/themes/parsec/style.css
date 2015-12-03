@@ -148,8 +148,8 @@ textarea {
   color: #333333;
   font-family: "minion-pro", serif;
   font-weight: 200;
-  font-size: 16px;
-  font-size: 1.6rem;
+  font-size: 18px;
+  font-size: 1.8rem;
   line-height: 1.5; }
 
 h1, h2, h3, h4, h5, h6 {
@@ -993,9 +993,10 @@ a:hover, a:focus, a:active {
       color: #FFFFFF; }
     .hentry .entry-footer a:hover, .hentry .entry-footer a:focus, .hentry .entry-footer a:active {
       color: #cccccc; }
-  .hentry .impact-area {
-    font-size: 24px;
-    font-size: 2.4rem; }
+
+.impact-area {
+  font-size: 24px;
+  font-size: 2.4rem; }
 
 .byline,
 .updated:not(.published) {
@@ -1184,6 +1185,8 @@ aside.box-half {
     padding: 15px;
     text-align: left;
     text-transform: uppercase; }
+  aside.box-half p {
+    padding: 15px; }
   @media (min-width: 40em) {
     aside.box-half {
       display: inline-block;

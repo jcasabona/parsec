@@ -3,7 +3,7 @@ add_action( 'admin_menu', 'parsec_create_menu' );
 function parsec_create_menu() {
 
 	//create new top-level menu
-	add_menu_page( __( 'Wedding Info', 'parsec' ), __( 'Wedding Info', 'parsec' ), 'administrator', 'parsec-theme-settings', 'parsec_settings_page', 'dashicons-megaphone' );
+	add_menu_page( __( 'Personal Info', 'parsec' ), __( 'Personal Info', 'parsec' ), 'administrator', 'parsec-theme-settings', 'parsec_settings_page', 'dashicons-megaphone' );
 }
 
 /**
@@ -45,7 +45,7 @@ function parsec_settings_page() {
 ?>
 
 <div class="wrap">
-<h2><?php _e( 'Wedding Info', 'parsec' ); ?></h2>
+<h2><?php _e( 'Personal Info', 'parsec' ); ?></h2>
 
 <form method="post" action="options.php">
 

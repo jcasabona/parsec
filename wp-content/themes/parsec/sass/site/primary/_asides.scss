@@ -41,6 +41,10 @@ aside.box-half {
 		text-transform: uppercase;
 	}
 
+	p {
+		padding: $base-padding;
+	}
+
 	@include breakpoint( $breakpoint-2 ) {
 		display: inline-block;
 		vertical-align: top;

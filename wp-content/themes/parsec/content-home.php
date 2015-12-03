@@ -6,7 +6,7 @@
  */
 ?>
 
-<div class="impact-area">
+<div class="impact-area clear">
 	<?php the_content(); ?>
 </div>
 
