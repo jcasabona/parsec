@@ -45,6 +45,7 @@ and Blueprint http://www.blueprintcss.org/
 	12.1 Captions
 	12.2 Galleries
 --------------------------------------------------------------*/
+/** Color Scheme: http://paletton.com/#uid=73t0u0k++obZBKY+WtZ+YiL+Nco **/
 /*** Breakpoints ***/
 /** General Variables **/
 /* Extensible Classes */
@@ -146,7 +147,7 @@ input,
 select,
 textarea {
   color: #333333;
-  font-family: "minion-pro", serif;
+  font-family: "ff-tisa-web-pro", serif;
   font-weight: 200;
   font-size: 18px;
   font-size: 1.8rem;
@@ -461,6 +462,13 @@ big {
 /*--------------------------------------------------------------
 3.0 Elements
 --------------------------------------------------------------*/
+a {
+  text-decoration: none; }
+  a:link, a:visited {
+    color: #EF8200; }
+  a:hover, a:focus, a:active {
+    color: #C16900; }
+
 hr {
   background-color: #00507A;
   border: 0;
@@ -485,7 +493,10 @@ dt {
   font-weight: bold; }
 
 dd {
-  margin: 0 1.5em 1.5em; }
+  margin: 0 1.5em; }
+  dd p {
+    margin: 0;
+    padding: 0; }
 
 img {
   height: auto;
@@ -536,7 +547,7 @@ input[type="submit"] {
   border: 1px solid;
   border-color: #00293F;
   border-radius: 3px;
-  background: #C16900;
+  background: #EF8200;
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);
   color: rgba(0, 0, 0, 0.8);
   cursor: pointer;
@@ -638,8 +649,10 @@ body {
 
 .site-content {
   background: whitesmoke;
-  max-width: 1300px;
+  max-width: 1100px;
   margin: 0 auto; }
+  .home .site-content {
+    max-width: 1300px; }
 
 .site-header, .site-footer {
   background: #00293F;
@@ -704,9 +717,9 @@ body {
 .site-footer {
   background: #333333; }
   .site-footer a:link, .site-footer a:visited {
-    color: #00507A; }
+    color: #FFFFFF; }
   .site-footer a:hover, .site-footer a:focus, .site-footer a:active {
-    color: #00293F; }
+    color: #EF8200; }
 
 .content-area {
   margin: 0 auto;
@@ -724,9 +737,6 @@ body {
   .content-area.one-col {
     display: block;
     width: 95%; }
-    @media (min-width: 50em) {
-      .content-area.one-col {
-        width: 85%; } }
   .content-area .featured-image {
     display: block;
     margin: 0 auto;
@@ -734,11 +744,10 @@ body {
 
 .contain {
   margin: 0 auto;
-  max-width: 1300px; }
+  max-width: 1100px; }
 
 aside {
-  margin: 0 auto;
-  max-width: 95%; }
+  margin: 0 auto; }
   @media (min-width: 40em) {
     aside {
       display: inline-block;
@@ -758,7 +767,7 @@ aside {
 5.1 Links
 --------------------------------------------------------------*/
 a:link, a:visited {
-  color: #C16900; }
+  color: #EF8200; }
 a:hover, a:focus, a:active {
   color: #00507A; }
 
@@ -799,7 +808,7 @@ a:hover, a:focus, a:active {
       .main-navigation .site-title a:link, .main-navigation .site-title a:visited {
         color: #FFFFFF; }
       .main-navigation .site-title a:hover, .main-navigation .site-title a:focus, .main-navigation .site-title a:active {
-        color: #C16900; }
+        color: #EF8200; }
 
 /* Small menu */
 .menu-toggle {
@@ -914,7 +923,7 @@ a:hover, a:focus, a:active {
   padding: 15px;
   /* Make sure select elements fit in widgets */ }
   .widget a:link, .widget a:visited {
-    color: #8e4d00; }
+    color: #bc6600; }
   .widget a:hover, .widget a:focus, .widget a:active {
     color: #00507A; }
   .widget ul {
@@ -963,6 +972,20 @@ a:hover, a:focus, a:active {
         vertical-align: top;
         width: 33%; } }
 
+.latest-post,
+.cse-events {
+  font-size: 20px;
+  font-size: 2rem;
+  margin: 15px; }
+  .latest-post h3,
+  .cse-events h3 {
+    font-size: 52px;
+    font-size: 5.2rem;
+    font-weight: bold;
+    line-height: 1.2em;
+    text-align: center;
+    text-transform: uppercase; }
+
 /* Search widget */
 .widget_search .search-submit {
   display: none; }
@@ -985,6 +1008,10 @@ a:hover, a:focus, a:active {
       text-decoration: none; }
   .hentry .entry-content {
     padding: 0 15px; }
+    @media (min-width: 40em) {
+      .hentry .entry-content {
+        font-size: 22.5px;
+        font-size: 2.25rem; } }
   .hentry .entry-footer {
     background: #00293F;
     color: #FFFFFF;
@@ -995,8 +1022,19 @@ a:hover, a:focus, a:active {
       color: #cccccc; }
 
 .impact-area {
-  font-size: 24px;
-  font-size: 2.4rem; }
+  background: #333333;
+  color: #FFFFFF;
+  font-size: 26px;
+  font-size: 2.6rem; }
+  .impact-area .featured-image {
+    float: left;
+    margin-bottom: -8px;
+    margin-right: 30px; }
+  .impact-area .featured-content {
+    padding: 30px 30px 0; }
+    .impact-area .featured-content p {
+      margin-bottom: 0;
+      padding: 0; }
 
 .byline,
 .updated:not(.published) {
@@ -1114,7 +1152,7 @@ a:hover, a:focus, a:active {
   float: left;
   width: 35%; }
   .wedding-party .bio-photo img {
-    border: 2px #C16900 solid;
+    border: 2px #EF8200 solid;
     border-radius: 50%; }
   @media screen and (min-width: 50em) and (max-width: 76.5625em) {
     .wedding-party .bio-photo {
@@ -1182,7 +1220,7 @@ aside.box-half {
     border-bottom: 1px solid #003E5F;
     color: #003E5F;
     margin: 0;
-    padding: 15px;
+    padding: 5px 15px;
     text-align: left;
     text-transform: uppercase; }
   aside.box-half p {
@@ -1198,7 +1236,7 @@ aside.box-half {
         margin-left: 10px; } }
   @media (min-width: 50em) {
     aside.box-half {
-      width: 48%; } }
+      width: 49.4%; } }
   aside.box-half .widget {
     background: #FFFFFF;
     color: #000000;

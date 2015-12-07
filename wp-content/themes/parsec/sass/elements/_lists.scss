@@ -21,5 +21,10 @@ dt {
 }
 
 dd {
-	margin: 0 1.5em 1.5em;
+	margin: 0 1.5em;
+
+	 p {
+		 margin: 0;
+		 padding: 0;
+	 }
 }

@@ -16,6 +16,10 @@
 
 	.entry-content {
 		padding: 0 $base-padding;
+
+		@include  breakpoint($breakpoint-2) {
+			@include font-size(2.25);
+		}
 	}
 
 	.entry-footer {
@@ -31,7 +35,24 @@
 }
 
 .impact-area {
-	@include font-size(2.4);
+	background: $color-primary;
+	color: $color-white;
+	@include font-size(2.6);
+
+	.featured-image {
+		float: left;
+		margin-bottom: -8px;
+		margin-right: $base-padding * 2;
+	}
+
+	.featured-content {
+		padding: ($base-padding * 2) ($base-padding * 2) 0;
+
+		p {
+			margin-bottom: 0;
+			padding: 0;
+		}
+	}
 }
 
 .byline,

@@ -11,6 +11,10 @@ body {
 	background: $color-background-screen;
 	max-width: $max-width-px;
 	margin: $margin-center;
+
+	.home & {
+		max-width: $max-width-home;
+	}
 }
 
 
@@ -104,7 +108,7 @@ body {
 .site-footer {
 	background: $color-primary;
 	a {
-		@include link-colors( $color-accent-three, $color-secondary );
+		@include link-colors( $color-white, $color-accent );
 	}
 }
 
@@ -127,10 +131,6 @@ body {
 	&.one-col {
 		display: block;
 		width: $max-width-percent;
-
-		@include breakpoint( $breakpoint-3 ) {
-			width: $max-width-percent - 10;
-		}
 	}
 
 	.featured-image {
@@ -146,7 +146,6 @@ body {
 
 aside {
 	margin: $margin-center;
-	max-width: $max-width-percent;
 
 	@include breakpoint( $breakpoint-2 ) {
 		display: inline-block;

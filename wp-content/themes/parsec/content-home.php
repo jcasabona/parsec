@@ -7,7 +7,15 @@
 ?>
 
 <div class="impact-area clear">
-	<?php the_content(); ?>
+	<?php if ( has_post_thumbnail() ) : ?>
+		<div class="featured-image">
+			<?php the_post_thumbnail( 'medium' ); ?>
+		</div>
+	<?php endif; ?>
+	
+	<div class="featured-content">
+		<?php the_content(); ?>
+	</div>
 </div>
 
 <aside class="box-half">
@@ -15,5 +23,7 @@
 </aside>
 
 <aside class="box-half">
-	<?php dynamic_sidebar( 'home-right' ); ?>
+	<div class="widget">
+			<h2>I Write</h2>
+			<?php parsec_latest_post(); ?>
 </aside>

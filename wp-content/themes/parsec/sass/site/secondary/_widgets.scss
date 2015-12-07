@@ -73,8 +73,20 @@
 		}
 
 	}
+}
 
+.latest-post,
+.cse-events {
+	@include font-size(2);
+	margin: $base-padding;
 
+	h3 {
+		@include font-size(5.2);
+		font-weight: bold;
+		line-height: 1.2em;
+		text-align: center;
+		text-transform: uppercase;
+	}
 }
 
 /* Search widget */

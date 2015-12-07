@@ -36,7 +36,7 @@ aside.box-half {
 		border-bottom: 1px solid $color-accent-two;
 		color: $color-accent-two;
 		margin: 0;
-		padding: $base-padding;
+		padding: $base-margin/2 $base-padding;
 		text-align: left;
 		text-transform: uppercase;
 	}
@@ -60,7 +60,7 @@ aside.box-half {
 	}
 
 	@include breakpoint( $breakpoint-3 ) {
-		width: 48%;
+		width: 49.4%;
 	}
 
 	.widget {
