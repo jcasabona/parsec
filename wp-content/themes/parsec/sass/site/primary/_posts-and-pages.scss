@@ -40,13 +40,24 @@
 	@include font-size(2.6);
 
 	.featured-image {
-		float: left;
-		margin-bottom: -8px;
-		margin-right: $base-padding * 2;
+		margin: 0;
+		padding: 0;
+		max-width: $breakpoint-3;
+
+		@include breakpoint($breakpoint-3) {
+			float: left;
+			margin-bottom: -8px;
+			margin-right: $base-padding * 2;
+			max-width: 400px;
+		}
 	}
 
 	.featured-content {
-		padding: ($base-padding * 2) ($base-padding * 2) 0;
+		padding: ($base-padding * 2);
+
+		@include breakpoint($breakpoint-3) {
+			margin-left: 400px;
+		}
 
 		p {
 			margin-bottom: 0;

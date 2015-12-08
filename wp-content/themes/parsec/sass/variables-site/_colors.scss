@@ -10,10 +10,12 @@ $color-white: #FFFFFF;
 $color-black: #000000;
 $color-gray-base: #999999;
 
+$color-alert: #880000;
+
 $color-background-body: $color-white;
 $color-background-screen: lighten($color-gray-base, 36%);
 $color-background-hr: $color-accent-three;
-$color-background-button: $color-accent;
+$color-background-button: $color-accent-two;
 $color-background-pre: $color-primary;
 $color-background-ins: $color-accent-two;
 
