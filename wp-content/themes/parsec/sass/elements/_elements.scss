@@ -2,6 +2,7 @@ a {
 	@include link-colors( $color-accent, $color-accent-dark );
 	text-decoration: none;
 }
+
 hr {
 	background-color: $color-background-hr;
 	border: 0;

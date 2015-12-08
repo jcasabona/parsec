@@ -23,7 +23,7 @@
 	}
 
 	.entry-footer {
-		background: $color-secondary;
+		background: $color-accent-two;
 		color: $color-white;
 		padding: $base-padding;
 
@@ -37,7 +37,10 @@
 .impact-area {
 	background: $color-primary;
 	color: $color-white;
-	@include font-size(2.6);
+
+	@include breakpoint($breakpoint-2) {
+		@include font-size(2.6);
+	}
 
 	.featured-image {
 		margin: 0;

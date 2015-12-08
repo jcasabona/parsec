@@ -79,13 +79,13 @@ function parsec_posted_on() {
 	);
 
 	$posted_on = sprintf(
-		_x( 'Posted on %s', 'post date', 'parsec' ),
-		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
+		_x( '%s', 'post date', 'parsec' ),
+		'<span class="genericon genericon-month"></span> <a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 	);
 
 	$byline = sprintf(
-		_x( 'by %s', 'post author', 'parsec' ),
-		'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
+		_x( '%s', 'post author', 'parsec' ),
+		'<span class="author vcard"><span class="genericon genericon-user"></span> <a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 	);
 
 	echo '<span class="posted-on">' . $posted_on . '</span><span class="byline"> ' . $byline . '</span>';
@@ -103,23 +103,23 @@ function parsec_entry_footer() {
 		/* translators: used between list items, there is a space after the comma */
 		$categories_list = get_the_category_list( __( ', ', 'parsec' ) );
 		if ( $categories_list && parsec_categorized_blog() ) {
-			printf( '<span class="cat-links">' . __( 'Posted in %1$s', 'parsec' ) . '</span>', $categories_list );
+			printf( '<span class="cat-links"><span class="genericon genericon-category"></span> ' . __( '%1$s', 'parsec' ) . '</span> ', $categories_list );
 		}
 
 		/* translators: used between list items, there is a space after the comma */
 		$tags_list = get_the_tag_list( '', __( ', ', 'parsec' ) );
 		if ( $tags_list ) {
-			printf( '<span class="tags-links">' . __( 'Tagged %1$s', 'parsec' ) . '</span>', $tags_list );
+			printf( '<span class="tags-links"><span class="genericon genericon-tag"></span> ' . __( '%1$s', 'parsec' ) . '</span> ', $tags_list );
 		}
 	}
 
 	if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
-		echo '<span class="comments-link">';
-		comments_popup_link( __( 'Leave a comment', 'parsec' ), __( '1 Comment', 'parsec' ), __( '% Comments', 'parsec' ) );
-		echo '</span>';
+		echo '<span class="comments-link"><span class="genericon genericon-chat"></span> ';
+		comments_popup_link( __( 'add', 'parsec' ), __( '1', 'parsec' ), __( '%', 'parsec' ) );
+		echo '</span> ';
 	}
 
-	edit_post_link( __( 'Edit', 'parsec' ), '<span class="edit-link">', '</span>' );
+	edit_post_link( __( 'Edit', 'parsec' ), '<span class="edit-link"><span class="genericon genericon-edit"></span> ', '</span>' );
 }
 endif;
 
@@ -278,9 +278,9 @@ function parsec_get_latest_post() {
 			<h3><a href="%1$s" title="%2$s">%2$s</a></h3>
 			<div class="latest-content">
 				%3$s
-				<p><a class="more-link" href="%1$s" title="%2$s">Read More</a></p>
 			</div>
-		</div>';
+		</div>
+		<a class="button more-link" href="%1$s" title="%2$s">Read More</a>';
 
 		$output = sprintf( $format,
 			get_permalink( $latest['ID'] ),

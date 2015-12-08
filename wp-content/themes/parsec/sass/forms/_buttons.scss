@@ -1,4 +1,5 @@
 button,
+.button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
@@ -19,7 +20,17 @@ input[type="submit"] {
 	width: 40%;
 }
 
+.button {
+	display: block;
+	@include link-colors($color-white, $color-white);
+	margin: $base-padding auto;
+	padding: 5px;
+	text-align: center;
+	width: auto;
+}
+
 button:hover,
+.button:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {

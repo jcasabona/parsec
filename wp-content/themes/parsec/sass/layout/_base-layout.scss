@@ -1,5 +1,9 @@
 body {
 	background: $color-primary;
+
+	.genericon {
+		@include font-size(3);
+	}
 }
 
 .site {
@@ -107,7 +111,8 @@ body {
 
 .site-footer {
 	background: $color-primary;
-	a {
+	a,
+	.widget a {
 		@include link-colors( $color-white, $color-accent );
 	}
 }

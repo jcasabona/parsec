@@ -541,6 +541,7 @@ textarea {
   /* Improves appearance and consistency in all browsers */ }
 
 button,
+.button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
@@ -563,7 +564,19 @@ input[type="submit"] {
   text-shadow: 0 1px 0 rgba(0, 0, 0, 0.8);
   width: 40%; }
 
+.button {
+  display: block;
+  margin: 15px auto;
+  padding: 5px;
+  text-align: center;
+  width: auto; }
+  .button:link, .button:visited {
+    color: #FFFFFF; }
+  .button:hover, .button:focus, .button:active {
+    color: #FFFFFF; }
+
 button:hover,
+.button:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
@@ -652,6 +665,9 @@ textarea {
 --------------------------------------------------------------*/
 body {
   background: #333333; }
+  body .genericon {
+    font-size: 30px;
+    font-size: 3rem; }
 
 .site {
   max-width: 100%;
@@ -732,9 +748,14 @@ body {
 
 .site-footer {
   background: #333333; }
-  .site-footer a:link, .site-footer a:visited {
+  .site-footer a:link, .site-footer a:visited,
+  .site-footer .widget a:link,
+  .site-footer .widget a:visited {
     color: #FFFFFF; }
-  .site-footer a:hover, .site-footer a:focus, .site-footer a:active {
+  .site-footer a:hover, .site-footer a:focus, .site-footer a:active,
+  .site-footer .widget a:hover,
+  .site-footer .widget a:focus,
+  .site-footer .widget a:active {
     color: #EF8200; }
 
 .content-area {
@@ -938,9 +959,9 @@ a:hover, a:focus, a:active {
   margin: 10px 0;
   padding: 15px;
   /* Make sure select elements fit in widgets */ }
-  .widget a:link, .widget a:visited {
+  .widget a:not(.button):link, .widget a:not(.button):visited {
     color: #bc6600; }
-  .widget a:hover, .widget a:focus, .widget a:active {
+  .widget a:not(.button):hover, .widget a:not(.button):focus, .widget a:not(.button):active {
     color: #00507A; }
   .widget ul {
     margin: 0;
@@ -1001,6 +1022,9 @@ a:hover, a:focus, a:active {
     line-height: 1.2em;
     text-align: center;
     text-transform: uppercase; }
+  .latest-post p,
+  .cse-events p {
+    margin: 0; }
 
 /* Search widget */
 .widget_search .search-submit {
@@ -1029,7 +1053,7 @@ a:hover, a:focus, a:active {
         font-size: 22.5px;
         font-size: 2.25rem; } }
   .hentry .entry-footer {
-    background: #00293F;
+    background: #003E5F;
     color: #FFFFFF;
     padding: 15px; }
     .hentry .entry-footer a:link, .hentry .entry-footer a:visited {
@@ -1039,9 +1063,11 @@ a:hover, a:focus, a:active {
 
 .impact-area {
   background: #333333;
-  color: #FFFFFF;
-  font-size: 26px;
-  font-size: 2.6rem; }
+  color: #FFFFFF; }
+  @media (min-width: 40em) {
+    .impact-area {
+      font-size: 26px;
+      font-size: 2.6rem; } }
   .impact-area .featured-image {
     margin: 0;
     padding: 0;
@@ -1271,7 +1297,7 @@ section.event-info {
 --------------------------------------------------------------*/
 .comment-list {
   list-style-type: none;
-  margin: 0; }
+  margin: 0 auto; }
   .comment-list li {
     background: #FFFFFF;
     padding: 15px;
