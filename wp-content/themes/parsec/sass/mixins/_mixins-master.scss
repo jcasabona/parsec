@@ -16,6 +16,12 @@
 	}
 }
 
+@mixin flex {
+	display: -ms-flex;
+	display: -webkit-flex;
+	display: flex;
+}
+
 // Center block
 @mixin center-block {
 	display: block;

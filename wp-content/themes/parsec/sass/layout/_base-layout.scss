@@ -111,8 +111,7 @@ body {
 
 .site-footer {
 	background: $color-primary;
-	a,
-	.widget a {
+	a {
 		@include link-colors( $color-white, $color-accent );
 	}
 }

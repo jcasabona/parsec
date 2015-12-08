@@ -12,12 +12,22 @@
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 
-		<aside class="footer-widgets site-info contain">
-			<?php dynamic_sidebar( 'footer-widgets' ); ?>
-		</aside>
+		<div class="footer-columns">
+			<aside class="footer-widgets site-info contain">
+				<?php dynamic_sidebar( 'footer-widgets' ); ?>
+			</aside>
+
+			<aside class="footer-widgets site-info contain">
+				<?php dynamic_sidebar( 'footer-widgets-2' ); ?>
+			</aside>
+
+			<aside class="footer-widgets site-info contain">
+				<?php dynamic_sidebar( 'footer-widgets-3' ); ?>
+			</aside>
+		</div>
 
 		<div class="site-info contain">
-			<?php echo '<a href="http://casabona.org" title="by Joe Casabona" rel="designer">Scranton Made</a>'; ?>
+			<?php printf( '&copy; Joe Casabona %s, All rights reserved.', date('Y') ); ?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->

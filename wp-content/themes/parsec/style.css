@@ -569,6 +569,7 @@ input[type="submit"] {
   margin: 15px auto;
   padding: 5px;
   text-align: center;
+  -webkit-appearance: none;
   width: auto; }
   .button:link, .button:visited {
     color: #FFFFFF; }
@@ -748,14 +749,9 @@ body {
 
 .site-footer {
   background: #333333; }
-  .site-footer a:link, .site-footer a:visited,
-  .site-footer .widget a:link,
-  .site-footer .widget a:visited {
+  .site-footer a:link, .site-footer a:visited {
     color: #FFFFFF; }
-  .site-footer a:hover, .site-footer a:focus, .site-footer a:active,
-  .site-footer .widget a:hover,
-  .site-footer .widget a:focus,
-  .site-footer .widget a:active {
+  .site-footer a:hover, .site-footer a:focus, .site-footer a:active {
     color: #EF8200; }
 
 .content-area {
@@ -1245,22 +1241,32 @@ a:hover, a:focus, a:active {
 .archive .format-aside .entry-title {
   display: none; }
 
-aside.footer-widgets {
-  display: block;
-  padding-top: 25px;
-  width: 100%; }
-  aside.footer-widgets .widget {
-    background: none;
-    vertical-align: top; }
-    @media (min-width: 40em) {
-      aside.footer-widgets .widget {
-        display: inline-block;
-        width: 49%; } }
-    @media (min-width: 60em) {
-      aside.footer-widgets .widget {
-        display: inline-block;
-        margin-right: 1.5em;
-        width: 24%; } }
+@media (min-width: 30em) {
+  .footer-columns {
+    display: -ms-flex;
+    display: -webkit-flex;
+    display: flex;
+    flex-wrap: wrap; } }
+@media (min-width: 50em) {
+  .footer-columns {
+    flex-wrap: none; } }
+.footer-columns .footer-widgets {
+  margin: 0;
+  padding: 15px; }
+  .footer-columns .footer-widgets .widget {
+    background: none; }
+    .footer-columns .footer-widgets .widget a:link, .footer-columns .footer-widgets .widget a:visited {
+      color: #FFFFFF; }
+    .footer-columns .footer-widgets .widget a:hover, .footer-columns .footer-widgets .widget a:focus, .footer-columns .footer-widgets .widget a:active {
+      color: #EF8200; }
+  @media (min-width: 30em) {
+    .footer-columns .footer-widgets {
+      width: 50%; } }
+  @media (min-width: 50em) {
+    .footer-columns .footer-widgets {
+      width: 33.3%; }
+      .footer-columns .footer-widgets:last-child {
+        margin-right: 0; } }
 
 section.event-info {
   background: #00293F; }

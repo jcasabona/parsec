@@ -100,6 +100,8 @@ if ( ! function_exists( 'parsec_entry_footer' ) ) :
 function parsec_entry_footer() {
 	// Hide category and tag text for pages.
 	if ( 'post' == get_post_type() ) {
+		parsec_posted_on();
+
 		/* translators: used between list items, there is a space after the comma */
 		$categories_list = get_the_category_list( __( ', ', 'parsec' ) );
 		if ( $categories_list && parsec_categorized_blog() ) {
