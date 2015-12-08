@@ -29,44 +29,42 @@ section.event-info {
 	background: $color-secondary;
 }
 
-aside.box-half {
-	margin: $base-margin 0;
-
-	h2 {
-		border-bottom: 1px solid $color-accent-two;
-		color: $color-accent-two;
-		margin: 0;
-		padding: $base-margin/2 $base-padding;
-		text-align: left;
-		text-transform: uppercase;
+.home-columns {
+	@include breakpoint($breakpoint-2) {
+		display: -ms-flex;
+		display: -webkit-flex;
+		display: flex;
 	}
 
-	p {
-		padding: $base-padding;
-	}
+	aside.box-half {
+		margin: $base-margin 0;
+		@include breakpoint($breakpoint-2) {
+			width: 50%;
 
-	@include breakpoint( $breakpoint-2 ) {
-		display: inline-block;
-		vertical-align: top;
-		width: 47%;
-
-		&:first-child {
-			margin-right: $base-margin;
+			&:first-child {
+				margin-right: 15px;
+			}
 		}
 
-		&:last-child {
-			margin-left: $base-margin;
+
+		h2 {
+			border-bottom: 1px solid $color-accent-two;
+			color: $color-accent-two;
+			margin: 0;
+			padding: $base-margin/2 $base-padding;
+			text-align: left;
+			text-transform: uppercase;
 		}
-	}
 
-	@include breakpoint( $breakpoint-3 ) {
-		width: 49.4%;
-	}
+		p {
+			padding: $base-padding;
+		}
 
-	.widget {
-		background: $color-white;
-		color: $color-black;
-		padding: 0;
-		margin: 0 0 $base-margin * 2;
+		.widget {
+			background: $color-white;
+			color: $color-black;
+			padding: 0;
+			margin: 0 0 $base-margin * 2;
+		}
 	}
 }

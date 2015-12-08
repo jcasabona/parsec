@@ -1214,30 +1214,28 @@ aside.footer-widgets {
 section.event-info {
   background: #00293F; }
 
-aside.box-half {
+@media (min-width: 40em) {
+  .home-columns {
+    display: -ms-flex;
+    display: -webkit-flex;
+    display: flex; } }
+.home-columns aside.box-half {
   margin: 10px 0; }
-  aside.box-half h2 {
+  @media (min-width: 40em) {
+    .home-columns aside.box-half {
+      width: 50%; }
+      .home-columns aside.box-half:first-child {
+        margin-right: 15px; } }
+  .home-columns aside.box-half h2 {
     border-bottom: 1px solid #003E5F;
     color: #003E5F;
     margin: 0;
     padding: 5px 15px;
     text-align: left;
     text-transform: uppercase; }
-  aside.box-half p {
+  .home-columns aside.box-half p {
     padding: 15px; }
-  @media (min-width: 40em) {
-    aside.box-half {
-      display: inline-block;
-      vertical-align: top;
-      width: 47%; }
-      aside.box-half:first-child {
-        margin-right: 10px; }
-      aside.box-half:last-child {
-        margin-left: 10px; } }
-  @media (min-width: 50em) {
-    aside.box-half {
-      width: 49.4%; } }
-  aside.box-half .widget {
+  .home-columns aside.box-half .widget {
     background: #FFFFFF;
     color: #000000;
     padding: 0;
