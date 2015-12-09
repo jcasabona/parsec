@@ -25,9 +25,6 @@
 	</aside>
 
 	<aside class="box-half">
-		<div class="widget">
-				<h2>I Write</h2>
-				<?php parsec_latest_post(); ?>
-		</div>
+			<?php dynamic_sidebar( 'home-right' ); ?>
 	</aside>
 </section>

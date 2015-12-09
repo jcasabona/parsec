@@ -30,17 +30,17 @@ function parsec_register_settings() {
 function parsec_settings_page() {
 
   $wedding_options = array( 'Date' => 'wedding_date',
-                            'Time' => 'wedding_time',
-                            'Reception Time' => 'wedding_reception_time',
-                            'Ceremony Location' => 'wedding_local',
-                            'Ceremony Address' => 'wedding_local_address',
-                            'Reception Location' => 'wedding_reception_local',
-                            'Reception Address' => 'wedding_reception_local_address',
-                            'Hashtag' => 'wedding_hashtag',
-                            'Our Story Page' => 'wedding_story_page',
-                            'RSVP Page' => 'wedding_rsvp_page',
-                            'Gfits Page' => 'wedding_gifts_page',
-                          );
+			'Time' => 'wedding_time',
+			'Reception Time' => 'wedding_reception_time',
+			'Ceremony Location' => 'wedding_local',
+			'Ceremony Address' => 'wedding_local_address',
+			'Reception Location' => 'wedding_reception_local',
+			'Reception Address' => 'wedding_reception_local_address',
+			'Hashtag' => 'wedding_hashtag',
+			'Our Story Page' => 'wedding_story_page',
+			'RSVP Page' => 'wedding_rsvp_page',
+			'Gfits Page' => 'wedding_gifts_page',
+		);
 
 ?>
 

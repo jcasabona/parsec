@@ -27,16 +27,10 @@
 		}
 
 		@include breakpoint($breakpoint-1) {
-			width: 50%;
-
-			&:first-child {
-				//margin-right: $base-padding;
-			}
-
+			width: 50%; 
 		}
 
 		@include breakpoint($breakpoint-3) {
-			//margin-right: $base-padding;
 			width: 33.3%;
 
 			&:last-child {

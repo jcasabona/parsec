@@ -268,32 +268,6 @@ function parsec_panel_link( $option ) {
 	return ( get_option( $option ) ) ? esc_attr( get_option( $option ) ) : "#";
 }
 
-function parsec_latest_post() {
-	echo parsec_get_latest_post();
-}
-
-function parsec_get_latest_post() {
-	$latest = wp_get_recent_posts( array( 'number_posts' => 1 ) );
-	$latest = $latest[0];
-
-	$format = '<div class="latest-post">
-			<h3><a href="%1$s" title="%2$s">%2$s</a></h3>
-			<div class="latest-content">
-				%3$s
-			</div>
-		</div>
-		<a class="button more-link" href="%1$s" title="%2$s">Read More</a>';
-
-		$output = sprintf( $format,
-			get_permalink( $latest['ID'] ),
-			esc_attr( $latest['post_title'] ),
-			apply_filters( 'the_content', wp_trim_words( $latest['post_content'] ) )
-		);
-
-		return $output;
-}
-
-
 function parsec_google_map( $address ){
 		$format = '<div class="google-map"><iframe src="https://www.google.com/maps?q=%s&output=embed" frameborder="0" style="border:0"></iframe></div>';
 		return sprintf( $format, esc_attr( $address ) );
