@@ -10,9 +10,9 @@ class Parsec_Projects extends WP_Widget {
 		load_plugin_textdomain( 'parsec', false, basename( dirname( __FILE__ ) ) . '/languages' );
 
 		parent::__construct(
-			'parsec-recent-post-widget',
-			'Parsec Recent Post',
-			array( 'description' => __( 'Display the latest post in a widget', 'parsec' ), )
+			'parsec-recent-project-widget',
+			'Parsec Recent Projects',
+			array( 'description' => __( 'Display the latest projects in a widget', 'parsec' ), )
 		);
 	}
 
@@ -28,7 +28,7 @@ class Parsec_Projects extends WP_Widget {
 
 		echo $args['before_widget'];
 
-		$title = ! empty( $instance['title'] ) ? apply_filters( 'widget_title', $instance['title'] ) : __( 'The Latest', 'dcp' );
+		$title = ! empty( $instance['title'] ) ? apply_filters( 'widget_title', $instance['title'] ) : __( 'Latest Work', 'dcp' );
 
 		$format =  '%1$s%2$s%3$s';
 
@@ -38,7 +38,7 @@ class Parsec_Projects extends WP_Widget {
 			$args['after_title']
 		);
 
-    parsec_latest_post();
+    parsec_latest_projects();
 
 		echo $args['after_widget'];
 	}
@@ -53,7 +53,7 @@ class Parsec_Projects extends WP_Widget {
 	public function form( $instance ) {
 
 		// Set defaults
-		if( ! isset( $instance['title'] ) ) { $instance['title'] = 'The Latest'; }
+		if( ! isset( $instance['title'] ) ) { $instance['title'] = 'Latest Work'; }
 
 		$title = $instance[ 'title' ];
 		?>

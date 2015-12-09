@@ -81,10 +81,9 @@
 	padding: $base-padding;
 
 	h3 {
+		font-variant: small-caps;
 		font-weight: bold;
 		line-height: 1.2em;
-		text-align: center;
-		text-transform: uppercase;
 
 		@include breakpoint($breakpoint-3) {
 			@include font-size(5.2);
@@ -93,6 +92,33 @@
 
 	p {
 		margin: 0;
+	}
+}
+
+.widget_parsec-recent-project-widget {
+	.project {
+		background-position: center center;
+		background-size: cover;
+		margin: $base-padding 0;
+		text-align: center;
+
+		h3 {
+			@include font-size(4);
+			margin: 0;
+			padding: 0;
+
+			a {
+				background: rgba($color-secondary, 0.7);
+				display: block;
+				@include link-colors($color-white, darken( $color-white, 5% ));
+				padding: $base-padding * 2;
+				transition: background 0.5s ease;
+
+				&:hover {
+					background: rgba($color-secondary, 0.1);
+				}
+			}
+		}
 	}
 }
 
