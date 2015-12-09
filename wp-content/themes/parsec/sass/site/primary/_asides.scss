@@ -27,7 +27,7 @@
 		}
 
 		@include breakpoint($breakpoint-1) {
-			width: 50%; 
+			width: 50%;
 		}
 
 		@include breakpoint($breakpoint-3) {
@@ -68,11 +68,7 @@ section.event-info {
 			text-align: left;
 			text-transform: uppercase;
 		}
-
-		p {
-			padding: $base-padding;
-		}
-
+		
 		.widget {
 			background: $color-white;
 			color: $color-black;

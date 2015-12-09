@@ -23,12 +23,25 @@ body {
 
 
 .site-header, .site-footer {
-	background: $color-secondary;
+	background: $color-accent-two;
 	color: $color-white;
 	margin: $margin-center;
 }
 
 .site-header {
+
+	.site-title {
+		float: left;
+		line-height: 1em;
+		max-width: 70%;
+		padding: 0 0 $base-padding $base-padding;
+		text-align: left;
+
+		 a {
+			@include link-colors( $color-white, $color-accent );
+			text-decoration: none;
+		}
+	}
 
 	.impact-img {
 		background: url( $asset-path + 'img/erinandjoe-sm.jpg' ) center no-repeat;

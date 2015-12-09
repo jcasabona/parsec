@@ -13,7 +13,7 @@
 
 	buttonContainer = document.getElementById( 'masthead' );
 
-	button = container.getElementsByTagName( 'i' )[0];
+	button = container.getElementsByTagName( 'span' )[0];
 	if ( 'undefined' === typeof button ) {
 		return;
 	}
