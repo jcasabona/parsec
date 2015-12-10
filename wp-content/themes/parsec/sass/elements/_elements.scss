@@ -3,6 +3,18 @@ a {
 	text-decoration: none;
 }
 
+blockquote {
+	color: $color-gray-base;
+	@include font-size(2.5);
+	font-style: italic;
+
+	@include breakpoint( $breakpoint-2 ) {
+		border-left: 4px solid $color-accent;
+		margin-left: 40px;
+		padding-left: 25px;
+	}
+}
+
 hr {
 	background-color: $color-background-hr;
 	border: 0;
