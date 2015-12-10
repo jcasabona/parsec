@@ -12,7 +12,7 @@
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 
-		<div class="footer-columns">
+		<div class="footer-columns contain">
 			<aside class="footer-widgets site-info contain">
 				<?php dynamic_sidebar( 'footer-widgets' ); ?>
 			</aside>

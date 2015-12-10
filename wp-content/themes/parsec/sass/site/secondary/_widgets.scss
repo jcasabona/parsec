@@ -76,13 +76,14 @@
 }
 
 .latest-post,
-.cse-events {
+.cse-events,
+.jetpack-image-container {
 	@include font-size(2);
 	padding: $base-padding;
 
 	h3 {
 		font-variant: small-caps;
-		font-weight: bold;
+		font-weight: normal;
 		line-height: 1.2em;
 
 		@include breakpoint($breakpoint-3) {
