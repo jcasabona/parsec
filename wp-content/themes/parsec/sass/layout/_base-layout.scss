@@ -127,6 +127,10 @@ body {
 	a {
 		@include link-colors( $color-white, $color-accent );
 	}
+
+	.site-info.copyright {
+		text-align: center;
+	}
 }
 
 .content-area {

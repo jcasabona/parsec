@@ -1,11 +1,16 @@
 .widget {
-	background: rgba($color-accent-two, 0.4);
-	color: $color-white;
+	background: rgba($color-accent-two, 0.2);
+	color: $color-primary;
 	margin: $base-margin 0;
 	padding: $base-padding;
 
+	h3 {
+		color: $color-accent-dark;
+		font-weight: normal;
+	}
+
 	a:not(.button) {
-		@include link-colors( darken($color-accent, 10%) , $color-accent-three );
+		@include link-colors( $color-accent-three , $color-accent-two );
 	}
 
 	ul {
