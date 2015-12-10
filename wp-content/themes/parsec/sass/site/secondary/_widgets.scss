@@ -75,9 +75,7 @@
 	}
 }
 
-.latest-post,
-.cse-events,
-.jetpack-image-container {
+aside.box-half .widget-content {
 	@include font-size(2);
 	padding: $base-padding;
 
@@ -107,6 +105,7 @@
 			@include font-size(4);
 			margin: 0;
 			padding: 0;
+			text-shadow: 1px 1px 6px $color-black;
 
 			a {
 				background: rgba($color-secondary, 0.7);

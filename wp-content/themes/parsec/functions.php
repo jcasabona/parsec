@@ -87,9 +87,9 @@ function parsec_widgets_init() {
 		'id'            => 'home-right',
 		'description'   => '',
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</div>',
+		'after_widget'  => '</div></div>',
 		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
+		'after_title'   => '</h2><div class="widget-content">',
 	) );
 
 	register_sidebar( array(
@@ -97,9 +97,9 @@ function parsec_widgets_init() {
 		'id'            => 'home-left',
 		'description'   => '',
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</div>',
+		'after_widget'  => '</div></div>',
 		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
+		'after_title'   => '</h2><div class="widget-content">',
 	) );
 
 	register_sidebar( array(

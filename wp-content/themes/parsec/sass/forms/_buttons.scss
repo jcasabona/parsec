@@ -24,10 +24,9 @@ input[type="submit"] {
 	display: block;
 	@include link-colors($color-white, $color-white);
 	margin: $base-padding auto;
-	padding: 5px;
+	padding: $base-padding;
 	text-align: center;
 	-webkit-appearance: none;
-	width: auto;
 }
 
 button:hover,
