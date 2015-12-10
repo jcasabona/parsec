@@ -6,6 +6,15 @@
 	background: $color-white;
 	margin: 0 0 1.5em;
 
+	.featured-image {
+		background: $color-accent-three;
+		text-align: center;
+
+		img {
+			margin: 0 auto;
+		}
+	}
+
 	.entry-header {
 		padding: 0 $base-padding;
 
