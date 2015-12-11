@@ -34,7 +34,7 @@ body {
 		float: left;
 		line-height: 1em;
 		max-width: 70%;
-		padding: 0 0 $base-padding $base-padding;
+		padding: $base-padding 0 $base-padding $base-padding;
 		text-align: left;
 
 		 a {

@@ -89,6 +89,10 @@ aside.box-half .widget-content {
 		font-weight: normal;
 		line-height: 1.2em;
 
+		a {
+			@include link-colors( $color-accent-dark, $color-accent );
+		}
+
 		@include breakpoint($breakpoint-3) {
 			@include font-size(5.2);
 		}
@@ -100,7 +104,7 @@ aside.box-half .widget-content {
 }
 
 .widget_parsec-recent-project-widget {
-	.project {
+	.widget-content .project {
 		background-position: center center;
 		background-size: cover;
 		margin: $base-padding 0;
