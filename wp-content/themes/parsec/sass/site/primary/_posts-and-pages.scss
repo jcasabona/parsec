@@ -54,9 +54,9 @@
 	.featured-image {
 		margin: 0;
 		padding: 0;
-		max-width: $breakpoint-3;
+		max-width: $breakpoint-4;
 
-		@include breakpoint($breakpoint-3) {
+		@include breakpoint($breakpoint-4) {
 			float: left;
 			margin-bottom: -8px;
 			margin-right: $base-padding * 2;
@@ -67,7 +67,7 @@
 	.featured-content {
 		padding: ($base-padding * 2);
 
-		@include breakpoint($breakpoint-3) {
+		@include breakpoint($breakpoint-4) {
 			margin-left: 400px;
 		}
 
