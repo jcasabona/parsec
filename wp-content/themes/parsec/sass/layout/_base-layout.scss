@@ -41,49 +41,17 @@ body {
 			@include link-colors( $color-white, $color-accent );
 			text-decoration: none;
 		}
-	}
 
-	.impact-img {
-		background: url( $asset-path + 'img/erinandjoe-sm.jpg' ) center no-repeat;
-		-webkit-background-size: cover;
-		background-size: cover;
-		margin: 0 auto;
-		min-height: 300px;
-		text-align: center;
-
-		@include breakpoint( $breakpoint-1 ) {
-			background-image: url( $asset-path + 'img/erinandjoe-med.jpg' );
-			background-position: center;
-			min-height: auto;
-			height: 250px;
-		}
-
-		@include breakpoint( $breakpoint-2 ) {
-			height: 350px;
+		@include breakpoint( $breakpoint-1+1 ) {
+			padding-left: 20px;
 		}
 
 		@include breakpoint( $breakpoint-3 ) {
-			background-image: url( $asset-path + 'img/erinandjoe.jpg' );
-		}
-
-		@include breakpoint( $breakpoint-4 ) {
-			height: 400px;
+			padding-left: 60px;
 		}
 
 		@include breakpoint( $breakpoint-5 ) {
-			height: 500px;
-		}
-
-		@include breakpoint( $breakpoint-srsly ) {
-			height: 700px;
-		}
-
-		#more-stuff {
-			margin: $padding-more;
-			padding: $padding-more;
-			text-align: left;
-			display: none;
-			transition: display 0.5s linear;
+			padding-left: 100px;
 		}
 	}
 
