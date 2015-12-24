@@ -81,8 +81,8 @@
 }
 
 aside.box-half .widget-content {
-	@include font-size(2);
-	padding: $base-padding;
+	@include font-size(2.25);
+	padding: $base-padding $base-padding*2;
 
 	h3 {
 		font-variant: small-caps;

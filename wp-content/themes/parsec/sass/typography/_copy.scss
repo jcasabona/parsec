@@ -1,5 +1,6 @@
 p {
 	margin-bottom: 1.5em;
+	line-height: 1.58em;
 }
 
 b, strong {
@@ -67,16 +68,4 @@ small {
 
 big {
 	font-size: 125%;
-}
-
-.erin,
-.bride {
-	color: $color-bride;
-	font-weight: bold;
-}
-
-.joe,
-.groom {
-	color: $color-groom;
-	font-weight: bold;
 }

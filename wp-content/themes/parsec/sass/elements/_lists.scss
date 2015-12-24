@@ -16,6 +16,12 @@ li > ol {
 	margin-left: 1.5em;
 }
 
+li > ul {
+	li {
+		list-style-type: circle;
+	}
+}
+
 dt {
 	font-weight: bold;
 }
