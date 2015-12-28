@@ -10,11 +10,15 @@
   }
 
   $(document).on('ready', function(){
-    setHeight();
+    if( $('body').hasClass('post-type-archive-jetpack-portfolio') ) {
+      setHeight();
+    }
   });
 
   $(window).on('resize', function(){
-    setHeight();
+    if( $('body').hasClass('post-type-archive-jetpack-portfolio') ) {
+      setHeight();
+    }
   });
 
 } )( jQuery );
