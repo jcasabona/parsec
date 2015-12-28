@@ -106,11 +106,8 @@ aside.box-half .widget-content {
 .widget_parsec-recent-project-widget {
 	.widget-content .project {
 		display: block;
-		width: auto;
-
-		&:nth-child(odd) {
-			margin-left: $base-padding;
-		}
+		margin: $base-padding 0;
+		width: 100%;
 
 		a {
 			@include link-colors($color-white, darken( $color-white, 5% ));

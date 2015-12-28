@@ -122,18 +122,23 @@
 
 .post-type-archive-jetpack-portfolio .projects {
 		@include flex;
-		flex-flow: row wrap;
+		flex-flow: column nowrap;
+
+		@include breakpoint($breakpoint-1) {
+			flex-flow: row wrap;
+			justify-content: space-between;
+			align-items: center;
+		}
 }
 
 .project {
 	background-position: center center;
 	background-size: cover;
-	margin: $base-padding;
 	text-align: center;
-	width: 45%;
+	width: 100%;
 
-	&:nth-child(odd) {
-		margin-left: 0;
+	@include breakpoint($breakpoint-1) {
+		width: 49.5%;
 	}
 
 	h3 {

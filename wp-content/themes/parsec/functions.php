@@ -150,6 +150,7 @@ function parsec_scripts() {
 	wp_enqueue_script( 'parsec-navigation', get_template_directory_uri() . '/js/navigation.js', array( 'jquery' ), '20120206', true );
 
 	wp_enqueue_script( 'parsec-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
+	wp_enqueue_script( 'parsec-scripts', get_template_directory_uri() . '/js/custom.js', array( 'jquery' ), '20151228', true );
 
 	if ( WP_DEBUG ) {
 		wp_enqueue_script( 'picturefill', get_template_directory_uri() . '/js/picturefill.js', false, '20150912', true );
