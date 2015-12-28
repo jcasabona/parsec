@@ -105,28 +105,15 @@ aside.box-half .widget-content {
 
 .widget_parsec-recent-project-widget {
 	.widget-content .project {
-		background-position: center center;
-		background-size: cover;
-		margin: $base-padding 0;
-		text-align: center;
+		display: block;
+		width: auto;
 
-		h3 {
-			@include font-size(4);
-			margin: 0;
-			padding: 0;
-			text-shadow: 1px 1px 6px $color-black;
+		&:nth-child(odd) {
+			margin-left: $base-padding;
+		}
 
-			a {
-				background: rgba($color-secondary, 0.7);
-				display: block;
-				@include link-colors($color-white, darken( $color-white, 5% ));
-				padding: $base-padding * 2;
-				transition: background 0.5s ease;
-
-				&:hover {
-					background: rgba($color-secondary, 0.1);
-				}
-			}
+		a {
+			@include link-colors($color-white, darken( $color-white, 5% ));
 		}
 	}
 }

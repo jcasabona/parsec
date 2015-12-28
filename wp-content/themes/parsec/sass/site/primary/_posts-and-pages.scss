@@ -20,16 +20,18 @@
 			padding: $base-padding;
 		}
 
-		@include breakpoint($breakpoint-2) {
-			padding: $base-padding $base-padding*2;
-		}
+		body:not(.page-template-page-two-col) & {
+			@include breakpoint($breakpoint-2) {
+				padding: $base-padding $base-padding*2;
+			}
 
-		@include breakpoint($breakpoint-3) {
-			padding: $base-padding $base-padding*5;
-		}
+			@include breakpoint($breakpoint-3) {
+				padding: $base-padding $base-padding*5;
+			}
 
-		@include breakpoint($breakpoint-3-5) {
-			padding: $base-padding $base-padding*8.5;
+			@include breakpoint($breakpoint-3-5) {
+				padding: $base-padding $base-padding*8.5;
+			}
 		}
 	}
 
@@ -53,6 +55,7 @@
 		background: $color-accent-two;
 		color: $color-white;
 		padding: $base-padding;
+		text-align: center;
 
 		a{
 			@include link-colors($color-white, lighten($color-gray-base, 20%));
@@ -117,203 +120,37 @@
 	margin: 0 0 1.5em;
 }
 
-//Home Page
-.date-time,
-.share {
+.post-type-archive-jetpack-portfolio .projects {
+		@include flex;
+		flex-flow: row wrap;
+}
+
+.project {
+	background-position: center center;
+	background-size: cover;
+	margin: $base-padding;
 	text-align: center;
-	text-transform: small-caps;
+	width: 45%;
+
+	&:nth-child(odd) {
+		margin-left: 0;
+	}
 
 	h3 {
-		font-size: $font-size-heading-base;
-		font-weight: bold;
-	}
+		@include font-size(4);
+		margin: 0;
+		padding: 0;
+		text-shadow: 1px 1px 6px $color-black;
 
-	h4.time {
-		font-size: 2em;
-		font-weight: bold;
-	}
+		a {
+			background: rgba($color-secondary, 0.7);
+			display: block;
+			@include link-colors($color-white, darken( $color-white, 5% ));
+			padding: $base-padding * 2;
+			transition: background 0.5s ease;
 
-	h5 {
-		font-size: 1.7em;
-	}
-
-	@include breakpoint( $breakpoint-4 ) {
-		h3 {
-			font-size: $font-size-huge + 0.5;
-		}
-
-		h4.time {
-			font-size: $font-size-huge;
-		}
-
-		h5 {
-			font-size: $font-size-heading-base;
-		}
-	}
-}
-
-.location {
-	p {
-		padding: $base-padding;
-		text-align: center;
-	}
-
-	iframe {
-		padding: $base-padding $base-padding 0;
-	}
-
-}
-
-.panels {
-	margin: 0 auto;
-	text-align: center;
-
-	div {
-		background-position: 50%;
-		background-repeat: no-repeat;
-		margin: 2px 0 0;
-
-
-		@include breakpoint($breakpoint-1) {
-			display: inline-block;
-			margin: $base-margin 0 0;
-			vertical-align: top;
-			width: 32.5%;
-		}
-
-		@include breakpoint($breakpoint-2) {
-			width: 33%;
-		}
-
-		&.our-story {
-			background-image: url( $asset-path + 'img/our-story.jpg' );
-		}
-
-		&.rsvp {
-			background-image: url( $asset-path + 'img/rsvp.jpg' );
-		}
-
-		&.registry {
-			background-image: url( $asset-path + 'img/registry.jpg' );
-		}
-	}
-
-	a.panel {
-		background: rgba( $color-white, 0.6 );
-		display: -ms-flexbox;      /* TWEENER - IE 10 */
-		display: -webkit-flex;
-		display: flex;
-		font-size: $font-size-heading-base - 0.5;
-		font-weight: bold;
-		-webkit-flex-direction: column;
-		flex-direction: column;
-		height: 250px;
-		-ms-flex-pack: center;
-		-ms-justify-content: center;
-		-webkit-justify-content: center;
-		justify-content: center;
-		padding: $padding-more 0;
-		text-align: center;
-		text-decoration: none;
-		text-transform: uppercase;
-		transition: background 0.5s ease;
-
-		@include breakpoint( $breakpoint-1 ) {
-			height: 550px;
-		}
-
-		&:hover {
-			background: rgba( $color-white, 0 );
-		}
-
-	}
-}
-
-.wedding-party {
-
-	.single-wedding-party & {
-		margin: $padding-more auto;
-
-
-	}
-
-	.bio {
-		@include clearfix();
-		padding: $base-padding;
-		width: 100%;
-
-		@include breakpoint( $breakpoint-2 + 4.875 ) {
-			display: inline-block;
-			vertical-align: top;
-			width: 49%;
-		}
-
-		@include breakpoint( $breakpoint-3 ) {
-			width: 32%;
-		}
-	}
-
-	.bio-photo {
-		float: left;
-		width: 35%;
-
-		img{
-			border: 2px $color-accent solid;
-			border-radius: 50%;
-		}
-
-		@include breakpoint-tweener( $breakpoint-3, $breakpoint-5 - 1 ) {
-			float: none;
-			margin: 0 auto;
-			width: 60%;
-		}
-
-		.single-wedding-party & {
-			width: 40%;
-
-			img {
-				border: 0;
-				border-radius: 0;
-				max-width: 100%;
-			}
-
-		}
-	}
-
-	.bio-info {
-		margin-left: 40%;
-
-		@include breakpoint-tweener( $breakpoint-3, $breakpoint-5 - 1 ) {
-			margin-left: 0;
-			text-align: center;
-		}
-	}
-
-	.elevate {
-		&.maid-of-honor {
-			background: rgba( $color-accent-three, 0.1 );
-		}
-
-		&.best-man {
-			background: rgba( $color-accent-two, 0.1 );
-		}
-
-		@include breakpoint( $breakpoint-3 ) {
-			width: 49%;
-		}
-
-		//undo some stuff.
-		.bio-info {
-			@include breakpoint( $breakpoint-4 ) {
-				margin-left: 43%;
-				text-align: left;
-			}
-		}
-
-		.bio-photo {
-			@include breakpoint( $breakpoint-4 ) {
-				float: left;
-				width: 38%;
+			&:hover {
+				background: rgba($color-secondary, 0.1);
 			}
 		}
 	}
