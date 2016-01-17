@@ -10,11 +10,13 @@
 }
 
 .gallery-columns-2 .gallery-item {
-	max-width: 50%;
+	max-width: 48%;
+	margin: 0 15px;
 }
 
 .gallery-columns-3 .gallery-item {
-	max-width: 33.33%;
+	max-width: 30%;
+	margin: 0 11px;
 }
 
 .gallery-columns-4 .gallery-item {
@@ -43,4 +45,6 @@
 
 .gallery-caption {
 	display: block;
+	@include font-size(1.4);
+	margin-bottom: $base-padding;
 }
