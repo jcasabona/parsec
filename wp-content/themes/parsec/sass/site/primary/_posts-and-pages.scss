@@ -4,6 +4,7 @@
 
 .hentry {
 	background: $color-white;
+	@include font-size(2.25);
 	margin: 0 0 1.5em;
 
 	.entry-header {
@@ -58,30 +59,30 @@
 	text-transform: small-caps;
 
 	h3 {
-		font-size: $font-size-heading-base;
+		@include font-size($font-size-heading-base);
 		font-weight: bold;
 	}
 
 	h4.time {
-		font-size: 2em;
+		@include font-size(2);
 		font-weight: bold;
 	}
 
 	h5 {
-		font-size: 1.7em;
+		@include font-size(1.7);
 	}
 
 	@include breakpoint( $breakpoint-4 ) {
 		h3 {
-			font-size: $font-size-huge + 0.5;
+			@include font-size($font-size-huge + 0.5);
 		}
 
 		h4.time {
-			font-size: $font-size-huge;
+			@include font-size($font-size-huge);
 		}
 
 		h5 {
-			font-size: $font-size-heading-base;
+			@include font-size($font-size-heading-base);
 		}
 	}
 }
@@ -99,6 +100,7 @@
 }
 
 .panels {
+	font-family: $font-sans-alt;
 	margin: 0 auto;
 	text-align: center;
 
@@ -137,7 +139,7 @@
 		display: -ms-flexbox;      /* TWEENER - IE 10 */
 		display: -webkit-flex;
 		display: flex;
-		font-size: $font-size-heading-base - 0.5;
+		@include font-size($font-size-heading-base - 0.5);
 		font-weight: bold;
 		-webkit-flex-direction: column;
 		flex-direction: column;

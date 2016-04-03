@@ -1,0 +1,54 @@
+table.reading{
+	margin: 20px 0;
+	border-collapse: collapse;
+	width: 99%;
+	border: 1px solid #999999;
+	}
+	
+
+	table.reading th{
+	background: #666666;
+	color: #FFFFFF;
+	font-size: 1.2em;
+	font-weight: bold;
+	border: 1px solid #999999;
+	}
+	
+	table.reading tr{
+	border-bottom: 2px solid #999999;
+	}
+	
+	table.reading tr.current{
+	border-bottom: 2px solid #000000;
+	background: #FFFFBD;
+	}
+	
+	table.reading tr.finished{
+	border-bottom: 2px solid #AAAAAA;
+	background: #EAEAEA;
+	color: #999999;
+	}
+	
+	table.reading tr.finished a{
+	color: #999999;
+	}
+	
+	table.reading td{
+	padding: 10px;
+	border: 0;
+	}
+	
+.status{
+color: #008800;
+font-weight: bold;
+}
+
+img.rl-star{ padding: 0; margin: 0; }
+
+.rl-widget{
+text-align: center;
+}
+
+.rl-widget img{
+padding: 10px;
+}

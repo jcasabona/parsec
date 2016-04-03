@@ -71,12 +71,10 @@ big {
 
 .erin,
 .bride {
-	color: $color-bride;
-	font-weight: bold;
+	color: darken($color-bride, 5%);
 }
 
 .joe,
 .groom {
-	color: $color-groom;
-	font-weight: bold;
+	color: darken($color-groom, 5%);
 }

@@ -6,7 +6,7 @@ h1, h2, h3, h4, h5, h6 {
 $start: $font-size-heading-base;
 @each $h in h1, h2, h3, h4, h5, h6{
     #{$h} {
-      font-size: $start;
+      @include font-size($start);
       }
 
       $start: $start - 0.5;
@@ -17,7 +17,7 @@ $start: $font-size-heading-base;
 
 		&.big-header {
 			color: $color-accent-two;
-			font-size: $font-size-huge * 1.5;
+			@include font-size($font-size-huge * 1.5);
 			font-variant: small-caps;
 			font-weight: bold;
 			margin: 0;
@@ -34,7 +34,7 @@ $start: $font-size-heading-base;
 
 			@include breakpoint( $breakpoint-2 ) {
 				color: $color-black;
-				font-size: $font-size-heading-base + 1;
+				@include font-size($font-size-heading-base + 1);
 
 				span {
 					background: #FFFFFF;

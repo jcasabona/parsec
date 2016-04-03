@@ -52,3 +52,47 @@ textarea {
 	vertical-align: top; /* Improves readability and alignment in all browsers */
 	width: 100%;
 }
+
+/* RSVP Form */
+.hentry {
+	select {
+    height: 48px;
+    background: transparent;
+    border: 1px solid #CCCCCC;
+	}
+
+	.gfield {
+		margin-top: 10px;
+		padding: 15px;
+
+		&:nth-child(odd) {
+			background: rgba(lighten($color-accent-two, 40%), 0.2);
+			border-bottom: 1px solid rgba(lighten($color-accent-two, 10%), 0.7);
+			border-top: 1px solid rgba(lighten($color-accent-two, 10%), 0.7);
+		}
+	}
+
+	div.ginput_complex.ginput_container.gf_name_has_2 span {
+
+		&.name_prefix {
+			width: 20%;
+		}
+
+		&.name_first {
+			width: 50%;
+		}
+	}
+
+	.gform_wrapper li.field_description_above .gfield_description {
+		display: inline;
+		margin-left: 10px !important;
+	}
+
+	.gform_wrapper ul.gfield_checkbox li,
+	.gform_wrapper ul.gfield_radio li {
+		display: inline-block;
+		max-width: 30%;
+		margin: 15px;
+		width: auto;
+	}
+}

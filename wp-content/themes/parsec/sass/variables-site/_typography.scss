@@ -1,5 +1,5 @@
-$font-sans: 'Source Sans Pro', sans-serif;
-$font-sans-alt: 'Pathway Gothic One', sans-serif;
+$font-sans: "garamond-premier-pro-caption", serif;
+$font-sans-alt: "jaf-bernino-sans-narrow", sans-serif;
 $font-mono: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
 
 $font-main: $font-sans;
@@ -10,8 +10,8 @@ $font-line-height-body: 1.5;
 $font-line-height-pre: 1.6;
 $font-weight: 200;
 
-$font-size-base: 10px;
-$font-size-heading-base: 3em;
-$font-size-huge: $font-size-heading-base * 1.5;
+$font-size-base: 1.25;
+$font-size-heading-base: 4;
+$font-size-huge: $font-size-heading-base + 2;
 
 $svg-path: 'assets/fonts/icon-font.svg';

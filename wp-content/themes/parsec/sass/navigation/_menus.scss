@@ -1,5 +1,6 @@
 .main-navigation {
 	background: $color-accent-two;
+	font-family: $font-sans-alt;
 	text-align: right;
 
 	ul {
@@ -47,7 +48,7 @@
 	.site-title {
 		float: left;
 		line-height: 1em;
-		padding: 0 0 0 $padding-less;
+		padding: $padding-less 0 0 $padding-less;
 
 		 a {
 			@include link-colors( $color-white, $color-accent );

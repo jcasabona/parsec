@@ -35,8 +35,7 @@
 		background: $color-secondary;
 		border-bottom: 1px solid $color-white;
 		color: $color-white;
-		font-size: 2rem;
-		font-size: 20px;
+		@include font-size(2);
 		font-weight: bold;
 		margin: 0;
 		padding: $base-padding;
@@ -51,8 +50,7 @@
 		}
 
 		i {
-			font-size: 6rem;
-			font-size: 60px;
+			@include font-size(6);
 			font-weight: normal;
 		}
 

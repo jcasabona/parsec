@@ -87,7 +87,7 @@ body {
 	}
 
 	i {
-		font-size: 3em;
+		@include font-size(3);
 		color: $color-white;
 		padding: 0 $padding-less;
 		text-align: right;
