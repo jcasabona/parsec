@@ -28,15 +28,20 @@ class Parsec_Recent_Post extends WP_Widget {
 
 		echo $args['before_widget'];
 
-		$title = ! empty( $instance['title'] ) ? apply_filters( 'widget_title', $instance['title'] ) : __( 'The Latest', 'dcp' );
+		if ( ! empty( $instance['title'] ) ) {
 
-		$format =  '%1$s%2$s%3$s';
+			$title = apply_filters( 'widget_title', $instance['title'] );
 
-		printf( $format,
-			$args['before_title'],
-			$title,
-			$args['after_title']
-		);
+			$format =  '%1$s%2$s%3$s';
+
+			printf( $format,
+				$args['before_title'],
+				$title,
+				$args['after_title']
+			);
+		} else {
+			echo '<div class="widget-content">';
+		}
 
     parsec_latest_post();
 

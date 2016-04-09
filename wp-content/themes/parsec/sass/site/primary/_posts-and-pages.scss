@@ -20,17 +20,21 @@
 			padding: $base-padding;
 		}
 
+		@include breakpoint($breakpoint-3) {
+			@include font-size(3.5);
+		}
+
 		body:not(.page-template-page-two-col) & {
 			@include breakpoint($breakpoint-2) {
-				padding: $base-padding $base-padding*2;
+				padding: $base-padding $base-padding*1.5;
 			}
 
 			@include breakpoint($breakpoint-3) {
-				padding: $base-padding $base-padding*5;
+				padding: $base-padding $base-padding*2;
 			}
 
 			@include breakpoint($breakpoint-3-5) {
-				padding: $base-padding $base-padding*8.5;
+				padding: $base-padding $base-padding*2.5;
 			}
 		}
 	}
@@ -52,13 +56,15 @@
 	}
 
 	.entry-footer {
-		background: $color-accent-two;
-		color: $color-white;
+		border-color: $color-accent-two;
+		border-style: solid;
+		border-width: 1px 0;
+		color: $color-accent-two;
 		padding: $base-padding;
 		text-align: center;
 
 		a{
-			@include link-colors($color-white, lighten($color-gray-base, 20%));
+			@include link-colors($color-accent-two, lighten($color-accent-two, 20%));
 		}
 
 	}
@@ -158,5 +164,11 @@
 				background: rgba($color-secondary, 0.1);
 			}
 		}
+	}
+}
+
+.cse-events {
+	div {
+		margin: 20px 0;
 	}
 }

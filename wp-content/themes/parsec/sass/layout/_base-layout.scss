@@ -8,11 +8,11 @@ body {
 
 .site {
 		@include container();
-		background: $color-background-screen;
+		background: $color-white;
 	}
 
 .site-content {
-	background: $color-background-screen;
+	background: $color-white;
 	max-width: $max-width-px;
 	margin: $margin-center;
 
@@ -41,18 +41,6 @@ body {
 		 a {
 			@include link-colors( $color-white, $color-accent );
 			text-decoration: none;
-		}
-
-		@include breakpoint( $breakpoint-1+1 ) {
-			padding-left: 20px;
-		}
-
-		@include breakpoint( $breakpoint-3 ) {
-			padding-left: 60px;
-		}
-
-		@include breakpoint( $breakpoint-5 ) {
-			padding-left: 100px;
 		}
 	}
 

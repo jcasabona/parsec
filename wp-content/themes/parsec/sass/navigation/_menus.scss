@@ -3,8 +3,7 @@
 	text-align: right;
 
 	ul {
-		clear: left;
-		display: block;
+		display: inline-block;
 		list-style: none;
 		margin: $base-padding 0 0 0;
 		padding-left: 0;
@@ -17,18 +16,8 @@
 		}
 
 		@include breakpoint( $breakpoint-1+1 ) {
-			clear: none;
-			margin-top: $padding-more;
-			padding-right: 20px;
+			@include font-size(2);
 			text-align: right;
-		}
-
-		@include breakpoint( $breakpoint-3 ) {
-			padding-right: 60px;
-		}
-
-		@include breakpoint( $breakpoint-5 ) {
-			padding-right: 100px;
 		}
 	}
 
