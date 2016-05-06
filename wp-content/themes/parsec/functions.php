@@ -171,7 +171,13 @@ function parsec_footer_scripts() {
 	<?php
 }
 
+function parsec_manual_typekit() { //sigh
+	echo '<script type="text/javascript" src="//use.typekit.net/bev5ovw.js?ver=4.4.2"></script>';
+}
+
 add_action( 'wp_footer', 'parsec_footer_scripts' );
+add_action( 'admin_head', 'parsec_manual_typekit' );
+add_action( 'admin_footer', 'parsec_footer_scripts' );
 /**
  * Custom template tags for this theme.
  */

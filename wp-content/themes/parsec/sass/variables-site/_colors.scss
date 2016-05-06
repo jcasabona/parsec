@@ -15,7 +15,7 @@ $color-alert: #880000;
 $color-background-body: $color-white;
 $color-background-screen: lighten($color-gray-base, 36%);
 $color-background-hr: $color-accent-three;
-$color-background-button: $color-accent-two;
+$color-background-button: darken($color-accent, 5%);
 $color-background-pre: $color-primary;
 $color-background-ins: $color-accent-two;
 
@@ -27,11 +27,8 @@ $color-link-visited: $color-accent;
 $color-link-hover: $color-accent-three;
 $color-text-main: $color-primary;
 
-$color-border-button: $color-secondary;
-$color-border-button-hover: lighten($color-secondary, 10%);
-$color-border-button-focus: lighten($color-secondary, 10%);
+$color-border-button: darken($color-accent, 5%);
+$color-border-button-hover: darken($color-accent, 10%);
+$color-border-button-focus: darken($color-accent, 10%);
 $color-border-input: $color-gray-base;
 $color-border-abbr: $color-gray-base;
-
-$color-bride: $color-secondary;
-$color-groom: $color-accent-two;

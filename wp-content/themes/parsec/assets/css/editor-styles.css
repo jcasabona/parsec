@@ -1,15 +1,5 @@
 #tinymce {
-  font-family: 'Source Sans Pro', sans-serif;
-}
-
-.erin,
-.bride {
-  color: #C05300;
-  font-weight: bold;
-}
-
-.joe,
-.groom {
-  color: #006776;
-  font-weight: bold;
+  font-family: "ff-tisa-web-pro",serif;
+  font-size: 1.5rem;
+  margin: 0 125px;
 }

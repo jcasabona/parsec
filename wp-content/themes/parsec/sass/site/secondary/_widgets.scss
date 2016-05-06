@@ -80,26 +80,34 @@
 	}
 }
 
-aside.box-half .widget-content {
-	@include font-size(2.25);
-	padding: $base-padding $base-padding*2;
+aside.box-half {
 
-	h3 {
-		font-variant: small-caps;
-		font-weight: normal;
-		line-height: 1.2em;
+	.widget-content {
+		@include font-size(2.25);
+		padding: $base-padding $base-padding*2;
 
-		a {
-			@include link-colors( $color-accent-dark, $color-accent );
+		h3 {
+			font-variant: small-caps;
+			font-weight: normal;
+			line-height: 1.2em;
+
+			a {
+				@include link-colors( $color-accent-dark, $color-accent );
+			}
+
+			@include breakpoint($breakpoint-3) {
+				@include font-size(5.2);
+			}
 		}
 
-		@include breakpoint($breakpoint-3) {
-			@include font-size(5.2);
+		p {
+			margin: 0;
 		}
 	}
 
-	p {
-		margin: 0;
+	&:first-of-type .widget-content {
+			padding-top: 0;
+			padding-left: 0;
 	}
 }
 

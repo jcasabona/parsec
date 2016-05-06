@@ -17,6 +17,7 @@ input[type="submit"] {
 	margin: $base-padding;
 	padding: $base-padding;
 	text-shadow: 0 1px 0 rgba(0, 0, 0, 0.8);
+	transition: background 0.75s ease-in-out;
 	width: 40%;
 }
 
@@ -34,7 +35,7 @@ button:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
-	background: lighten( $color-background-button, 5% );
+	background: lighten( $color-background-button, 10% );
 }
 
 button:focus,
