@@ -31,7 +31,7 @@
 		}
 
 		@include breakpoint($breakpoint-3) {
-			width: 33.3%;
+			width: 33%;
 
 			&:last-child {
 				margin-right: 0;
@@ -44,40 +44,34 @@ section.event-info {
 	background: $color-secondary;
 }
 
-.home-columns {
+section.home-widgets {
+	margin: $base-margin 0;
+
 	@include breakpoint($breakpoint-2) {
 		@include flex;
 	}
 
-	aside.box-half {
-		margin: $base-margin 0;
-		@include breakpoint($breakpoint-2) {
-			width: 50%;
 
-			&:first-child {
-				margin-right: 15px;
-			}
-		}
-
-
-		h2 {
-			background: $color-accent-two;
-			color: $color-white;
-			margin: 0;
-			padding: $base-margin/2 $base-padding;
-			text-align: left;
-			text-transform: uppercase;
-		}
-
-		.widget {
-			background: $color-white;
-			color: $color-black;
-			padding: 0;
-			margin: 0 0 $base-margin * 2;
-		}
+	h2 {
+		margin: 0;
+		padding: $base-margin/2 0;
+		text-align: left;
 	}
 
-	.button {
-		width: auto;
+	.widget {
+		background: $color-white;
+		color: $color-black;
+		flex-basis: 0;
+		flex-grow: 1;
+		padding: 0;
+		margin: $base-padding*2;
+
+		&:first-child {
+			margin-left: 0;
+		}
+
+		&:last-child {
+			margin-right: 0;
+		}
 	}
 }

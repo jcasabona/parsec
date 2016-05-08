@@ -1,5 +1,5 @@
 h1, h2, h3, h4, h5, h6 {
-	font-family: $font-sans-alt;
+	font-family: $font-headings;
 	font-weight: normal;
 	line-height: 1.2em;
 	margin: $padding-more 0;
@@ -20,7 +20,6 @@ $start: $font-size-heading-base;
 		&.big-header {
 			color: $color-accent-two;
 			font-size: $font-size-huge * 1.5;
-			font-variant: small-caps;
 			font-weight: bold;
 			margin: 0;
 			text-align: center;

@@ -16,12 +16,22 @@
 	}
 
 	.entry {
+		margin: $margin-center;
+		max-width: $max-width-percent;
+		padding: $padding-more 0 $padding-less;
+
 		@include breakpoint($breakpoint-1) {
 			padding: $base-padding;
 		}
 
+		@include breakpoint($breakpoint-2) {
+			padding: $padding-more;
+			width: 85%;
+		}
+
 		@include breakpoint($breakpoint-3) {
 			@include font-size(3.5);
+			width: 69%;
 		}
 
 		body:not(.page-template-page-two-col) & {
@@ -56,11 +66,9 @@
 	}
 
 	.entry-footer {
-		border-color: $color-accent-two;
-		border-style: solid;
-		border-width: 1px 0;
+		border-top: 1px solid lighten($color-gray-base, 30%);
 		color: $color-accent-two;
-		padding: $base-padding;
+		padding-top: $base-padding/3;
 		text-align: center;
 
 		a{
@@ -71,8 +79,7 @@
 }
 
 .impact-area {
-	background: $color-primary;
-	color: $color-white;
+	border-bottom: 1px solid lighten($color-gray-base, 30%);
 
 	@include breakpoint($breakpoint-2) {
 		@include font-size(2.6);
@@ -85,7 +92,6 @@
 
 		@include breakpoint($breakpoint-4) {
 			float: left;
-			margin-bottom: -8px;
 			margin-right: $base-padding * 2;
 			max-width: 400px;
 		}

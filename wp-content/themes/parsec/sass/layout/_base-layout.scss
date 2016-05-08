@@ -23,23 +23,28 @@ body {
 
 
 .site-header, .site-footer {
-	background: $color-accent-two;
-	color: $color-white;
+	color: $color-primary;
 	margin: $margin-center;
 }
 
 .site-header {
+	border-top: 8px solid rgba($color-accent, 0.7);
 
 	.site-title {
 		float: left;
+		font-family: $font-sans-alt;
 		line-height: 1em;
 		margin: 0;
 		max-width: 70%;
 		padding: $base-padding 0 $base-padding $base-padding;
 		text-align: left;
 
+		@include breakpoint( $breakpoint-1 + 1, 'max' ) {
+			max-width: none;
+		}
+
 		 a {
-			@include link-colors( $color-white, $color-accent );
+			@include link-colors( $color-primary, $color-accent-three );
 			text-decoration: none;
 		}
 	}
@@ -81,6 +86,7 @@ body {
 
 .site-footer {
 	background: $color-primary;
+	color: $color-white;
 	a {
 		@include link-colors( $color-white, $color-accent );
 	}
@@ -92,23 +98,14 @@ body {
 
 .content-area {
 	margin: $margin-center;
-	max-width: $max-width-percent;
-	padding: $padding-more 0 $padding-less;
 
 	@include breakpoint( $breakpoint-2 ) {
 		display: inline-block;
-		padding: $padding-more;
-		width: 60%;
 		vertical-align: top;
-	}
-
-	@include breakpoint( $breakpoint-3 ) {
-		width: 69%;
 	}
 
 	&.one-col {
 		display: block;
-		width: $max-width-percent;
 	}
 
 	.featured-image {

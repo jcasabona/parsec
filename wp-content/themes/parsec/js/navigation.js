@@ -13,7 +13,7 @@
 
 	buttonContainer = document.getElementById( 'masthead' );
 
-	button = container.getElementsByTagName( 'span' )[0];
+	button = document.getElementById( 'menu-togglr' );
 	if ( 'undefined' === typeof button ) {
 		return;
 	}

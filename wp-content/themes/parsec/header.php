@@ -28,8 +28,8 @@ global $p_svg_path;
 	<header id="masthead" class="site-header clearfix" role="banner">
 		<div class="contain">
 			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<nav id="site-navigation" class="main-navigation" role="navigation">
-				<span class="menu-toggle" aria-controls="menu" aria-expanded="false">menu</span>
+			<span id="menu-togglr" class="menu-toggle" aria-controls="menu" aria-expanded="false">menu</span>
+			<nav id="site-navigation" class="main-navigation clear" role="navigation">
 				<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 			</nav><!-- #site-navigation -->
 		</div>

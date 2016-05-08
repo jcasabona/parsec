@@ -1,6 +1,6 @@
 a {
-	@include link-colors( $color-accent, $color-accent-dark );
-	text-decoration: none;
+	@include link-colors( $color-secondary, $color-accent-dark );
+	text-decoration: underline;
 }
 
 blockquote {

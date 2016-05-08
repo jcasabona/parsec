@@ -19,12 +19,19 @@
 </section>
 
 
-<section class="home-columns">
-	<aside class="box-half">
-		<?php dynamic_sidebar( 'home-left' ); ?>
-	</aside>
+<section class="latest-post">
+	<?php
+		$latest_post = get_posts( array( 'numberposts' => 3, 'post_status' => 'publish' ) );
+		global $post;
+		foreach( $latest_post as $post ) {
+			setup_postdata( $post );
+			get_template_part( 'content', 'home-post' );
+		}
+		wp_reset_postdata();
+	?>
+</section>
 
-	<aside class="box-half">
-			<?php dynamic_sidebar( 'home-right' ); ?>
-	</aside>
+
+<section class="home-widgets">
+	<?php dynamic_sidebar( 'home-right' ); ?>
 </section>

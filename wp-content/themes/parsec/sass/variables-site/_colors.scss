@@ -22,9 +22,9 @@ $color-background-ins: $color-accent-two;
 $color-text-screen: $color-primary;
 $color-text-input: $color-gray-base;
 $color-text-input-focus: darken($color-gray-base, 10%);
-$color-link: $color-accent;
-$color-link-visited: $color-accent;
-$color-link-hover: $color-accent-three;
+$color-link: $color-accent-three;
+$color-link-visited: $color-link;
+$color-link-hover: $color-accent;
 $color-text-main: $color-primary;
 
 $color-border-button: darken($color-accent, 5%);

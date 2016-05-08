@@ -1,12 +1,17 @@
 .widget {
-	background: rgba($color-accent-two, 0.2);
 	color: $color-primary;
 	margin: $base-margin 0;
 	padding: $base-padding;
 
 	h3 {
-		color: $color-accent-dark;
-		font-weight: normal;
+		color: $color-secondary;
+		font-weight: 600;
+
+		footer & {
+			color: $color-white;
+			@include font-size(3);
+			font-weight: 400;
+		}
 	}
 
 	a:not(.button) {
@@ -87,16 +92,11 @@ aside.box-half {
 		padding: $base-padding $base-padding*2;
 
 		h3 {
-			font-variant: small-caps;
-			font-weight: normal;
+			font-weight: 600;
 			line-height: 1.2em;
 
-			a {
-				@include link-colors( $color-accent-dark, $color-accent );
-			}
-
 			@include breakpoint($breakpoint-3) {
-				@include font-size(5.2);
+				@include font-size(4);
 			}
 		}
 
