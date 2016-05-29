@@ -4,16 +4,21 @@
  *
  * @package Parsec
  */
+
+ $has_img = '';
 ?>
 
 <section class="impact-area clear">
 	<?php if ( has_post_thumbnail() ) : ?>
 		<div class="featured-image">
-			<?php the_post_thumbnail( 'large' ); ?>
+			<?php
+				the_post_thumbnail( 'large' );
+				$has_img = ' with-featured-img';
+			?>
 		</div>
 	<?php endif; ?>
 
-	<div class="featured-content">
+	<div class="featured-content<?php echo $has_img; ?>">
 		<?php the_content(); ?>
 	</div>
 </section>

@@ -26,7 +26,7 @@
 			?>
 		</div><!-- .entry-content -->
 	</div>
-	<footer class="entry-footer">
-		<?php parsec_entry_footer(); ?>
+	<footer class="entry-footer group">
+			<?php parsec_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->

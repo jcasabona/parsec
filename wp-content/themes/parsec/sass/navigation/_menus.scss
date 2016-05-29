@@ -1,6 +1,11 @@
 .main-navigation {
 	text-align: right;
 
+	@include breakpoint-tweener($breakpoint-header, $breakpoint-3) {
+		display: block;
+		text-align: center;
+	}
+
 	ul {
 		display: inline-block;
 		list-style: none;
@@ -14,14 +19,18 @@
 			width: 100%;
 		}
 
-		@include breakpoint( $breakpoint-1+1 ) {
+		@include breakpoint( $breakpoint-header ) {
 			@include font-size(2);
 			text-align: right;
+		}
+
+		@include breakpoint-tweener($breakpoint-header, $breakpoint-3) {
+			text-align: center;
 		}
 	}
 
 	li {
-		@include breakpoint($breakpoint-1+1) {
+		@include breakpoint($breakpoint-header) {
 			display: inline-block;
 		}
 
@@ -32,7 +41,7 @@
 			padding: $padding-less;
 			text-decoration: none;
 
-			@include breakpoint($breakpoint-1, 'max') {
+			@include breakpoint($breakpoint-header, 'max') {
 				border-bottom: 1px solid lighten( $color-accent-two, 10% );
 				@include link-colors( $color-white, $color-gray-base );
 				display: block;
@@ -56,7 +65,7 @@
 	float: right;
 }
 
-@include breakpoint( $breakpoint-1 + 1, 'max' ) {
+@include breakpoint( $breakpoint-header, 'max' ) {
 	.menu-toggle,
 	.main-navigation.toggled .nav-menu {
 		display: block;
@@ -86,19 +95,4 @@
 .site-main .post-navigation {
 	margin: 0 0 1.5em;
 	overflow: hidden;
-}
-
-.comment-navigation .nav-previous,
-.paging-navigation .nav-previous,
-.post-navigation .nav-previous {
-	float: left;
-	width: 50%;
-}
-
-.comment-navigation .nav-next,
-.paging-navigation .nav-next,
-.post-navigation .nav-next {
-	float: right;
-	text-align: right;
-	width: 50%;
 }

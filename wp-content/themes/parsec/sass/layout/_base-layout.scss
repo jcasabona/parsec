@@ -36,11 +36,17 @@ body {
 		line-height: 1em;
 		margin: 0;
 		max-width: 70%;
-		padding: $base-padding 0 $base-padding $base-padding;
+		padding: $base-padding 5px;
 		text-align: left;
 
-		@include breakpoint( $breakpoint-1 + 1, 'max' ) {
+		@include breakpoint-tweener( $breakpoint-header, $breakpoint-3) {
+			float: none;
 			max-width: none;
+			text-align: center;
+		}
+
+		@include breakpoint( $breakpoint-header, 'max' ) {
+			padding: $base-padding 0 $base-padding $base-padding;
 		}
 
 		 a {

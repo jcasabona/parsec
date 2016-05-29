@@ -48,11 +48,11 @@ function parsec_post_nav() {
 		return;
 	}
 	?>
-	<nav class="navigation post-navigation" role="navigation">
+	<nav class="navigation post-navigation group" role="navigation">
 		<h1 class="screen-reader-text"><?php _e( 'Post navigation', 'parsec' ); ?></h1>
 		<div class="nav-links">
 			<?php
-				previous_post_link( '<div class="nav-previous">%link</div>', _x( '<span class="meta-nav">&larr;</span>&nbsp;%title', 'Previous post link', 'parsec' ) );
+				previous_post_link( '<span class="nav-previous">%link</span>', _x( '<span class="meta-nav">&larr;</span>&nbsp;%title', 'Previous post link', 'parsec' ) );
 				next_post_link(     '<div class="nav-next">%link</div>',     _x( '%title&nbsp;<span class="meta-nav">&rarr;</span>', 'Next post link',     'parsec' ) );
 			?>
 		</div><!-- .nav-links -->
@@ -120,8 +120,6 @@ function parsec_entry_footer() {
 		comments_popup_link( __( 'add', 'parsec' ), __( '1', 'parsec' ), __( '%', 'parsec' ) );
 		echo '</span> ';
 	}
-
-	edit_post_link( __( 'Edit', 'parsec' ), '<span class="edit-link"><span class="genericon genericon-edit"></span> ', '</span>' );
 }
 endif;
 

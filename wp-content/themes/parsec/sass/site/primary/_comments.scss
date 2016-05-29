@@ -1,11 +1,11 @@
 .comments-area {
 	background: #FFFFFF;
-	border: 1px solid #EFEFEF;
-	margin: 0 auto;
+	margin: $base-padding auto;
 	max-width: 700px;
 	padding: 15px;
 }
 .comment-list {
+	border: 1px solid #EFEFEF;
 	list-style-type: none;
 	margin: 0 auto;
 
@@ -17,6 +17,10 @@
 
 		&:nth-child(even) {
 			border-bottom: 3px solid $color-accent-two;
+		}
+
+		&.bypostauthor {
+			background: rgba($color-accent, 0.10);
 		}
 
 		.comment-meta {
