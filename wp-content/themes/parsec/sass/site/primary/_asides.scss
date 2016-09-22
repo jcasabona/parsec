@@ -63,11 +63,21 @@ section.home-widgets {
 		color: $color-black;
 		flex-basis: 0;
 		flex-grow: 1;
-		padding: 0;
-		margin: $base-padding*2;
+		padding: 10px 50px;
+		margin: 0;
+
+		.textwidget {
+			margin-top: 20px;
+		}
 
 		&:first-child {
 			margin-left: 0;
+			border-bottom: 1px solid darken($color-gray-2, 3%);
+
+			@include breakpoint($breakpoint-2) {
+				border-bottom: 0;
+				border-right: 1px solid darken($color-gray-2, 3%);
+			}
 		}
 
 		&:last-child {

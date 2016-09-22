@@ -1,7 +1,7 @@
 .main-navigation {
 	text-align: right;
 
-	@include breakpoint-tweener($breakpoint-header, $breakpoint-3) {
+	@include breakpoint-tweener($breakpoint-header, $breakpoint-4) {
 		display: block;
 		text-align: center;
 	}

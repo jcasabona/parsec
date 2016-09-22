@@ -1,14 +1,15 @@
-$font-sans: 'ff-tisa-web-pro', serif;
-$font-sans-alt: 'league-gothic',sans-serif;
+$font-sans: 'Tinos', Helvetica, sans-serif;
+$font-serif: 'Playfair Display', Georgia, serif;
+$font-sans-alt: $font-serif; // Backwards Compatibility.
 $font-mono: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
 
 $font-main: $font-sans;
-$font-headings: $font-sans;
+$font-headings: $font-serif;
 $font-code: $font-mono;
 $font-pre: $font-mono;
 $font-line-height-body: 1.5;
 $font-line-height-pre: 1.6;
-$font-weight: 200;
+$font-weight: 400;
 
 $font-size-base: 10px;
 $font-size-heading-base: 5rem;

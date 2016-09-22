@@ -13,6 +13,7 @@ body {
 
 .site-content {
 	background: $color-white;
+	font-color: $color-text-main;
 	max-width: $max-width-px;
 	margin: $margin-center;
 
@@ -39,7 +40,7 @@ body {
 		padding: $base-padding 5px;
 		text-align: left;
 
-		@include breakpoint-tweener( $breakpoint-header, $breakpoint-3) {
+		@include breakpoint-tweener( $breakpoint-header, $breakpoint-4) {
 			float: none;
 			max-width: none;
 			text-align: center;
@@ -47,6 +48,11 @@ body {
 
 		@include breakpoint( $breakpoint-header, 'max' ) {
 			padding: $base-padding 0 $base-padding $base-padding;
+		}
+
+		@include breakpoint-tweener( $breakpoint-4, $max-width-px ) {
+			padding-left: $padding-less;
+			padding-right: $padding-less;
 		}
 
 		 a {

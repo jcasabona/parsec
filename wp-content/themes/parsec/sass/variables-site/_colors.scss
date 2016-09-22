@@ -6,27 +6,29 @@ $color-accent: #EF8200; //orng
 $color-accent-dark: #C16900;
 $color-accent-two: #003E5F; // tealish
 $color-accent-three: #00507A;
-$color-white: #FFFFFF;
+$color-white: whitesmoke;
+$color-whitesmoke: whitesmoke;
 $color-black: #000000;
 $color-gray-base: #999999;
 $color-gray-2: #EFEFEF;
+$color-grey-3: #4f4f4f;
 
 $color-alert: #880000;
 
-$color-background-body: $color-white;
+$color-background-body: $color-whitesmoke;
 $color-background-screen: lighten($color-gray-base, 36%);
 $color-background-hr: $color-accent-three;
 $color-background-button: darken($color-accent, 5%);
 $color-background-pre: $color-primary;
 $color-background-ins: $color-accent-two;
 
-$color-text-screen: $color-primary;
+$color-text-screen: $color-grey-3;
 $color-text-input: $color-gray-base;
 $color-text-input-focus: darken($color-gray-base, 10%);
 $color-link: $color-accent-three;
 $color-link-visited: $color-link;
 $color-link-hover: $color-accent;
-$color-text-main: $color-primary;
+$color-text-main: $color-grey-3;
 
 $color-border-button: darken($color-accent, 5%);
 $color-border-button-hover: darken($color-accent, 10%);

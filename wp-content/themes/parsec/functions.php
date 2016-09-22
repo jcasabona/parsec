@@ -144,7 +144,7 @@ function parsec_scripts() {
       wp_enqueue_script( 'jquery' );
 	}
 
-	wp_enqueue_script( 'typekit', '//use.typekit.net/bev5ovw.js' );
+	wp_enqueue_style( 'parsec-fonts', '//fonts.googleapis.com/css?family=Playfair+Display:900|Tinos:400,700' );
 	wp_enqueue_style( 'parsec-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'parsec-navigation', get_template_directory_uri() . '/js/navigation.js', array( 'jquery' ), '20120206', true );
@@ -164,20 +164,6 @@ function parsec_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'parsec_scripts' );
 
-
-function parsec_footer_scripts() {
-	?>
-		<script>try{Typekit.load({ async: true });}catch(e){}</script>
-	<?php
-}
-
-function parsec_manual_typekit() { //sigh
-	echo '<script type="text/javascript" src="//use.typekit.net/bev5ovw.js?ver=4.4.2"></script>';
-}
-
-add_action( 'wp_footer', 'parsec_footer_scripts' );
-add_action( 'admin_head', 'parsec_manual_typekit' );
-add_action( 'admin_footer', 'parsec_footer_scripts' );
 /**
  * Custom template tags for this theme.
  */

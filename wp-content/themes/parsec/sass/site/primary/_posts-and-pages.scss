@@ -4,7 +4,8 @@
 
 .hentry {
 	background: $color-white;
-	margin: 0 0 1.5em;
+	margin: 0 auto 1.5em;
+	max-width: $max-width-content;
 
 	.featured-image {
 		background: #EFEFEF;
@@ -15,45 +16,39 @@
 		}
 	}
 
+	.featured-thumb {
+		margin: 1.5em auto 0;
+		max-width: $max-width-content;
+		text-align: center;
+
+		@include breakpoint($breakpoint-3) {
+		}
+	}
+
 	.entry {
-		margin: $margin-center;
-		max-width: $max-width-percent;
-		padding: $padding-more 0 $padding-less;
+		margin: 0 auto;
+		max-width: $max-width-content;
+
 
 		@include breakpoint($breakpoint-1) {
 			padding: $base-padding;
 		}
 
-		@include breakpoint($breakpoint-2) {
-			padding: $padding-more;
-			width: 85%;
-		}
-
 		@include breakpoint($breakpoint-3) {
 			@include font-size(3.5);
-			width: 69%;
-		}
-
-		body:not(.page-template-page-two-col) & {
-			@include breakpoint($breakpoint-2) {
-				padding: $base-padding $base-padding*1.5;
-			}
-
-			@include breakpoint($breakpoint-3) {
-				padding: $base-padding $base-padding*2;
-			}
-
-			@include breakpoint($breakpoint-3-5) {
-				padding: $base-padding $base-padding*2.5;
-			}
 		}
 	}
 
 	.entry-header {
-		padding: 0 $base-padding;
+		padding: 0;
+		text-align: center;
 
 		a {
 				text-decoration: none;
+		}
+
+		@include  breakpoint($breakpoint-2) {
+			text-align: left;
 		}
 	}
 
@@ -61,7 +56,7 @@
 		padding: 0 $base-padding;
 
 		@include  breakpoint($breakpoint-2) {
-			@include font-size(2.25);
+			@include font-size(2.4);
 		}
 	}
 
@@ -70,7 +65,7 @@
 		color: $color-accent-two;
 		@include font-size(1.5);
 		padding: $base-padding/3 $base-padding;
-		text-align: right;
+		text-align: center;
 
 		span,
 		time {
@@ -180,7 +175,7 @@
 	width: 100%;
 
 	@include breakpoint($breakpoint-1) {
-		width: 49.5%;
+		width: 45%;
 	}
 
 	h3 {
