@@ -147,3 +147,9 @@ aside {
 		width: 30%;
 	}
 }
+
+.page-header {
+	&.archive {
+		text-align: center;
+	}
+}

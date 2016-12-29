@@ -44,7 +44,7 @@
 		text-align: center;
 
 		h1 {
-			margin-bottom: $base-padding/2;
+			margin-bottom: $base-padding;
 		}
 
 		a {
@@ -157,6 +157,7 @@
 
 	.genericon {
 		@include font-size(1.6);
+		vertical-align: middle;
 	}
 }
 

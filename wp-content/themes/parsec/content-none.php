@@ -11,6 +11,7 @@
 <section class="no-results not-found entry">
 	<header class="page-header">
 		<h1 class="page-title"><?php _e( 'Nothing Found', 'parsec' ); ?></h1>
+		<?php parsec_posted_on(); ?>
 	</header><!-- .page-header -->
 
 	<div class="page-content">
