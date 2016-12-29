@@ -14,6 +14,7 @@
 	<div class="entry">
 		<header class="entry-header">
 			<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+			<?php parsec_posted_on(); ?>
 		</header><!-- .entry-header -->
 
 		<div class="entry-content">

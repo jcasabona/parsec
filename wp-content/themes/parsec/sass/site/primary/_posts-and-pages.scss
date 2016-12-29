@@ -43,6 +43,10 @@
 		padding: 0;
 		text-align: center;
 
+		h1 {
+			margin-bottom: $base-padding/2;
+		}
+
 		a {
 				text-decoration: none;
 		}
@@ -65,7 +69,7 @@
 		color: $color-accent-two;
 		@include font-size(1.5);
 		padding: $base-padding/3 $base-padding;
-		text-align: center;
+		text-align: right;
 
 		span,
 		time {
@@ -144,6 +148,12 @@
 .single .byline,
 .group-blog .byline {
 	display: inline;
+}
+
+.posted-on {
+	border-bottom: 1px solid darken($color-whitesmoke, 25%);
+	display: block;
+	@include font-size(1.6);
 }
 
 .page-content,
