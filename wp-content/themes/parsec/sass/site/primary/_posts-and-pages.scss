@@ -154,6 +154,10 @@
 	border-bottom: 1px solid darken($color-whitesmoke, 25%);
 	display: block;
 	@include font-size(1.6);
+
+	.genericon {
+		@include font-size(1.6);
+	}
 }
 
 .page-content,
