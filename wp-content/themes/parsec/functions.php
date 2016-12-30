@@ -55,6 +55,9 @@ function parsec_setup() {
 		'default-image' => '',
 	) ) );
 
+	// Enable shortcodes in text widgets
+	add_filter('widget_text','do_shortcode');
+
 	/**
 	* Global Variables
 	*/
