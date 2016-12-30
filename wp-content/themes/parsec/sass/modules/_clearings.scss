@@ -1,4 +1,6 @@
 .clear:before,
+.clear-section:before,
+.clear-section:after,
 .clear:after,
 .entry-content:before,
 .entry-content:after,
@@ -14,10 +16,15 @@
 }
 
 .clear:after,
+.clear-section:after,
 .entry-content:after,
 .comment-content:after,
 .site-header:after,
 .site-content:after,
 .site-footer:after {
 	@include clearfix-after;
+}
+
+.clear-section {
+	clear: both;
 }
