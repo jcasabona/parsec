@@ -27,7 +27,7 @@
 		</div>
 
 		<div class="site-info contain copyright">
-			<?php printf( '&copy; Joe Casabona %1$s, All rights reserved. Powered by <a href="%2$S">Parsec</a>', date('Y'), 'http://github.com/jcasabona/parsec' ); ?>
+			<?php printf( '&copy; Joe Casabona %1$s - %2$s, All rights reserved. Powered by <a href="%3$s">Parsec</a>', '2002', date('Y'), 'http://github.com/jcasabona/parsec' ); ?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
