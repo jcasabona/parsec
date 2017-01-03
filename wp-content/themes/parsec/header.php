@@ -35,6 +35,12 @@ global $p_svg_path;
 			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 		</div><!-- .site-branding -->
 
+		<?php
+		if ( has_podcatcher() ) {
+			get_template_part( 'header', 'podcatcher' );
+		}
+		?>
+
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content"> <?php //here is where I will put a class for choosing the layout ?>

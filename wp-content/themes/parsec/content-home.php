@@ -1,10 +1,9 @@
 <?php
 /**
- * The template used for displaying page content in page.php
+ * The template used for displaying page content in page-home.php, sans podcatcher plugin.
  *
  * @package Parsec
  */
-
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>

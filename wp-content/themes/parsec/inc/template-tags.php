@@ -260,3 +260,5 @@ function parsec_category_transient_flusher() {
 }
 add_action( 'edit_category', 'parsec_category_transient_flusher' );
 add_action( 'save_post',     'parsec_category_transient_flusher' );
+
+include( 'podcatcher-functions.php' );
