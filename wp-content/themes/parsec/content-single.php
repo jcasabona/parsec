@@ -5,6 +5,13 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<div class="featured-image center">
+		<?php
+			if ( has_post_thumbnail() ) {
+				the_post_thumbnail( 'large' );
+			}
+		?>
+	</div>
 	<header class="entry-header">
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 

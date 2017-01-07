@@ -46,29 +46,49 @@ body {
 		@include breakpoint( $breakpoint-4 ) {
 			min-height: 450px;
 		}
-	.site-branding {
-		h1{
-				float: left;
-				line-height: 1em;
-				margin: 0;
-				padding: 0;
 
-				a{
-					color: $color-white;
-					font-weight: normal;
-					text-decoration: none;
-				}
+	.top-bar {
+		background: $color-primary;
+		color: $color-white;
+		padding: 0 $base-padding;
 
-				img {
-					@include breakpoint( $breakpoint-1 ) {
-						max-height: 300px;
-					}
-				}
+		&:after {
+			@include clearfix();
+			@include clearfix-after;
+		}
+	}
+
+	.site-title {
+		float: left;
+		line-height: 1em;
+		margin: 0;
+		max-width: 70%;
+		padding: $base-padding 5px;
+		text-align: left;
+
+		@include breakpoint-tweener( $breakpoint-3, $breakpoint-4) {
+			float: none;
+			max-width: none;
+			text-align: center;
+		}
+
+		@include breakpoint( $breakpoint-3, 'max' ) {
+			padding: $base-padding 0 $base-padding $base-padding;
+		}
+
+		@include breakpoint-tweener( $breakpoint-4, $max-width-px ) {
+			padding-left: $padding-less;
+			padding-right: $padding-less;
+		}
+
+		 a {
+			@include link-colors( $color-white, $color-accent-three );
+			text-decoration: none;
 		}
 	}
 
 	.latest-episode {
-		background: rgba($color-black, 0.5);
+		background: rgba($color-black, 0.7);
 		padding: $base-padding*2;
 
 		@include breakpoint( $breakpoint-2 ) {
@@ -83,6 +103,7 @@ body {
 		h5 {
 			border-bottom: 5px solid $color-accent-three;
 			font-family: $font-body;
+			@include font-size(2.3);
 			margin-bottom: $base-padding;
 			text-align: left;
 		}
@@ -111,7 +132,7 @@ body {
 			display: inline-block;
 			margin: $base-padding 0;
 			max-width: 48%;
-			vertical-align: bottom;
+			vertical-align: top;
 
 			&:first-child {
 				margin-left: 0;
@@ -121,6 +142,10 @@ body {
 			&:last-child {
 				margin-left: $padding-less;
 				margin-right: 0;
+			}
+
+			img {
+				background: $color-white;
 			}
 		}
 

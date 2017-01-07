@@ -1,11 +1,16 @@
 .main-navigation {
-	background: $color-primary;
+	padding-top: $base-padding;
 	text-align: right;
 
-	ul {
+	@include breakpoint-tweener($breakpoint-3, $breakpoint-4) {
 		display: block;
+		text-align: center;
+	}
+
+	ul {
+		display: inline-block;
 		list-style: none;
-		margin: 0;
+		margin: $base-padding 0 0 0;
 		padding-left: 0;
 		text-align: justify;
 
@@ -14,21 +19,35 @@
 			height: 0%;
 			width: 100%;
 		}
+
+		@include breakpoint( $breakpoint-3 ) {
+			@include font-size(2);
+			text-align: right;
+		}
+
+		@include breakpoint-tweener($breakpoint-2, $breakpoint-3) {
+			text-align: center;
+		}
 	}
 
 	li {
-		display: inline-block;
-
-		&:hover > a {
+		@include breakpoint($breakpoint-3) {
+			display: inline-block;
 		}
 
 		a {
-			color: $color-white;
-			display: inline-block;
+			@include link-colors( $color-white, $color-link-hover );
 			font-weight: bold;
-			margin: $base-margin;
+			margin: 0;
 			padding: $padding-less;
 			text-decoration: none;
+
+			@include breakpoint($breakpoint-3, 'max') {
+				border-bottom: 1px solid lighten( $color-accent-three, 10% );
+				@include link-colors( $color-white, $color-gray-base );
+				display: block;
+				text-align: center;
+			}
 
 		}
 
@@ -39,18 +58,32 @@
 	}
 
 	}
-
 }
 
 /* Small menu */
 .menu-toggle {
 	display: none;
+	float: right;
 }
 
-@include breakpoint( $breakpoint-1, 'max' ) {
+@include breakpoint( $breakpoint-3, 'max' ) {
 	.menu-toggle,
 	.main-navigation.toggled .nav-menu {
-		display: inline-block;
+		display: block;
+		@include font-size(2.5);
+		padding: $base-padding 10px 0 0;
+	}
+
+	.main-navigation.toggled .nav-menu {
+		background: $color-primary;
+		@include clearfix-after();
+		margin: 15px 30px 20px;
+		padding: $base-padding 20px;
+		text-align: center;
+
+		a {
+			@include link-colors($color-white, darken($color-white, 25%));
+		}
 	}
 
 	.main-navigation ul {
@@ -63,19 +96,4 @@
 .site-main .post-navigation {
 	margin: 0 0 1.5em;
 	overflow: hidden;
-}
-
-.comment-navigation .nav-previous,
-.paging-navigation .nav-previous,
-.post-navigation .nav-previous {
-	float: left;
-	width: 50%;
-}
-
-.comment-navigation .nav-next,
-.paging-navigation .nav-next,
-.post-navigation .nav-next {
-	float: right;
-	text-align: right;
-	width: 50%;
 }

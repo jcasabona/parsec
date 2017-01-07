@@ -1,14 +1,17 @@
 <?php
 /**
- * Plugin Name: WP Podcatcher
- * Plugin URI: http://howibuilt.it/
- * Description: This plugin allows you to properly power your Podcasting site
- * Author: Joe Casabona
- * Version: 0.5
- * Author URI: http://casabona.org/
-
  * @package wp-podcatcher
- */
+*/
+/*
+Plugin Name: WP Podcatcher
+Plugin URI: http://howibuilt.it/
+Description: This plugin allows you to properly power your Podcasting site
+Author: Joe Casabona
+Version: 0.5
+Author URI: http://casabona.org/
+License: GPLv2 or later
+Text Domain: wp-podcatcher
+*/
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;

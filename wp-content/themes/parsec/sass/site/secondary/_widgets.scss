@@ -1,11 +1,11 @@
 .widget {
 	background: $color-white;
 	margin: $base-margin 0;
-	padding: 0 0 $base-padding 0;
 
 	.widget-title {
 		background: $color-accent-two;
 		color: $color-white;
+		@include font-size(2.6);
 		padding: $base-padding;
 		margin-bottom: $base-margin;
 	}
@@ -15,6 +15,10 @@
 
 		&:first-child {
 			margin-top: 0;
+		}
+
+		& > div {
+			padding: $base-padding;
 		}
 	}
 
