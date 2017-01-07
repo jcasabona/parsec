@@ -76,6 +76,8 @@ function parsec_setup() {
 		'default-image' => '',
 	) ) );
 
+	add_theme_support( 'post-thumbnails' );
+
 	/**
 	* Global Variables
 	*/
@@ -95,6 +97,16 @@ function parsec_widgets_init() {
 	register_sidebar( array(
 		'name'          => __( 'Sidebar', 'parsec' ),
 		'id'            => 'sidebar-1',
+		'description'   => '',
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
+	) );
+
+	register_sidebar( array(
+		'name'          => __( 'Home Sidebar', 'parsec' ),
+		'id'            => 'sidebar-home',
 		'description'   => '',
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</div>',

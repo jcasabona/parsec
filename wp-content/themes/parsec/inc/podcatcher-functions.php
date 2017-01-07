@@ -13,5 +13,5 @@
  * @return boolean
  */
 function has_podcatcher() {
-	return class_exists( 'WPP_Episodes' );
+	return defined( 'WPP_VERSION' );
 }

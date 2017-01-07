@@ -1,0 +1,204 @@
+/* subscribe.css PowerPress subscribe widget */
+
+.pp-sub-widget {
+	width: 100%;
+	max-width: 800px;
+	margin: 10px auto;
+	border: 3px solid #787878;
+	font-family: Sans-serif;
+	background-color: #FFFFFF;
+}
+.pp-sub-widget .pp-sub-bx {
+	-webkit-column-count: 2;
+	-moz-column-count: 2;
+	column-count: 2;
+	-webkit-column-gap: 20px;
+	-moz-column-gap: 20px;
+	column-gap: 20px;
+	width: auto;
+	height: auto;
+	margin: 0 10px;
+}
+
+.pp-sub-widget div.pp-sub-h {
+	margin: 10px 10px 0 10px;
+	font-size: 90%;
+	font-weight: bold;
+	color: #666666;
+}
+.pp-sub-widget h2.pp-sub-t {
+	margin: 10px 10px 0 10px !important;
+	padding: 0 !important;
+	font-size: 200% !important;
+	color: #222222 !important;
+}
+.pp-sub-widget p.pp-sub-st {
+	margin: 5px 10px 0 10px !important;
+	padding: 0 !important;
+	font-size: 100% !important;
+	color: #222222 !important;
+}
+
+.pp-sub-widget a.pp-sub-btn {
+	width: 100%;
+	height: 48px;
+	padding: 0px 0px 0px 0px;
+	color: #FFFFFF;
+	display: inline-block;
+	margin: 10px 0 10px 0;
+	text-decoration: none;
+	text-align:left;
+	vertical-align: middle;
+	line-height: 48px;
+	font-size: 90% !important;
+	font-weight: bold !important;
+	overflow: hidden;
+	border-radius: 1px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2); 
+}
+
+.pp-sub-widget .pp-sub-btn-l {
+
+}
+body .entry-content .pp-sub-widget a:link,
+body .entry-content .pp-sub-widget a:visited,
+body .entry-content .pp-sub-widget a:active,
+body .entry-content .pp-sub-widget a:hover,
+body .pp-sub-widget a:link,
+body .pp-sub-widget a:visited,
+body .pp-sub-widget a:active,
+body .pp-sub-widget a:hover {
+	text-decoration: none !important;
+	color: #FFFFFF !important;
+}
+
+.pp-sub-widget img.pp-sub-l {
+	width: 100% !important;
+	height: auto !important;
+	max-width: 300px;
+	padding: 0;
+	margin: 10px 0;
+	float: left;
+	box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2); 
+}
+.pp-sub-widget .pp-sub-btns {
+	width: 100% !important;
+	margin:  0;
+	padding: 0;
+	display: inline-block;
+}
+.pp-sub-widget .pp-sub-m {
+	clear: both;
+	margin: 10px;
+}
+.pp-sub-widget p.pp-sub-m-p {
+	margin: 0;
+	font-size: 90%;
+	color: #222222;
+}
+.pp-sub-widget .pp-sub-m-i {
+	width: 80%;
+	color: #333333;
+	font-size: 85%;
+	border: 1px solid #999999;
+	padding: 5px;
+}
+@media screen and (max-width: 400px) {
+	.pp-sub-widget .pp-sub-bx {
+		-webkit-column-count: 1;
+		-moz-column-count: 1;
+		column-count: 1;
+		-webkit-column-gap: 0;
+		-moz-column-gap: 0;
+		column-gap: 0;
+	}
+	.pp-sub-widget .pp-sub-t {
+		font-size: 150%;
+	}
+}
+.pp-sub-widget-dark a,
+.pp-sub-widget-modern a {
+	background-color: #222222;
+}
+.pp-sub-widget-modern a.pp-sub-itunes {
+	background-color: #732BBE;
+}
+.pp-sub-widget-modern a.pp-sub-pr,
+.pp-sub-widget-modern a.pp-sub-email {
+	background-color: #337EC9;
+}
+.pp-sub-widget-modern a.pp-sub-bp,
+.pp-sub-widget-modern a.pp-sub-rss {
+	background-color: #FF8800;
+}
+
+.pp-sub-widget-modern a.pp-sub-stitcher {
+	background-color: #222222;
+	background-color: #3ec6ff; /* stitcher light blue */
+	background-color: #197195; /* stitcher dark blue */
+}
+.pp-sub-widget-modern a.pp-sub-tunein {
+	background-color: #2CB6A8;
+}
+.pp-sub-widget-modern a.pp-sub-gp {
+	background-color: #F15832;
+}
+.pp-sub-widget-modern a.pp-sub-android {
+	background-color: #6AB344;
+}
+
+.pp-sub-widget-modern  div.pp-sub-h,
+.pp-sub-widget-modern  p.pp-sub-m-p {
+	color: #337EC9;
+}
+
+.pp-sub-widget .pp-sub-ic {
+	width: 48px;
+    height: 48px;
+	border: 0;
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 2px;
+}
+.pp-sub-ic {
+	background-image: url(../images/spriteStandard.png);
+	background-repeat: no-repeat;
+	background-size: 294px;
+}
+.pp-sub-itunes .pp-sub-ic {
+	background-position: -49px 0;
+}
+.pp-sub-rss .pp-sub-ic {
+	background-position: 0 -49px;
+}
+.pp-sub-email .pp-sub-ic {
+	background-position: -196px -49px;
+}
+.pp-sub-pr .pp-sub-ic {
+	background-position: -196px 0;
+}
+.pp-sub-bp .pp-sub-ic {
+	background-position: -147px 0;
+}
+.pp-sub-android .pp-sub-ic {
+	background-position: -98px -98px;
+}
+.pp-sub-stitcher .pp-sub-ic {
+	background-position: -147px -98px;
+}
+.pp-sub-tunein .pp-sub-ic {
+	background-position: -245px -98px;
+}
+.pp-sub-gp .pp-sub-ic {
+	background-position: -196px -98px;
+}
+
+/* Retina-specific stuff here */
+@media only screen and (-webkit-min-device-pixel-ratio: 2.0),
+       only screen and (min--moz-device-pixel-ratio: 2.0),
+       only screen and (-o-min-device-pixel-ratio: 200/100),
+       only screen and (min-device-pixel-ratio: 2.0) {
+	.pp-sub-ic {
+		background-image: url(../images/spriteRetina.png);
+	}
+}

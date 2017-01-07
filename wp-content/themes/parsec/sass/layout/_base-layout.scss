@@ -32,11 +32,10 @@ body {
 			background-image: url( $asset-path + 'img/banner-med.jpg' );
 			background-position: center;
 			min-height: auto;
-			height: 200px;
 		}
 
 		@include breakpoint( $breakpoint-2 ) {
-			height: 300px;
+			min-height: 300px;
 			text-align: left;
 		}
 
@@ -45,12 +44,11 @@ body {
 		}
 
 		@include breakpoint( $breakpoint-4 ) {
-			height: 450px;
+			min-height: 450px;
 		}
-
 	.site-branding {
-		padding: $padding-more;
 		h1{
+				float: left;
 				line-height: 1em;
 				margin: 0;
 				padding: 0;
@@ -67,6 +65,65 @@ body {
 					}
 				}
 		}
+	}
+
+	.latest-episode {
+		background: rgba($color-black, 0.5);
+		padding: $base-padding*2;
+
+		@include breakpoint( $breakpoint-2 ) {
+			max-width: 75%;
+			margin: $base-padding auto;
+		}
+
+		@include breakpoint( $breakpoint-3 ) {
+			max-width: 40%;
+		}
+
+		h5 {
+			border-bottom: 5px solid $color-accent-three;
+			font-family: $font-body;
+			margin-bottom: $base-padding;
+			text-align: left;
+		}
+
+		.episode {
+			margin: $padding-more $padding-less;
+		}
+
+		a.show-notes {
+			background: $color-white;
+			display: block;
+			@include font-size(3);
+			font-weight: bold;
+			margin: 0 auto;
+			padding: $base-padding;
+			text-align: center;
+
+			&:hover,
+			&:focus,
+			&:active {
+				background: $color-primary;
+			}
+		}
+
+		.wpp-sponsor {
+			display: inline-block;
+			margin: $base-padding 0;
+			max-width: 48%;
+			vertical-align: bottom;
+
+			&:first-child {
+				margin-left: 0;
+				margin-right: $padding-less;
+			}
+
+			&:last-child {
+				margin-left: $padding-less;
+				margin-right: 0;
+			}
+		}
+
 	}
 
 	svg {

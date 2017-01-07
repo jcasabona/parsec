@@ -1,0 +1,110 @@
+
+#powerpress-steps {
+	margin: 20px 0 30px 0;
+	overflow: hidden;
+	/*CSS counters to number the steps*/
+	counter-reset: step;
+	text-align: center;
+}
+#powerpress-steps li {
+	list-style-type: none;
+	color: white;
+	color: #999999;
+	text-transform: uppercase;
+	font-size: 18px;
+	width: 33.33%;
+	float: left;
+	position: relative;
+}
+#powerpress-steps li.pp-step-1:before {
+	content: '1';
+}
+#powerpress-steps li.pp-step-2:before {
+	content: '2';
+}
+#powerpress-steps li.pp-step-3:before {
+	content: '3';
+}
+#powerpress-steps li:before {
+	width: 30px;
+	line-height: 30px;
+	display: block;
+	font-size: 18px;
+	color: #333;
+	background: white;
+	background: #999999;
+	color: white;
+	border-radius: 3px;
+	margin: 0 auto 5px auto;
+	font-family: arial, verdana;
+}
+#powerpress-steps li:after {
+	content: '';
+	width: 100%;
+	height: 2px;
+	background: #999999;
+	position: absolute;
+	left: -50%;
+	top: 14px;
+	z-index: -1; /*put it behind the numbers*/
+}
+#powerpress-steps li:first-child:after {
+	/*connector not needed before the first step*/
+	content: none; 
+}
+#powerpress-steps li.pp-step-active:before,  #powerpress-steps li.pp-step-active:after{
+	background: #0D87E9;
+	color: white;
+}
+#powerpress-steps li.pp-step-active {
+	color: #0D87E9;
+}
+#powerpress-steps li.pp-step-active p,
+#powerpress-steps li.pp-step-active h3 {
+	color: #0D87E9;
+}
+#powerpress-steps p {
+		text-transform: none;
+		margin: 10px 40px;
+		line-height: 1.3em;
+}
+#powerpress-steps h3 {
+		text-transform: none;
+		margin: 10px 40px;
+		font-size: 100%;
+		line-height: 1.3em;
+		position: relative;
+		display: inline-block;
+}
+#powerpress-steps a {
+	color: #999999;
+}
+#powerpress-steps li.pp-step-active a {
+	color: #003366;
+	color: #0D87E9;
+}
+#powerpress-steps li.pp-step-active a:hover {
+	color: #003366;
+}
+#powerpress-steps h3.pp-step-h-completed:before
+{
+	content: url(../images/check.svg); /*'\2713';*/
+	color: #54A954;
+	width: 24px;
+	height: 24px;
+	padding-right: 5px;
+	font-weight: 400;
+	font-size: 32px;
+	position: absolute;
+	left: -30px;
+}
+
+@media screen and (max-width: 400px) {
+	#powerpress-steps p,
+	#powerpress-steps h3 {
+			margin: 10px 10px;
+	}
+	#powerpress-steps h3.pp-step-h-completed:before {
+		left: -15px;
+	}
+}
