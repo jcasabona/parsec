@@ -1,10 +1,12 @@
-.alignleft {
+.alignleft,
+.nav-previous {
 	display: inline;
 	float: left;
 	margin-right: 1.5em;
 }
 
-.alignright {
+.alignright,
+.nav-next {
 	display: inline;
 	float: right;
 	margin-left: 1.5em;
@@ -14,4 +16,17 @@
 .center {
 	@include center-block;
 	text-align: center;
+}
+
+.nav-previous,
+.nav-next {
+	max-width: 46%;
+}
+
+.nav-previous {
+	text-align: right;
+}
+
+.nav-next {
+	text-align: left;
 }

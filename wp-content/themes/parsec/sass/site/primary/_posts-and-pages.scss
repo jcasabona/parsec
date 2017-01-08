@@ -7,7 +7,7 @@
 	margin: 0 0 1.5em;
 
 	.entry-header {
-		padding: 0 $base-padding;
+		padding: 0 $base-padding*3;
 
 		a {
 				text-decoration: none;
@@ -15,7 +15,16 @@
 	}
 
 	.entry-content {
-		padding: 0 $base-padding;
+		@include font-size(2.2);
+		padding: 0 $base-padding*4;
+
+		p {
+			margin: $padding-more 0;
+		}
+
+		p.powerpress_links {
+			margin-top: $padding-less;
+		}
 	}
 
 	.entry-footer {
@@ -28,11 +37,36 @@
 		}
 
 	}
+
+	.wpp-episode-sponsors {
+		background: $color-primary;
+		@include flex();
+		justify-content: center;
+
+		.wpp-sponsor {
+			align-self: center;
+			background: $color-white;
+			box-shadow: 4px 4px 8px 4px rgba(0,0,0,0.2);
+			display: inline-block;
+			margin: $base-padding;
+			max-width: 48%;
+			padding: $padding-less;
+			text-align: center;
+			transition: 0.3s;
+		}
+	}
 }
 
 .byline,
 .updated:not(.published){
 	display: none;
+}
+
+.entry-meta {
+	border-bottom: 2px solid $color-accent-three;
+	@include font-size(2);
+	margin-bottom: $base-padding;
+	padding-top: $base-padding;
 }
 
 .single .byline,

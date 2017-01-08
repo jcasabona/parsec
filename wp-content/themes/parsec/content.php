@@ -5,14 +5,21 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<div class="featured-image center">
+		<?php
+			if ( has_post_thumbnail() ) {
+				the_post_thumbnail( 'full' );
+			}
+		?>
+	</div>
 	<header class="entry-header">
-		<?php the_title( sprintf( '<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
-
 		<?php if ( 'post' == get_post_type() ) : ?>
-		<div class="entry-meta">
+		<div class="entry-meta posted-on">
 			<?php parsec_posted_on(); ?>
 		</div><!-- .entry-meta -->
 		<?php endif; ?>
+
+		<?php the_title( sprintf( '<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">

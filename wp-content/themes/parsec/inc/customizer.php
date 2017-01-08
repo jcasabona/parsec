@@ -13,7 +13,6 @@
 function parsec_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
-	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
 
 	$wp_customize->add_section( 'parsec_settings' , array(
 		'title'    =>  'Parsec Settings',
@@ -23,7 +22,7 @@ function parsec_customize_register( $wp_customize ) {
 	$wp_customize->add_setting( 'parsec_custom_logo' );
 
 	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'parsec_custom_logo', array(
-		'label'    => __( 'Logo', 'tep' ),
+		'label'    => __( 'Logo', 'parsec' ),
 		'section'  => 'parsec_settings',
 		'settings' => 'parsec_custom_logo',
 		)
@@ -32,7 +31,7 @@ function parsec_customize_register( $wp_customize ) {
 	$wp_customize->add_setting( 'parsec_custom_header_bg' );
 
 	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'parsec_custom_header_bg', array(
-		'label'    => __( 'Header Background', 'tep' ),
+		'label'    => __( 'Header Background', 'parsec' ),
 		'section'  => 'parsec_settings',
 		'settings' => 'parsec_custom_header_bg',
 		)
@@ -60,7 +59,7 @@ function parsec_customize_register( $wp_customize ) {
 	$wp_customize->add_setting( 'parsec_ga_code' );
 
 	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'parsec_ga_code', array(
-		'label'    => __( 'Google Analytics UA Code', 'tep' ),
+		'label'    => __( 'Google Analytics UA Code', 'parsec' ),
 		'section'  => 'parsec_settings',
 		'settings' => 'parsec_ga_code',
 		)
@@ -88,10 +87,21 @@ function parsec_customize_css() {
 
 <?php
 	if ( ! empty( $logo ) ) :
+		list($width, $height) = getimagesize( $logo );
+		if ( $height > 90 ) {
+			$ratio = $height / 90;
+			$height = 90;
+			$width = $width / $ratio;
+		}
+
 ?>
 		.site-title a {
 			background: url('<?php echo esc_url( $logo ); ?>') top center no-repeat;
+			background-size: <?php echo $width; ?>px <?php echo $height; ?>px;
+			display: inline-block;
+			height: <?php echo $height; ?>px;
 			text-indent: -999999px;
+			min-width: <?php echo $width; ?>px;
 		}
 
 <?php
@@ -101,6 +111,8 @@ function parsec_customize_css() {
 ?>
 		.site-header {
 			background-image: url('<?php echo esc_url( $header_bg ); ?>');
+			background-position: bottom;
+			background-size: cover;
 		}
 
 <?php

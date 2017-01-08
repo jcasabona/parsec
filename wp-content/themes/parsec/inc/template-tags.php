@@ -88,7 +88,7 @@ function parsec_posted_on() {
 		'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 	);
 
-	echo '<span class="posted-on">' . $posted_on . '</span><span class="byline"> ' . $byline . '</span>';
+	echo '<span class="posted-on">' . $posted_on . '</span>';
 
 }
 endif;
@@ -103,20 +103,20 @@ function parsec_entry_footer() {
 		/* translators: used between list items, there is a space after the comma */
 		$categories_list = get_the_category_list( __( ', ', 'parsec' ) );
 		if ( $categories_list && parsec_categorized_blog() ) {
-			printf( '<span class="cat-links">' . __( 'Posted in %1$s', 'parsec' ) . '</span>', $categories_list );
+			printf( '<span class="cat-links">' . __( 'Posted in %1$s', 'parsec' ) . '</span> ', $categories_list );
 		}
 
 		/* translators: used between list items, there is a space after the comma */
 		$tags_list = get_the_tag_list( '', __( ', ', 'parsec' ) );
 		if ( $tags_list ) {
-			printf( '<span class="tags-links">' . __( 'Tagged %1$s', 'parsec' ) . '</span>', $tags_list );
+			printf( '<span class="tags-links">' . __( 'Tagged %1$s', 'parsec' ) . '</span> ', $tags_list );
 		}
 	}
 
 	if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
 		echo '<span class="comments-link">';
 		comments_popup_link( __( 'Leave a comment', 'parsec' ), __( '1 Comment', 'parsec' ), __( '% Comments', 'parsec' ) );
-		echo '</span>';
+		echo '</span> ';
 	}
 
 	edit_post_link( __( 'Edit', 'parsec' ), '<span class="edit-link">', '</span>' );

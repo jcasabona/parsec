@@ -8,16 +8,15 @@
 	<div class="featured-image center">
 		<?php
 			if ( has_post_thumbnail() ) {
-				the_post_thumbnail( 'large' );
+				the_post_thumbnail( 'full' );
 			}
 		?>
 	</div>
 	<header class="entry-header">
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-
-		<div class="entry-meta">
+		<div class="entry-meta posted-on">
 			<?php parsec_posted_on(); ?>
 		</div><!-- .entry-meta -->
+		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">

@@ -1,6 +1,6 @@
 .widget {
 	background: $color-white;
-	margin: $base-margin 0;
+	margin: $base-margin 0 $padding-more*2 0;
 
 	.widget-title {
 		background: $color-accent-two;
@@ -8,6 +8,11 @@
 		@include font-size(2.6);
 		padding: $base-padding;
 		margin-bottom: $base-margin;
+
+		footer & {
+			background: none;
+			padding: $padding-less;
+		}
 	}
 
 
