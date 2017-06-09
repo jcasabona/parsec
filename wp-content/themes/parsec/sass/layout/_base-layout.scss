@@ -92,11 +92,11 @@ body {
 		padding: $base-padding*2;
 
 		@include breakpoint( $breakpoint-2 ) {
-			max-width: 75%;
+			max-width: 90%;
 			margin: $base-padding auto;
 		}
 
-		@include breakpoint( $breakpoint-3 ) {
+		@include breakpoint( $breakpoint-4 ) {
 			max-width: 40%;
 		}
 
@@ -109,16 +109,18 @@ body {
 		}
 
 		.episode {
-			margin: $padding-more $padding-less;
+			background: $color-white;
+			margin: $base-padding 0;
+			padding: $base-padding;
 		}
 
 		a.show-notes {
 			background: $color-white;
-			display: block;
-			@include font-size(3);
+			display: inline-block;
+			@include font-size(2.6);
 			font-weight: bold;
 			margin: 0 auto;
-			padding: $base-padding;
+			padding: $padding-less;
 			text-align: center;
 
 			&:hover,
@@ -183,15 +185,11 @@ body {
 	max-width: $max-width-percent;
 	padding: $padding-more 0 $padding-less;
 
-	@include breakpoint( $breakpoint-2 ) {
+	@include breakpoint( $breakpoint-3 ) {
 		display: inline-block;
 		padding: $padding-more;
-		width: 60%;
-		vertical-align: top;
-	}
-
-	@include breakpoint( $breakpoint-3 ) {
 		width: 69%;
+		vertical-align: top;
 	}
 
 	&.one-col {
@@ -213,16 +211,11 @@ aside {
 	margin: $margin-center;
 	max-width: $max-width-percent;
 
-	@include breakpoint( $breakpoint-2 ) {
+	@include breakpoint( $breakpoint-3 ) {
 		display: inline-block;
 		padding-top: $padding-more;
-		width: 36%;
+		width: 30%;
 		vertical-align: top;
 	}
 
-	@include breakpoint( $breakpoint-3 ) {
-		display: inline-block;
-		vertical-align: top;
-		width: 30%;
-	}
 }

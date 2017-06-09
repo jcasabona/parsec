@@ -30,3 +30,16 @@
 .nav-next {
 	text-align: left;
 }
+
+@include breakpoint( $breakpoint-2, 'max' ) {
+	.alignleft,
+	.nav-previous,
+	.alignright,
+	.nav-next {
+		display: block;
+		float: none;
+		margin: $padding-less auto;
+		max-width: 100%;
+		text-align: center;
+	}
+}

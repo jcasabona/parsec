@@ -16,7 +16,7 @@
 
 	.entry-content {
 		@include font-size(2.2);
-		padding: 0 $base-padding*4;
+		padding: 0 $base-padding*2;
 
 		p {
 			margin: $padding-more 0;
@@ -40,8 +40,11 @@
 
 	.wpp-episode-sponsors {
 		background: $color-primary;
-		@include flex();
-		justify-content: center;
+
+		@include breakpoint( $breakpoint-2 ) {
+			@include flex();
+			justify-content: center;
+		}
 
 		.wpp-sponsor {
 			align-self: center;
@@ -49,11 +52,17 @@
 			box-shadow: 4px 4px 8px 4px rgba(0,0,0,0.2);
 			display: inline-block;
 			margin: $base-padding;
-			max-width: 48%;
 			padding: $padding-less;
 			text-align: center;
 			transition: 0.3s;
+			word-wrap: break-word;
 		}
+	}
+}
+
+.episode-list {
+	h3.entry-title {
+		margin-bottom: $base-padding;
 	}
 }
 
