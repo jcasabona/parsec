@@ -563,6 +563,8 @@ body {
   background: whitesmoke;
   max-width: 1300px;
   margin: 0 auto; }
+  .home .site-content {
+    max-width: 99%; }
 
 .site-header, .site-footer {
   background: #333333;
@@ -583,14 +585,10 @@ body {
       min-height: auto; } }
   @media (min-width: 40em) {
     .site-header {
-      min-height: 300px;
       text-align: left; } }
   @media (min-width: 50em) {
     .site-header {
       background-image: url("/wp-content/themes/parsec/assets/img/banner.jpg"); } }
-  @media (min-width: 60em) {
-    .site-header {
-      min-height: 450px; } }
   .site-header .top-bar {
     background: #333333;
     color: #FFFFFF;
@@ -626,14 +624,10 @@ body {
         color: #FCD062; }
   .site-header .latest-episode {
     background: rgba(0, 0, 0, 0.7);
-    padding: 30px; }
+    padding: 30px 45px; }
     @media (min-width: 40em) {
       .site-header .latest-episode {
-        max-width: 90%;
-        margin: 15px auto; } }
-    @media (min-width: 60em) {
-      .site-header .latest-episode {
-        max-width: 40%; } }
+        margin: 0 auto; } }
     .site-header .latest-episode h5 {
       border-bottom: 5px solid #FCD062;
       font-family: "Tinos", serif;
@@ -698,6 +692,8 @@ body {
   .content-area.one-col {
     display: block;
     width: 95%; }
+    .content-area.one-col.home {
+      width: 95%; }
     @media (min-width: 50em) {
       .content-area.one-col {
         width: 85%; } }
@@ -715,6 +711,25 @@ aside {
       padding-top: 30px;
       width: 30%;
       vertical-align: top; } }
+
+.home-grid {
+  display: -ms-flex;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; }
+  @media (max-width: 30em) {
+    .home-grid {
+      display: block; } }
+  .home-grid article {
+    margin: 10px auto;
+    width: 32%; }
+    @media (max-width: 50em) {
+      .home-grid article {
+        width: 48%; } }
+    @media (max-width: 30em) {
+      .home-grid article {
+        width: 100%; } }
 
 /*--------------------------------------------------------------
 5.0 Navigation
@@ -1013,6 +1028,20 @@ a:hover, a:focus, a:active {
   clear: both;
   margin: 0 0 1.5em; }
 
+.pagination {
+  margin: 10px auto;
+  text-align: center; }
+  .pagination .page-numbers {
+    background: #333333;
+    color: #FFFFFF;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none; }
+    .pagination .page-numbers.current {
+      background: #A45702; }
+    .pagination .page-numbers:hover {
+      background: #4d4d4d; }
+
 /*--------------------------------------------------------------
 10.2 Asides
 --------------------------------------------------------------*/
@@ -1036,6 +1065,22 @@ aside.footer-widgets {
         display: inline-block;
         margin-right: 1.5em;
         width: 24%; } }
+
+.home aside.widget-area {
+  background: #42859E;
+  display: -ms-flex;
+  display: -webkit-flex;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 100%;
+  justify-content: center;
+  width: auto; }
+  .home aside.widget-area .widget {
+    margin: 10px;
+    width: 47%; }
+    @media (max-width: 42em) {
+      .home aside.widget-area .widget {
+        width: 100%; } }
 
 /*--------------------------------------------------------------
 10.3 Comments

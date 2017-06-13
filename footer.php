@@ -10,6 +10,12 @@
 
 	</div><!-- #content -->
 
+	<?php
+		if ( is_front_page() ) {
+			get_sidebar();
+		}
+	?>
+
 	<footer id="colophon" class="site-footer" role="contentinfo">
 
 		<aside class="footer-widgets contain">

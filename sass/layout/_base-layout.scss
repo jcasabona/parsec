@@ -11,6 +11,10 @@ body {
 	background: $color-background-screen;
 	max-width: $max-width-px;
 	margin: $margin-center;
+
+	.home & {
+		max-width: 99%;
+	}
 }
 
 
@@ -35,7 +39,6 @@ body {
 		}
 
 		@include breakpoint( $breakpoint-2 ) {
-			min-height: 300px;
 			text-align: left;
 		}
 
@@ -43,9 +46,6 @@ body {
 			background-image: url( $asset-path + 'img/banner.jpg' );
 		}
 
-		@include breakpoint( $breakpoint-4 ) {
-			min-height: 450px;
-		}
 
 	.top-bar {
 		background: $color-primary;
@@ -89,15 +89,10 @@ body {
 
 	.latest-episode {
 		background: rgba($color-black, 0.7);
-		padding: $base-padding*2;
+		padding: $base-padding*2 $base-padding*3;
 
 		@include breakpoint( $breakpoint-2 ) {
-			max-width: 90%;
-			margin: $base-padding auto;
-		}
-
-		@include breakpoint( $breakpoint-4 ) {
-			max-width: 40%;
+			margin: 0 auto;
 		}
 
 		h5 {
@@ -196,6 +191,10 @@ body {
 		display: block;
 		width: $max-width-percent;
 
+		&.home {
+			width: 95%;
+		}
+
 		@include breakpoint( $breakpoint-3 ) {
 			width: $max-width-percent - 10;
 		}
@@ -218,4 +217,27 @@ aside {
 		vertical-align: top;
 	}
 
+}
+
+.home-grid {
+	@include flex();
+	justify-content: space-between;
+	flex-wrap: wrap;
+
+	@include breakpoint($breakpoint-1, 'max') {
+		display: block;
+	}
+
+	article {
+		margin: 10px auto;
+    width: 32%;
+
+		@include breakpoint($breakpoint-3, 'max') {
+			width: 48%;
+		}
+
+		@include breakpoint($breakpoint-1, 'max') {
+			width: 100%;
+		}
+	}
 }

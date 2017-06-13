@@ -24,3 +24,21 @@ aside.footer-widgets {
 		}
 	}
 }
+
+.home aside.widget-area {
+	background: $color-secondary;
+	@include flex();
+	flex-wrap: wrap;
+	max-width: 100%;
+	justify-content: center;
+	width: auto;
+
+	.widget {
+		margin: 10px;
+		width: 47%;
+
+		@include breakpoint(42em, 'max') {
+			width: 100%;
+		}
+	}
+}
